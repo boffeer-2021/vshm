@@ -22,6 +22,8 @@
     --c-font: #333;
     --c-font-2: #b9b9b9;
 		--c-font-primary: #d59b64;
+		--c-font-golden: #eec30a;
+		--c-font-silver: #a4a4a4;
 		--c-primary: #dca067;
 		--c-secondary: #985e36;
 		--bg-grad-ltr:  0deg, var(--c-primary) 0%, var(--c-secondary) 100%;
@@ -50,20 +52,22 @@ p, ul, h1, h2, h3, h4, h5, h6 {
 }
 
 picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 picture img {
-    width: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: top;
 }
 
 .container {
-    max-width: 1170px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+	max-width: 1230px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 button {
@@ -78,6 +82,14 @@ button {
 .btn-prim:focus,
 .btn-prim:hover {
 }
+
+
+/* Typography */
+.text__golden {
+
+}
+
+
 
 /* 
  * ==========

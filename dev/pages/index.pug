@@ -2,12 +2,738 @@ extends common/layout
 include common/mixins
 
 block content
+	- var phone = '+ 7 (800) 600-01-90';
+	- var vk = 'https://vk.com';
+	- var tiktok = 'https://tiktok.com';
+	- var tiktok = 'https://telegram.com';
+	- var yagla = '';
+	- var senler = '';
+	- var kia = '';
+	- var lenfilm = '';
+	- var license = '';
+	- var privacy = '';
+	- var designerLink = '';
+
+
+
 	main
-		button.pop-opener open
-		button not me
-		button.pop-opener open
-		.pop-wrap
-			button.pop-closer x
-			.pop-aligner
-				.pop
-					h1 Hello
+		header.header-wrapper
+			.container.header
+				.header-logo
+					img.header-logo(src="./img/hero/hero-logo.png", alt="")
+				nav
+					a.nav-item(href="#programm") Программа
+					a.nav-item(href="#pricing") Цены
+					a.nav-item(href="#testimonials") Отзывы
+				.header-contact
+					a.header-phone.button-thirdly(href="tel")
+					button.button-primary Заказать звонок
+
+
+		section.hero-wrapper
+			.hero.container
+				img.hero__character-left(src="./img/hero/nastya.png", alt="")
+				.hero-offer
+					p.hero__prephrase От создателей «Ядерного Чемоданчика»
+					h1.hero__title Перестань чувствовать себя<br> маркетологом-самозванцем
+					p.hero__subtitle 
+						span.text__golden и увеличь свой доход в 2,2 раза
+						span.hero__date до
+							time.hero__deadline 9 августа
+						span с помощью стратегического маркетинга
+
+					p.hero__caption *Программа соответствует гос.профстандарту профессии<br>маркетолог по уровням квалификации 6 и 7.
+					button.button-primary Забронировать место
+				.hero-bullets
+					.hero__warranty
+						img(src="./img/hero/warranty.png", alt="")
+						p.hero__bullet-text Окупишь обучение, изучив 35 из 95 часов<br>программы, или мы вернём деньги!
+					.hero__diploma
+						img(src="./img/hero/diploma.png", alt="")
+						p.hero__bullet-text Диплом государственного образца
+				img.hero__character-right(src="./img/hero/egor.png", alt="")
+
+
+
+
+		section.syndrome-wrapper
+			h2.section__title.syndrome__title Синдром самозванца, как он есть
+			.syndrome.container
+				img.syndrome__img(src="./img/syndrome/syndrome.png", alt="")
+			.swiper-container.syndrome-slider
+				.swiper-wrapper
+					
+					.swiper-slide.syndrome-slide
+						h3.syndrome-slide__title Не уверен в себе
+						ul.syndrome-slide-list
+							li.syndrome-slide__item Страшно продавать.
+							li.syndrome-slide__item Страшно искать клиентов.
+							li.syndrome-slide__item Страшно повышать чеки.
+							li.syndrome-slide__item Вдруг я возьму деньги и<br>подведу заказчика?
+							li.syndrome-slide__item Вдруг у него нет денег, чтобы заплатить мне больше? У него же дети, семья...
+					.swiper-slide.syndrome-slide
+						h3.syndrome-slide__title Прокрастинирую
+						ul.syndrome-slide-list
+							li.syndrome-slide__item Не могу начать действовать.
+							li.syndrome-slide__item Сижу над постом, майнд-картой, креативами, воронками и тупо не могу начать.
+							li.syndrome-slide__item Просыпаюсь, и думаю над тем что предстоит.
+							li.syndrome-slide__item В итоге весь день откладываю и обещаю, что завтра будет иначе.
+					.swiper-slide.syndrome-slide
+						h3.syndrome-slide__title Не кайфую
+						ul.syndrome-slide-list
+							li.syndrome-slide__item Обложиться работой, чтобы чувствовать себя важным, публиковать посты, какой ты занятой — это да.
+							li.syndrome-slide__item Но … заказчик давит дедлайнами, не понимает за что платит, лезет со своими правками и комментариями, не хочет делать то, что я предлагаю, а в итоге винит меня.
+							li.syndrome-slide__item Работаю 24/7, и не расту пропорционально в деньгах.
+					.swiper-slide.syndrome-slide
+						h3.syndrome-slide__title Выгораю
+						ul.syndrome-slide-list
+							li.syndrome-slide__item Не получил результатов = разочаровался = не могу действовать.
+							li.syndrome-slide__item Устаю. Просыпаюсь = уже устал.
+				.swiper-button-prev.syndrome-button-prev
+				.swiper-button-next.syndrome-button-next
+
+
+
+		.bad-marketing-wrapper
+			.container.bad-marketing
+				h2.section__title Знаешь, в чём дело?... Ты просто используешь не тот маркетинг!
+				.bad-marketing-character
+					p.bad-marketing-character__text Василий Петров, 
+						span.bad-marketing-character__spec маркетолог
+				.bad-marketing-text
+					p Пока что уровень индустрии маркетинга — это что-то типа:<br>сделать таргет, написать тексты, запилить сайт,
+					p.bad-marketing-text__em
+						em.text__golden Изучи стратегический маркетинг:
+						span Изучи стратегический маркетинг: от анализа целевой аудитории до подбора команды
+					p Заведи знакомства с опытными коллегами
+					p Автоматизируй и шаблонизируй рабочий процесс
+					p Научись поддерживать ресурсное состояние
+					p Обеспечь себя проектами с договорами от 3-х месяцев 
+					h3.text__golden Изменить ситуацию возможно вшм
+
+
+
+
+
+	section.look-wrapper
+		.look-wood.look-wood--top
+		.container.look
+			h2.section__title Смотри, как всё может быть!
+
+			.before-after-slider
+				.before-section
+					img.look__img.look__img-bad(src="./img/look/look-sad.png", alt="")
+					.look-before-text
+						h3.look__title Твоя жизнь до ВШМ
+						ul.look-list.look-list--before
+							li.look-list__item Пашешь 24/7 за копейки
+							li.look-list__item Продаёшь одну-две услуги, в которых<br>разбираешься сам
+							li.look-list__item Допекает синдром самозванца
+							li.look-list__item Постоянно ищешь клиентов
+							li.look-list__item Времени и сил не остаётся даже на себя
+			.after-section
+				.look-after-text
+					h3.look__title Твоя жизнь после ВШМ
+					ul.look-list.look-list--after
+						li.look-list__item Высокие чеки, хозяин своего времени
+						li.look-list__item Запускаешь комплексные проекты
+						li.look-list__item Уверен в себе, пользуешься репутацией эксперта
+						li.look-list__item Клиенты сами выходят на тебя
+						li.look-list__item Есть свободное время тратить заработанные деньги
+				.has-popup.look-img
+					button.pop-trigger
+					img.look__img.look__img--good(src="./img/look/ilnaz.png", alt="")
+		.look-wood.look-wood--bottom
+
+
+
+
+		section.about-wrapper
+			.container.about
+				h2.section__title.section__tile__underlined Как-то красиво всё выглядит... что вообще за ВШМ?
+				p.about-descr
+					strong.text__golden ВШМ
+					span  — это не онлайн-школа или университет, не очередной курс
+				.about-features
+					.about-features__item
+						img.about-features__icon(src="./img/about/.", alt="")
+						p Обучающая программа
+
+					.about-features-wrap
+						.about-features__item
+							img.about-features__icon(src="./img/about/.", alt="")
+							p Библиотека связок
+						.about-features__item
+							img.about-features__icon(src="./img/about/.", alt="")
+							p Биржа проектов
+
+					.about-features-wrap
+						.about-features__item
+							img.about-features__icon(src="./img/about/.", alt="")
+							p Система чатов
+						.about-features__item
+							img.about-features__icon(src="./img/about/.", alt="")
+							p Пополняемая<br>база знаний
+
+					.about-features-wrap
+						.about-features__item
+							img.about-features__icon(src="./img/about/.", alt="")
+							p Виртуальные<br>классы
+						.about-features__item
+							img.about-features__icon(src="./img/about/.", alt="")
+							p Набор раздаток
+
+					.about-features-wrap
+						.about-features__item
+							img.about-features__icon(src="./img/about/.", alt="")
+							p Регулярные<br>видеоконференции
+						.about-features__item
+							img.about-features__icon(src="./img/about/.", alt="")
+							p Buddying
+
+					.about-features__item
+						img.about-features__icon(src="./img/about/.", alt="")
+						p Штатный психолог
+				.about-description
+					.about-circles
+						span
+						span
+						span
+						span
+						span
+						span
+					h3.about__description
+						strong.text__golden Высшая Школа Маркетинга
+						|  —<br>
+						span это экосистема для маркетологов<br>со своими сервисами...
+					.has-popup.about-img
+						button.pop-trigger
+						img.about__img(src="./img/hero/nastya.png", alt="")
+
+
+
+
+
+		section.base-wrapper
+			.base.container
+				h2.section__title В основе обучения — 
+					button.button-thirdly.text__silver электив
+					|  «
+					button.button-thirdly.text__golden Ядерный Чемоданчик
+					| »
+				h3.section__subtitle Сначала ты проходишь бонусные курсы...
+				.has-popup.base-img
+					button.pop-trigger
+					img.base__img(src="./base/egor.png", alt="")
+				.base-slider-1-wrapper
+					h4.base-slider__title ... «Чистилище»
+
+					.base-slider-1.swiper-container
+						.swiper-wrapper
+							.swiper-slide.base-slide
+								h5.base-slide__title Что узнаешь:<br>Как здесь всё работает:
+								p.base-slide__item — про то, где проходит обучение
+								p.base-slide__item — про дедлайны и стоп-уроки
+								p.base-slide__item — про место сдачи ДЗ
+								p.base-slide__item — про связь с куратором и техподдержкой
+								p.base-slide__item — про общий чат и нишевые чаты на дискорде
+
+							.swiper-slide.base-slide
+								h5.base-slide__title Правильное планирование дня и доступы к сервисам ВШМ. 
+								p.base-slide__item — про экосистему чатов и доски для планирования в Миро.
+								p.base-slide__item — про организацию и психологическую подготовку к работе на удаленке. 
+								p.base-slide__item — про то, как всегда быть в ресурсе и избавиться от синдрома самозванца
+
+							.swiper-slide.base-slide
+								h5.base-slide__title Как и зачем делать курсовой проект.
+								p.base-slide__item про то, как работать с заказчиком так, чтобы после окончания курса у тебя был красивый и результативный кейс. И даже не один.
+
+							.swiper-slide.base-slide
+								h5.base-slide__title Как укоротить путь к цели
+								p.base-slide__item — про инструкции по прохождению курса
+								p.base-slide__item — про самый короткий путь к достижению твоей цели.
+								p.base-slide__item — 5 практических советов, как перестать просматривать любое обучение, как сериал, а сделать все уроки действительно полезными для тебя.
+
+							.swiper-slide.base-slide
+								h5.base-slide__title Финансы маркетолога
+								p.base-slide__item — про то, чем важно владеть маркетологу, чтобы делать 50к, 100к, 200к и выше. 
+								p.base-slide__item — про то, как разобраться с учетом своих доходов и расходов, 
+								p.base-slide__item — про инструменты для инвестирования.
+
+							.swiper-slide.base-slide
+								h5.base-slide__title Миссия и цели маркетолога
+								p.base-slide__item — про то,  зачем вообще нужна миссия, чем полезен маркетолог миру. 
+								p.base-slide__item — про то,  зачем нужны цели
+								p.base-slide__item — про то, какие цели бывают
+								p.base-slide__item — про то, как поставить цель
+								p.base-slide__item — про то, как планировать, чтобы достигать целей
+
+						.swiper-button-prev.base-1-button-prev
+						.swiper-button-next.base-1-button-next
+
+
+				.base-slider-2-wrapper
+					h4.base-slider__title ... и «Первые деньги»
+					.base-slider-2.swiper-container
+						.swiper-wrapper
+
+							.swiper-slide.base-slide
+								h5.base-slide__title Урок 1: Введение в профессию.<br>Главные навыки интернет-маркетолога.
+								p.base-slide__item — ТОП-3 профессии, в которых можно стартануть за 1–2 недели и заработать первые деньги. 
+								p.base-slide__item — Простой способ найти клиента. 
+								p.base-slide__item — ТОП-4 профессий, в которых можно заработать до 500 000р.
+								.base-slide-result
+									h6.base-slide-result__title Результат:
+									p.bease-slide-result__text узнаешь, какие профессии принесут тебе первые деньги, а какие позволят заработать до 500 000 руб. Освоишь первый способ найти клиента
+
+							.swiper-slide.base-slide
+								h5.base-slide__title Урок 2: Экспресс-анализ ЦА. 
+								p.base-slide__item — Первый ключевой навык маркетолога.
+								p.base-slide__item — Экспресс-анализ целевой аудитории на реальных примерах.
+								p.base-slide__item — Исследование целевой аудитории даже с телефона.
+								p.base-slide__item — Еще один способ найти первого клиента
+								.base-slide-result
+									h6.base-slide-result__title Результат:
+									p.bease-slide-result__text познакомишься с самым важным навыком маркетологов
+									p.bease-slide-result__text научишься делать экспресс-анализ ЦА 
+									p.bease-slide-result__text освоишь второй способ найти клиента
+
+							.swiper-slide.base-slide
+								h5.base-slide__title Урок 3: Чем зацепить ЦА? 
+								p.base-slide__item — Что такое триггеры?
+								p.base-slide__item — ТОП-3 самых простых и эффективных триггера. Как сделать, чтобы твои тексты целевая аудитория дочитывала до конца и просила еще.
+								p.base-slide__item — Ну и еще один способ найти клиента
+								.base-slide-result
+									h6.base-slide-result__title Результат:
+									p.bease-slide-result__text узнаешь, что такое триггеры
+									p.bease-slide-result__text научишься применять три триггера в своих текстах
+									p.bease-slide-result__text освоишь третий способ поиска клиента
+
+							.swiper-slide.base-slide
+								h5.base-slide__title Урок 4: Введение в профессию. 
+								p.base-slide__item — Второй ключевой навык маркетолога — копирайтинг
+								p.base-slide__item — Авторская формула продающего поста 
+								p.base-slide__item — Готовый шаблон эффективного продающего поста 
+								p.base-slide__item — Пошаговая инструкция, как сделать красивые картинки для постов с телефона.
+								.base-slide-result
+									h6.base-slide-result__title Результат:
+									p.bease-slide-result__text познакомишься со вторым ключевым навыком маркетолога
+									p.bease-slide-result__text получишь готовый шаблон продающего текста
+
+						.swiper-button-prev.base-2-button-prev
+						.swiper-button-next.base-2-button-next
+
+
+
+
+
+		section.programm-wrapper#programm
+			.container.programm
+				h2.section__title Основной курс —
+					|  3
+					button.button-thirdly.text__silver  драга 
+					|  13
+					button.button-thirdly.text__golden  раундов
+
+				.programm-drag.programm-drag-1
+					.programm-certificates
+						p.text__italic За каждый раунд ты получаешь скилл-карточку.
+						p.text__italic Скилл-карточка, подтверждает, что ты освоил(а) очередной навык маркетолога.
+						img.programm__skillcard-pic(src="./img/programm/programm-cards.png", alt="")
+						p.text__italic Соберёшь все скилл-карточки драга и получишь квалификационный сертификат первого уровня.
+						img.programm__certificate-pic(src="./img/programm/programm-certificate.png", alt="")
+					.programm-about
+						h3.programm__title
+							strong.text__golden Драг 1:
+							span МАРКЕТИНГОВАЯ СТРАТЕГИЯ.
+						h4.programm__subtitle Этот драг состоит из 4 раундов:
+						p.programm__content — Раунд 1: маркетинговая база
+						p.programm__content — Раунд 2: нейромаркетинг
+						p.programm__content — Раунд 3: упаковка
+						p.programm__content — Раунд 4: копирайтинг
+						button.button-thirdly.text__italic Подробнее о драге 1 
+						button.button-primary.button-drag-1 Получить пробный бесплатный доступ
+					.has-popup.drag-img
+						button.pop-trigger
+						img.drag__img(src="./img/programm/michail.png", alt="")
+
+
+				.programm-drag.programm-drag-2
+					.has-popup.drag-img
+						button.pop-trigger
+						img.drag__img(src="./img/programm/dim.png", alt="")
+					.programm-about
+						h3.programm__title
+							strong.text__golden Драг 2:
+							span ИНСТРУМЕНТЫ МАРКЕТОЛОГА
+						h4.programm__subtitle Этот драг состоит из 4 раундов + дополнительный мини-курс по дизайну сообществ ВК:
+						p.programm__content — Раунд 5: стратегии продаж и лидогенерации. Манимейкинг.
+						p.programm__content — Раунд 4: копирайтинг<br>часть 1: Вконтактер.
+						p.programm__content — Раунд 7: реклама и рекламные инструменты,<br>часть 2: Инстаграмер.
+						p.programm__content — Раунд 8: реклама и рекламные инструменты,<br>часть 3: Экспресс-лигденщик и ОКер.
+						button.button-thirdly.text__italic Подробнее о драге 2 
+					.programm-certificates
+						p.text__italic 4 скилл-карточки на драг.
+						img.programm__skillcard-pic(src="./img/programm/programm-cards.png", alt="")
+						p.text__italic Квалификационный сертификат<br>второго уровня.
+						img.programm__certificate-pic(src="./img/programm/programm-certificate.png", alt="")
+
+				.programm-drag.programm-drag-3
+					.programm-certificates
+						p.text__italic 4 скилл-карточки на драг.
+						img.programm__skillcard-pic(src="./img/programm/programm-cards.png", alt="")
+						p.text__italic Квалификационный сертификат<br>третьего уровня.
+						img.programm__certificate-pic(src="./img/programm/programm-certificate.png", alt="")
+					.programm-about
+						h3.programm__title
+							strong.text__golden Драг 3
+							span ДЕЛЕГИРОВАНИЕ и АВТОМАТИЗАЦИЯ МАРКЕТИНГОВЫХ ПРОЦЕССОВ. 
+						h4.programm__subtitle Этот драг состоит из 4 раундов:
+						p.programm__content — Раунд 9: конвертация заявок в деньги. Продажи.
+						p.programm__content — Раунд 10: автоворонки.
+						p.programm__content — Раунд 11: оффлайн и онлайн запуски.
+						p.programm__content — Раунд12: масштабирование маркетинга. 
+						button.button-thirdly.text__italic Подробнее о драге 3 
+					.has-popup.drag-img
+						button.pop-trigger
+						img.drag__img(src="./img/programm/nikolai.png", alt="")
+
+				.programm-drag.programm-drag-4
+					.programm-certificates
+						p.text__italic Получишь сертификат ВШМ
+						img.programm__skillcard-pic(src="./img/programm/programm-cards.png", alt="")
+						p.text__italic По запросу, получишь диплом государственного образца по квалификации «Маркетолог».
+						img.programm__certificate-pic(src="./img/hero/diploma.png", alt="")
+					.programm-about
+						h3.programm__title
+							strong.text__golden БОНУСНЫЙ РАУНД 13:
+							span  ФИШКИ и СЕКРЕТНЫЕ СЕКРЕТЫ 
+						h4.programm__subtitle Эти фишки по маркетингу собирались несколько лет. 
+						p.programm__content Здесь ты узнаешь 3 способа запустить сарафанку, как активировать триггер «инсайдинг» и хайпануть на нём, как раскочегарить активность у поста...  И это только малая часть, фишек будет столько, что трудно унести.
+						p.programm__content.text__golden.text__bold И дополнительный бонус: 
+						p.programm__content.text__bold бекстейдж Ядерного Чемоданчика
+					.has-popup.drag-img
+						h4.programm__subtitle.text__golden Результат:
+						p.programm__content-result у тебя на руках реально редкая информация, которую все просят, но которой делиться очень не хочется.
+						p.programm__content-result Фишки, которые в проработанной стратегии, давали плюсом сотни тысяч рублей к продажам.
+						img.drag__img(src="./img/programm/case.png", alt="")
+
+
+
+		section.learn-wrapper
+			.container.learn
+				.learn-faq
+					button.button-thirdly
+						span.text__golden — Про
+						span  курсовой проект
+					button.button-thirdly
+						span.text__golden — Про
+						span  платформу обучения
+					button.button-thirdly
+						span.text__golden — Про
+						span  домашки и бонусы
+					button.button-thirdly
+						span.text__golden — Про
+						span  гибкость и подстройку
+					button.button-thirdly
+						span.text__golden — Про
+						span  гарантии и сертификаты
+					button.button-thirdly
+						span.text__golden — Про
+						span  общение
+					button.button-thirdly
+						span.text__golden — Про
+						span  трудоустройство
+				.learn-text
+					h2.section__title Смотри, как ты будешь учиться:
+					p
+						span.text__golden — Эффективность программы подтверждена 
+							span.pupils 858
+							span учениками
+						span , за счёт британской методики выращивания профессионалов “Buddying”
+					p — Курс построен на опыте
+						strong.text__bold  205
+						|  реальных проектов с учётом трендов на ближайшие
+						strong.text__bold  5 лет
+						| . Включает бонусы
+						strong.text__bold от 10 лидеров маркетинга
+						|, чей суммарный месячный доход составляет
+						strong.text__bold 50 млн рублей
+						| . 
+					h3.section__subtitle Хочешь пообщаться с<br>консультирующим<br>маркетологом?
+					p Записывайся на индивидуальную консультацию к Богдану<br>Барбашову и узнай, какие быстрые результаты реально<br>получить по твоему проекту прямо сейчас!
+					button.button-primary Получить консультацию
+
+				.has-popup.drag-img
+					button.pop-trigger
+					img.drag__img(src="./img/learn/bogdan.png", alt="")
+
+
+
+
+
+
+
+		section.get-wrapper
+			.container.get
+				h2.section__title Что ты получаешь в ВШМ
+				.get-features
+					.get-features-item
+						img.get-features__img(src="./img/get/", alt="")
+						p.get-features__text Биржа проектов, чтобы взять в работу или отдать лишний
+
+					.get-features-wrapper
+						.get-features-item
+							img.get-features__img(src="./img/get/", alt="")
+							p.get-features__text Система чатов чтобы найти проект или<br>посоветоваться 
+						.get-features-item
+							img.get-features__img(src="./img/get/", alt="")
+							p.get-features__text Сотрудничество с<br>опытным маркетологом
+
+					.get-features-wrapper
+						.get-features-item
+							img.get-features__img(src="./img/get/", alt="")
+							p.get-features__text Библиотека связок,<br>чтобы не изобретать велосипед
+						.get-features-item
+							img.get-features__img(src="./img/get/", alt="")
+							p.get-features__text База фишек и шаблонов для автоматизации
+
+					.get-features-wrapper
+						.get-features-item
+							img.get-features__img(src="./img/get/", alt="")
+							p.get-features__text Сопровождения психолога, который разбирается в маркетинге
+						.get-features-item
+							img.get-features__img(src="./img/get/", alt="")
+							p.get-features__text Виртуальный класс для комфортной работы
+
+					.get-features-item
+						img.get-features__img(src="./img/get/", alt="")
+						p.get-features__text.text__extra +20 бонусных уроков от мега-экспертов рунета
+
+
+					img.get-logo(src="./img/get/get-logo.png", alt="")
+					img.get-cirgle(src="./img/get/get-circles.png", alt="")
+
+
+
+
+
+
+
+		section.testimonials-wrapper
+			.container.testimonials
+				h2.section__title Что изменилось у тех, кто уже в ВШМ:
+				.testimonials-stats 
+					p
+						span.text__golden Доход
+						|  вырос
+						span.text__golden  в
+							strong.text__bold  2-3 
+							|  раза
+
+					p
+						span.text__golden Доход
+						|  более
+						span.text__bold  100 000 
+						|  руб
+						span.text__golden  в месяц у
+							span.text__bold  30%
+							| учащихся
+
+					p
+						span.text__golden Режим работы —
+							span.text__bold  6,5
+							|  часов
+						|  в день
+				.testimonials-list
+					div.testimonials-item
+						img.testimonials__img(src="./img/testimonials/testimonials-1.png", alt="")
+						h3.testimonials__name Ольга Кувикова
+						p.testimonials__text Доход был 30к<br>Сейчас уже <del>88-128к</del><br>Более 200к
+						button.button-thirdly Смотреть отзыв
+
+					div.testimonials-item
+						img.testimonials__img(src="./img/testimonials/testimonials-2.png", alt="")
+						h3.testimonials__name Дмитрий Рязанов
+						p.testimonials__text После обучени з/п выросла в 2 раза и продолжает расти
+						button.button-thirdly Смотреть отзыв
+					div.testimonials-item
+						img.testimonials__img(src="./img/testimonials/testimonials-3.png", alt="")
+						h3.testimonials__name Дарина Терихова
+						p.testimonials__text Обучаясь на очном зарабатываю 40к в месяц в 19 лет
+						button.button-thirdly Смотреть отзыв
+					div.testimonials-item
+						img.testimonials__img(src="./img/testimonials/testimonials-4.png", alt="")
+						h3.testimonials__name Елена Алексеева
+						p.testimonials__text Доход вырос из 50к в 150к и это не предел
+						button.button-thirdly Смотреть отзыв
+					div.testimonials-item
+						img.testimonials__img(src="./img/testimonials/testimonials-5.png", alt="")
+						h3.testimonials__name Наталья Гордон
+						p.testimonials__text После ЯЧ работаю в РосНано
+						button.button-thirdly Смотреть отзыв
+					div.testimonials-item
+						img.testimonials__img(src="./img/testimonials/testimonials-6.png", alt="")
+						h3.testimonials__name Родион Казанцев
+						p.testimonials__text Вписался в движуху, конец декабря — закрыл 200к+, январь — 340к+
+						button.button-thirdly Смотреть отзыв
+					div.testimonials-item
+						img.testimonials__img(src="./img/testimonials/testimonials-7.png", alt="")
+						h3.testimonials__name Натали Жагуло 
+						p.testimonials__text До цели в 200к осталось 3,5 тысячи и 2 дня
+						button.button-thirdly Смотреть отзыв
+					div.testimonials-item
+						img.testimonials__img(src="./img/testimonials/testimonials-8.png", alt="")
+						h3.testimonials__name Андрей Петров
+						p.testimonials__text До обучения пахал на заводе. Сейчас доход уже превысил З/П
+						button.button-thirdly Смотреть отзыв
+				a.button-primary показать ещё кейсы
+
+
+
+
+		section.partners-wrapper
+			.container.partners
+				h2.section__title.partners__title 
+					span.text__golden А вот с кем они
+					span работают сейчас:
+
+				.partners-list
+					.partner-item 
+						img.partner__img(src="./img/partners/partners-bm.png", alt="")
+					.partner-item 
+						img.partner__img(src="./img/partners/partners-audi.png", alt="")
+					.partner-item 
+						img.partner__img(src="./img/partners/partners-tele2.png", alt="")
+					.partner-item 
+						img.partner__img(src="./img/partners/partners-renault.png", alt="")
+					.partner-item 
+						img.partner__img(src="./img/partners/partners-volvo.png", alt="")
+					.partner-item 
+						img.partner__img(src="./img/partners/partners-kirieshki.png", alt="")
+					.partner-item 
+						img.partner__img(src="./img/partners/partners-peugeot.png", alt="")
+					.partner-item 
+						img.partner__img(src="./img/partners/partners-ford.png", alt="")
+					.partner-item 
+						img.partner__img(src="./img/partners/partners-hackathon.png", alt="")
+				h3.section__subtitle.partners__subtitle Наше агентство Dr. i-Bolit
+					span.text__golden  стабильно предоставляет проекты
+					|  выпускникам
+
+
+		section.pricing-wrapper#pricing
+			.container.pricing
+				h2.section__title.pricing__title Как думаешь, сколько это стоит? 
+				p.pricing__price 5 000 рублей/месяц
+				p.pricing__descriptor Пять тысяч рублей в месяц
+				.pricing-scheme
+					.pricing-in
+						img.in__img(src="./img/scheme/scheme-in.png", alt="")
+						p.pricing-action отдаешь ВШМ
+					.pricing-card
+						img.pricing__card(src="./img/scheme/scheme-card.png", alt="")
+					.pricing-out
+						img.pricing__out(src="./img/scheme/scheme-out.png", alt="")
+						p.scheme__project Проекты 
+						p.scheme__project Постоянная прокачка
+						p.scheme__project Рабочие фишки
+						p.scheme__project Консультации профи
+						p.scheme__project Инструкции
+						p.scheme__project Чек-личты
+						p.scheme__project Майнд-карты
+						p.pricing-action Получаешь от ВШМ
+				button.button-primary.pricing-button хочу в вшм
+
+
+
+
+
+		section.team-wrapper
+			.container.team
+				h2.section__title.team__title Что делает команда «Высшей Школы Маркетинга» в полях?
+				h3.section__subtitle.team__subtitle.text__golden За последние 2 года сделали в 205 проектах такие результаты
+
+				.team-about
+					ul.team-bullets
+						li.team-bullet Привели 700+ гостей на открытие роллердрома Омска и 17 138 624 рублей выручки за год с одного филиала.
+						li.team-bullet Заработали  977 500руб. выручки в автошколу, при бюджете 65 320руб.
+						li.team-bullet Увеличили месячный доход с 500 000руб. до 3 000 000руб. за 4 месяца в обучении массажистов.
+						li.team-bullet Увеличили в 3 раза прибыль микро-бизнеса по автоподбору за 1 год.
+					button.team-thanks-button
+						img(src="./img/team/team-thanks.png", alt="")
+						span Смотреть благодарности 
+				.team-clients
+					img.team__img(src="./team/team.-pic.png", alt="")
+					h3.team-clients__title Клиенты команды:
+					div.team-client-list
+						a.team-clients-item(href=`${yagla}`)
+							span.team-clients__logo-wrap
+								img.team-clients__logo(src="./img/team-yagla.png", alt="")
+							p Yagla
+
+						a.team-clients-item(href=`${senler}`)
+							span.team-clients__logo-wrap
+								img.team-clients__logo(src="./img/team-senler.png", alt="")
+							p Senler 
+
+						a.team-clients-item(href=`${kia}`)
+							span.team-clients__logo-wrap
+								img.team-clients__logo(src="./img/team-kia.png", alt="")
+							p KIA
+
+						a.team-clients-item(href=`${lenfilm}`)
+							span.team-clients__logo-wrap
+								img.team-clients__logo(src="./img/team-lenfilm.png", alt="")
+							p «Ленфильм»
+
+
+
+		section.changes-wrapper
+			.container.changes
+				h2.section__title Готов(а) к изменениям прямо сегодня?
+				p.section__subtitle.changes__subtitle Тогда вступай в ряды студентов «Высшей Школы Маркетинга» и забирай один из подарков на выбор 
+				.changes-course-list
+					.changes-course
+						h3.changes-course__title.text__golden Курс<br>«Картель Маркетологов»
+						p Пошаговые уроки, как маркетологу за 1 день привлечь заказчиков, продать на высокие чеки и научиться 8 способами гарантировать результат в проекте
+
+					.changes-course
+						h3.changes-course__title.text__golden Курс «Маркетинг в Кайф»
+						p Пошаговые уроки, как прийти к партнёрскому маркетингу и научиться работать с заказчиком за лиды или за %
+
+				.changes-offer
+					h3.changes-offer__title Внимание! Предложение актуально всего 10 часов
+					button.primary-button Вступить в ВШМ
+					p.changes-people
+						span нами уже 
+						.changes-people__counter 956
+						span человек
+
+
+
+		.footer-wrapper
+			footer.container.footer
+				.footer-info
+					a.footer-link(href=`${privacy}`)
+					a.footer-link(href=`${license}`)
+					p.footer__caption Вся предоставленная на сайте информация ни при каких условиях не является публичной афертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ
+				a(href=`${designerLink}`)
+					img(src="./img/common/desiginer-logo.png", alt="")
+				.footer-socials
+					a(href=`${telegram}`)
+						+telegramIcon({
+							color: '#dca067',
+							className: 'footer-socials-item'
+						})
+					a(href=`${tiktok}`)
+						+tiktokIcon({
+							color: '#dca067',
+							className: 'footer-socials-item'
+						})
+					a(href=`${vk}`)
+						+vkIcon({
+							color: '#dca067',
+							className: 'footer-socials-item'
+						})
+

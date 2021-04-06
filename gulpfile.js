@@ -409,7 +409,6 @@ exports.build = build
 // ===========
 const prep = gulp.series(
 	gulp.series(
-		php,
 		htaccess,
 		getWebp,
 		convertFonts
