@@ -1,0 +1,57 @@
+.pop-opened--html {
+	overflow: hidden;
+}
+@media (min-width: 1400px) and (max-width: 1500px){
+	.pop-opened--html {
+		margin-right: 15px;
+	}
+}
+
+.pop-wrap {
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.3);
+	transition: all 0.3s;
+	opacity: 0;
+	z-index: 100000000;
+}
+.pop-wrap--opened {
+	visibility: visible;
+	opacity: 1;
+}
+.pop-aligner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+}
+.pop-closer {
+	border: none;
+	border-radius: 0;
+	line-height: 1;
+	font-weight: 600;
+	font-size: 28px;
+	background: rgba(255,255,255, 0.3);
+	color: #fff;
+	position: absolute;
+	top: 1%;
+	right: 1%;
+}
+
+
+/* TEMP */
+.pop {
+	transform: scale(0.2);
+	transition: all 0.3s;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.pop--opened {
+	transform: scale(1);
+}

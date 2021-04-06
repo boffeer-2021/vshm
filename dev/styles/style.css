@@ -1,0 +1,90 @@
+@import 'modal/modal.css';
+
+
+
+
+/* 
+ * === Table of content ===
+ *
+ * 1. Globals
+ *
+ * 2. 
+ *
+ * */
+
+
+/* 
+ * ==========
+ * 1. Globals
+ * ==========
+ * */
+:root {
+    --c-font: #333;
+    --c-font-2: #b9b9b9;
+		--c-font-primary: #d59b64;
+		--c-primary: #dca067;
+		--c-secondary: #985e36;
+		--bg-grad-ltr:  0deg, var(--c-primary) 0%, var(--c-secondary) 100%;
+		--bg-grad-rtl:  0deg, var(--c-secondary) 0%, var(--c-primary) 100%;
+		--bg: #080808;
+
+
+		--f-title-1: 40px;
+		--f-title-2: 36px;
+		--f-regular: 18px;
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    color: var(--c-font);
+}
+
+p, ul, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+picture img {
+    width: 100%;
+}
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+button {
+    cursor: pointer;
+}
+.btn-prim {
+    box-sizing: border-box;
+    border: none;
+    transition: all 0.3s;
+}
+
+.btn-prim:focus,
+.btn-prim:hover {
+}
+
+/* 
+ * ==========
+ * 2. 
+ * ==========
+ * */
+
+
+
+@import './media.css';

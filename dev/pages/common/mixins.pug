@@ -1,0 +1,8 @@
+include icons
+
+
+mixin pic(data)
+    picture(class= data.pictureClass)
+        source(srcset= data.src+".webp 1x,"+data.src+"@2x.webp 2x", type="image/webp")
+        img(class= data.imgClass, src= data.src+data.ext alt= data.alt)
+        img(class= data.imgClass, src= data.src+data.ext, srcset= data.src+"@2x"+data.ext+" 2x", alt= data.alt)
