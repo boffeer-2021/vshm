@@ -288,7 +288,7 @@ span {
 	border: 2px solid var(--c-primary);
 	border-radius: 12px;
 	color: var(--c-primary);
-	max-height: 43px;
+	max-height: 35px;
 }
 .swiper-button-next {
 	right: 0;
@@ -296,6 +296,7 @@ span {
 .swiper-button-prev {
 	left: 0;
 }
+
 
 .button-thirdly {
 	background: none;
@@ -368,9 +369,10 @@ span {
 /* Hero */
 .hero-wrapper {
 	background: url(./../img/learn/learn-bg.png);
-	padding-bottom: 45px;
+	padding-bottom: 185px;
 	background-size: contain;
 	background-repeat: no-repeat;
+
 }
 .hero {
 	position: relative;
@@ -442,12 +444,17 @@ span {
 }
 .hero-warranty::after {
 	content: '';
-	background: url(./../img/hero/arrow.png);
+	background: url(./../img/hero/hero-arrow.png);
 	display: block;
 	width: 300px;
-	height: 150px;
-	background-size: cover;
-	transform: scale(1.5, 1);
+	height: 230px;
+	background-size: contain;
+	background-position: right;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: -30px;
+	left: 190px;
+	/* transform: scale(1.5, 1); */
 }
 .hero-warranty__img {
 	max-width: 130px;
@@ -496,6 +503,7 @@ span {
 .syndrome__img {
 	max-width: 571px;
 	margin-left: 100px;
+	margin-right: 25px;
 }
 .syndrome-slider {
 	max-width: 400px;
@@ -513,7 +521,7 @@ span {
 	font-weight: 700;
 	color: var(--c-font-primary);
 	font-family: 'Akrobat', sans-serif;
-	margin-bottom: 40px;
+	margin-bottom: 45px;
 }
 .syndrome-slide__item {
 	list-style: none;
@@ -543,6 +551,10 @@ span {
 }
 .syndrome-slide__item::before {
 	transform: rotate(-45deg);
+}
+.swiper-button-prev.syndrome-button-prev,
+.swiper-button-next.syndrome-button-next {
+	top: 43%
 }
 
 
@@ -668,7 +680,6 @@ span {
 	text-transform: none;
 	margin-bottom: 50px;
 }
-
 
 
 .before-after-slider__controller {
