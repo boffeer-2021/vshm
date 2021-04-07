@@ -1,0 +1,6 @@
+@media (min-width: 1300px) {
+	.swiper-button-prev.base-2-button-prev,
+	.swiper-button-next.base-2-button-next {
+		top: 35%;
+	}
+}
