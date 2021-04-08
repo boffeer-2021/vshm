@@ -3,16 +3,24 @@ include common/mixins
 
 block content
 	- var phone = '+7 (800) 600-01-90';
-	- var vk = 'https://vk.com';
-	- var tiktok = 'https://tiktok.com';
-	- var tiktok = 'https://telegram.com';
-	- var yagla = '';
-	- var senler = '';
-	- var kia = '';
-	- var lenfilm = '';
+	- var vk = ' https://vk.com/hellosales';
+	- var tiktok = 'https://vm.tiktok.com/ZSJ6nC9kQ/';
+	- var tiktok = 'https://t.me/babki_na_udalenke ';
+	- var yagla = 'https://yagla.ru/';
+	- var senler = 'https://senler.ru/';
+	- var kia = 'https://www.kia.ru/';
+	- var lenfilm = 'https://www.lenfilm.ru/';
 	- var license = '';
 	- var privacy = '';
 	- var designerLink = '';
+
+
+	- var giftPop = 'https://yadi.sk/i/XTZa8suuedzD1A';
+
+	- var buttonPricing = 'https://nadoje.getcourse.ru/hsm_1month ';
+	- var buttonCases = 'https://higher-school-of-marketing.com/keis';
+	- var buttonLastForm = 'https://nadoje.getcourse.ru/hsm_1month_fast';
+	- var demo ='https://nadoje.getcourse.ru/hsm_demo';
 
 
 
@@ -26,7 +34,7 @@ block content
 					a.nav-item(href="#pricing") Цены
 					a.nav-item(href="#testimonials") Отзывы
 				.header-contact
-					a.header-phone.button-thirdly(href="tel") #{phone}
+					a.header-phone.button-thirdly(href="tel" end="600-01-90") #{phone}
 					button.button-primary.button__callback Заказать звонок
 
 
@@ -75,14 +83,14 @@ block content
 							h3.syndrome-slide__title Прокрастинирую
 							ul.syndrome-slide-list
 								li.syndrome-slide__item Не могу начать действовать.
-								li.syndrome-slide__item Сижу над постом, майнд-картой, креативами, воронками и тупо не могу начать.
+								li.syndrome-slide__item Сижу над постом, майнд-картой, креативами, воронками и<br>тупо не могу начать.
 								li.syndrome-slide__item Просыпаюсь, и думаю над тем что предстоит.
 								li.syndrome-slide__item В итоге весь день откладываю и обещаю, что завтра будет иначе.
 						.swiper-slide.syndrome-slide
 							h3.syndrome-slide__title Не кайфую
 							ul.syndrome-slide-list
 								li.syndrome-slide__item Обложиться работой, чтобы чувствовать себя важным, публиковать посты, какой ты занятой — это да.
-								li.syndrome-slide__item Но … заказчик давит дедлайнами, не понимает за что платит, лезет со своими правками и комментариями, не хочет делать то, что я предлагаю, а в итоге винит меня.
+								li.syndrome-slide__item Но … заказчик давит дедлайнами, не понимает за что платит,<br>лезет со своими правками и<br>комментариями, не хочет<br>делать то, что я предлагаю, а в итоге винит меня.
 								li.syndrome-slide__item Работаю 24/7, и не расту пропорционально в деньгах.
 						.swiper-slide.syndrome-slide
 							h3.syndrome-slide__title Выгораю
@@ -146,7 +154,11 @@ block content
 							li.look-list__item.look-list__item--after Клиенты сами выходят на тебя
 							li.look-list__item.look-list__item--after Есть свободное время тратить<br>заработанные деньги
 					.has-popup.look-img.look-img--good
-						button.pop-trigger
+						button.pop-trigger.pop-trigger--ilnaz
+							span.pop-circle-1
+							span.pop-circle-2
+							span.pop-circle-3
+							span.pop-hover-glower
 						img.look__img.look__img--good(src="./img/look/ilnaz.png", alt="")
 			.look-wood.look-wood--bottom
 				.look-wood-small
@@ -218,7 +230,11 @@ block content
 							span.about__name  —<br>
 							span это экосистема для маркетологов<br>со своими сервисами...
 				.has-popup.about-img
-					button.pop-trigger
+					button.pop-trigger.pop-trigger--nastya
+						span.pop-circle-1
+						span.pop-circle-2
+						span.pop-circle-3
+						span.pop-hover-glower
 					img.about__img(src="./img/about/about-nastya.png", alt="")
 
 
@@ -234,7 +250,15 @@ block content
 			h3.section__subtitle.base__subtitle Сначала ты проходишь бонусные курсы...
 			.base.container
 				.has-popup.base-img
-					button.pop-trigger
+					button.pop-trigger.pop-trigger--egor
+						span.pop-circle-1
+						span.pop-circle-2
+						span.pop-circle-3
+						span.pop-hover-glower
+						span.pop-circle-1
+						span.pop-circle-2
+						span.pop-circle-3
+						span.pop-hover-glower
 					img.base__img(src="./img/base/egor.png", alt="")
 					.base-circles
 						span.base-circle-1.base-circle
@@ -249,42 +273,48 @@ block content
 					.base-slider-1.swiper-container
 						.swiper-wrapper
 							.swiper-slide.base-slide
-								h5.base-slide__title Что узнаешь:<br>Как здесь всё работает:
-								p.base-slide__item — про то, где проходит обучение
-								p.base-slide__item — про дедлайны и стоп-уроки
-								p.base-slide__item — про место сдачи ДЗ
-								p.base-slide__item — про связь с куратором и техподдержкой
-								p.base-slide__item — про общий чат и нишевые чаты на дискорде
+								.base-slide-content
+									h5.base-slide__title Что узнаешь:<br>Как здесь всё работает:
+									p.base-slide__item — про то, где проходит обучение
+									p.base-slide__item — про дедлайны и стоп-уроки
+									p.base-slide__item — про место сдачи ДЗ
+									p.base-slide__item — про связь с куратором и техподдержкой
+									p.base-slide__item — про общий чат и нишевые чаты на дискорде
 
 							.swiper-slide.base-slide
-								h5.base-slide__title Правильное планирование дня и доступы к сервисам ВШМ. 
-								p.base-slide__item — про экосистему чатов и доски для планирования в Миро.
-								p.base-slide__item — про организацию и психологическую подготовку к работе на удаленке. 
-								p.base-slide__item — про то, как всегда быть в ресурсе и избавиться от синдрома самозванца
+								.base-slide-content
+									h5.base-slide__title Правильное планирование дня и доступы к сервисам ВШМ. 
+									p.base-slide__item — про экосистему чатов и доски для планирования в Миро.
+									p.base-slide__item — про организацию и психологическую подготовку к работе на удаленке. 
+									p.base-slide__item — про то, как всегда быть в ресурсе и избавиться от синдрома самозванца
 
 							.swiper-slide.base-slide
-								h5.base-slide__title Как и зачем делать курсовой проект.
-								p.base-slide__item про то, как работать с заказчиком так, чтобы после окончания курса у тебя был красивый и результативный кейс. И даже не один.
+								.base-slide-content
+									h5.base-slide__title Как и зачем делать курсовой проект.
+									p.base-slide__item про то, как работать с заказчиком так, чтобы после окончания курса у тебя был красивый и результативный кейс. И даже не один.
 
 							.swiper-slide.base-slide
-								h5.base-slide__title Как укоротить путь к цели
-								p.base-slide__item — про инструкции по прохождению курса
-								p.base-slide__item — про самый короткий путь к достижению твоей цели.
-								p.base-slide__item — 5 практических советов, как перестать просматривать любое обучение, как сериал, а сделать все уроки действительно полезными для тебя.
+								.base-slide-content
+									h5.base-slide__title Как укоротить путь к цели
+									p.base-slide__item — про инструкции по прохождению курса
+									p.base-slide__item — про самый короткий путь к достижению твоей цели.
+									p.base-slide__item — 5 практических советов, как перестать просматривать любое обучение, как сериал, а сделать все уроки действительно полезными для тебя.
 
 							.swiper-slide.base-slide
-								h5.base-slide__title Финансы маркетолога
-								p.base-slide__item — про то, чем важно владеть маркетологу, чтобы делать 50к, 100к, 200к и выше. 
-								p.base-slide__item — про то, как разобраться с учетом своих доходов и расходов, 
-								p.base-slide__item — про инструменты для инвестирования.
+								.base-slide-content
+									h5.base-slide__title Финансы маркетолога
+									p.base-slide__item — про то, чем важно владеть маркетологу, чтобы делать 50к, 100к, 200к и выше. 
+									p.base-slide__item — про то, как разобраться с учетом своих доходов и расходов, 
+									p.base-slide__item — про инструменты для инвестирования.
 
 							.swiper-slide.base-slide
-								h5.base-slide__title Миссия и цели маркетолога
-								p.base-slide__item — про то,  зачем вообще нужна миссия, чем полезен маркетолог миру. 
-								p.base-slide__item — про то,  зачем нужны цели
-								p.base-slide__item — про то, какие цели бывают
-								p.base-slide__item — про то, как поставить цель
-								p.base-slide__item — про то, как планировать, чтобы достигать целей
+								.base-slide-content
+									h5.base-slide__title Миссия и цели маркетолога
+									p.base-slide__item — про то,  зачем вообще нужна миссия, чем полезен маркетолог миру. 
+									p.base-slide__item — про то,  зачем нужны цели
+									p.base-slide__item — про то, какие цели бывают
+									p.base-slide__item — про то, как поставить цель
+									p.base-slide__item — про то, как планировать, чтобы достигать целей
 
 						.swiper-button-prev.base-1-button-prev
 						.swiper-button-next.base-1-button-next
@@ -296,47 +326,51 @@ block content
 						.swiper-wrapper
 
 							.swiper-slide.base-slide
-								h5.base-slide__title Урок 1: Введение в профессию.<br>Главные навыки интернет-маркетолога.
-								p.base-slide__item — ТОП-3 профессии, в которых можно стартануть за 1–2 недели и заработать первые деньги. 
-								p.base-slide__item — Простой способ найти клиента. 
-								p.base-slide__item — ТОП-4 профессий, в которых можно заработать до 500 000р.
-								.base-slide-result
-									h6.base-slide-result__title Результат:
-									p.base-slide-result__text узнаешь, какие профессии принесут тебе первые деньги, а какие позволят заработать до 500 000 руб. Освоишь первый способ найти клиента.
+								.base-slide-content
+									h5.base-slide__title Урок 1: Введение в профессию.<br>Главные навыки интернет-маркетолога.
+									p.base-slide__item — ТОП-3 профессии, в которых можно стартануть за 1–2 недели и заработать первые деньги. 
+									p.base-slide__item — Простой способ найти клиента. 
+									p.base-slide__item — ТОП-4 профессий, в которых можно заработать до 500 000р.
+									.base-slide-result
+										h6.base-slide-result__title Результат:
+										p.base-slide-result__text узнаешь, какие профессии принесут тебе первые деньги, а какие позволят заработать до 500 000 руб. Освоишь первый способ найти клиента.
 
 							.swiper-slide.base-slide
-								h5.base-slide__title Урок 2: Экспресс-анализ ЦА. 
-								p.base-slide__item — Первый ключевой навык маркетолога.
-								p.base-slide__item — Экспресс-анализ целевой аудитории на реальных примерах.
-								p.base-slide__item — Исследование целевой аудитории даже с телефона.
-								p.base-slide__item — Еще один способ найти первого клиента
-								.base-slide-result
-									h6.base-slide-result__title Результат:
-									p.base-slide-result__text познакомишься с самым важным навыком маркетологов
-									p.base-slide-result__text научишься делать экспресс-анализ ЦА 
-									p.base-slide-result__text освоишь второй способ найти клиента
+								.base-slide-content
+									h5.base-slide__title Урок 2: Экспресс-анализ ЦА. 
+									p.base-slide__item — Первый ключевой навык маркетолога.
+									p.base-slide__item — Экспресс-анализ целевой аудитории на реальных примерах.
+									p.base-slide__item — Исследование целевой аудитории даже с телефона.
+									p.base-slide__item — Еще один способ найти первого клиента
+									.base-slide-result
+										h6.base-slide-result__title Результат:
+										p.base-slide-result__text познакомишься с самым важным навыком маркетологов
+										p.base-slide-result__text научишься делать экспресс-анализ ЦА 
+										p.base-slide-result__text освоишь второй способ найти клиента
 
 							.swiper-slide.base-slide
-								h5.base-slide__title Урок 3: Чем зацепить ЦА? 
-								p.base-slide__item — Что такое триггеры?
-								p.base-slide__item — ТОП-3 самых простых и эффективных триггера. Как сделать, чтобы твои тексты целевая аудитория дочитывала до конца и просила еще.
-								p.base-slide__item — Ну и еще один способ найти клиента
-								.base-slide-result
-									h6.base-slide-result__title Результат:
-									p.base-slide-result__text узнаешь, что такое триггеры
-									p.base-slide-result__text научишься применять три триггера в своих текстах
-									p.base-slide-result__text освоишь третий способ поиска клиента
+								.base-slide-content
+									h5.base-slide__title Урок 3: Чем зацепить ЦА? 
+									p.base-slide__item — Что такое триггеры?
+									p.base-slide__item — ТОП-3 самых простых и эффективных триггера. Как сделать, чтобы твои тексты целевая аудитория дочитывала до конца и просила еще.
+									p.base-slide__item — Ну и еще один способ найти клиента
+									.base-slide-result
+										h6.base-slide-result__title Результат:
+										p.base-slide-result__text узнаешь, что такое триггеры
+										p.base-slide-result__text научишься применять три триггера в своих текстах
+										p.base-slide-result__text освоишь третий способ поиска клиента
 
 							.swiper-slide.base-slide
-								h5.base-slide__title Урок 4: Введение в профессию. 
-								p.base-slide__item — Второй ключевой навык маркетолога — копирайтинг
-								p.base-slide__item — Авторская формула продающего поста 
-								p.base-slide__item — Готовый шаблон эффективного продающего поста 
-								p.base-slide__item — Пошаговая инструкция, как сделать красивые картинки для постов с телефона.
-								.base-slide-result
-									h6.base-slide-result__title Результат:
-									p.base-slide-result__text познакомишься со вторым ключевым навыком маркетолога
-									p.base-slide-result__text получишь готовый шаблон продающего текста
+								.base-slide-content
+									h5.base-slide__title Урок 4: Введение в профессию. 
+									p.base-slide__item — Второй ключевой навык маркетолога — копирайтинг
+									p.base-slide__item — Авторская формула продающего поста 
+									p.base-slide__item — Готовый шаблон эффективного продающего поста 
+									p.base-slide__item — Пошаговая инструкция, как сделать красивые картинки для постов с телефона.
+									.base-slide-result
+										h6.base-slide-result__title Результат:
+										p.base-slide-result__text познакомишься со вторым ключевым навыком маркетолога
+										p.base-slide-result__text получишь готовый шаблон продающего текста
 
 						.swiper-button-prev.base-2-button-prev
 						.swiper-button-next.base-2-button-next
@@ -380,7 +414,11 @@ block content
 							button.button-thirdly.text__italic.button-drag-more.button-drag-more-1 Подробнее о драге 1 
 							button.button-primary.button-drag-1 Получить пробный бесплатный доступ
 						.has-popup.drag-img
-							button.pop-trigger
+							button.pop-trigger.pop-trigger--mikhail
+								span.pop-circle-1
+								span.pop-circle-2
+								span.pop-circle-3
+								span.pop-hover-glower
 							img.drag__img.img__mikhail(src="./img/programm/michail.png", alt="")
 
 
@@ -388,7 +426,11 @@ block content
 				.container
 					.programm-drag.programm-drag-2
 						.has-popup.drag-img
-							button.pop-trigger
+							button.pop-trigger.pop-trigger--dim
+								span.pop-circle-1
+								span.pop-circle-2
+								span.pop-circle-3
+								span.pop-hover-glower
 							img.drag__img.img__dim(src="./img/programm/dim.png", alt="")
 						.programm-about
 							h3.programm-about__title
@@ -425,7 +467,11 @@ block content
 							p.programm__content — Раунд12: масштабирование маркетинга. 
 							button.button-thirdly.text__italic.button-drag-more.button-drag-more-3 Подробнее о драге 2  Подробнее о драге 3 
 						.has-popup.drag-img
-							button.pop-trigger
+							button.pop-trigger.pop-trigger--nikolai
+								span.pop-circle-1
+								span.pop-circle-2
+								span.pop-circle-3
+								span.pop-hover-glower
 							img.drag__img(src="./img/programm/nikolai.png", alt="")
 
 			.programm-drag-wrapper
@@ -504,7 +550,11 @@ block content
 					button.button-primary Получить консультацию
 
 				.has-popup.drag-img.img-bogdan
-					button.pop-trigger
+					button.pop-trigger.pop-trigger--bogdan
+						span.pop-circle-1
+						span.pop-circle-2
+						span.pop-circle-3
+						span.pop-hover-glower
 					img.drag__img.img__bogdan(src="./img/learn/bogdan.png", alt="")
 
 
@@ -560,7 +610,7 @@ block content
 
 
 
-		section.testimonials-wrapper
+		section.testimonials-wrapper#testimonials
 			.container.testimonials
 				h2.section__title.testimonials__title Что изменилось у тех, кто уже в ВШМ:
 				.testimonials-stats 
@@ -578,7 +628,7 @@ block content
 						|  руб
 						span.text__golden  в месяц у
 							span.text__bold  30%
-							| учащихся
+							|  учащихся
 
 					p
 						span.text__golden Режим работы —
@@ -778,3 +828,35 @@ block content
 							className: 'footer-socials-item__icon'
 						})
 
+
+
+
+
+
+
+
+
+		.popups
+			.main-callback-pop
+				form.callback-form(method="POST")
+					p.text__pop-centered Привет, как тебя зовут?
+					.input-wrapper
+						input(
+							name="name"
+							type="text"
+							placeholder="Василий"
+						required).input-regular
+					.input-wrapper
+						input(name="phone" 
+						type="text"
+						placeholder="Введи номер телефона"
+						required).input-regular
+					.form-socials
+						a(href=`${whatsapp}`).form-socials__item
+							+whatsappIcon({className: 'form-socials__icon', color: '#fff'})
+						a(href=`${vk}`).form-socials__item
+							+vkIcon({className: 'form-socials__icon', color: '#fff'})
+						a(href=`${telegram}`).form-socials__item
+							+telegramIconCircle({className: 'form-socials__icon', color: '#fff'})
+					button.button-primary.callback-form__button(type="submit") Забронировать место
+					p.form-privacy Нажимая на кнопку, вы подтверждаете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности
