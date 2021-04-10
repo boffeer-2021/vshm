@@ -53,7 +53,7 @@ block content
 						span с помощью стратегического маркетинга
 
 					p.hero__caption *Программа соответствует гос.профстандарту профессии<br>маркетолог по уровням квалификации 6 и 7.
-					button.button-primary Забронировать место
+					button.button-primary.hero-button Забронировать место
 				.hero-bullets
 					.hero-warranty
 						img.hero-warranty__img(src="./img/hero/warranty.png", alt="")
@@ -185,45 +185,45 @@ block content
 					span  — это не онлайн-школа или университет, не очередной курс<br>по профессия в интернете.
 				.about-features
 					.about-features-wrap--single
-						button.about-features__item
+						button.about-features__item.about-features__item--learn
 							img.about-features__icon(src="./img/about/1.png", alt="")
 							span.about-features__text Обучающая программа
 
 					.about-features-wrap.about-features-wrap-1
-						button.about-features__item
+						button.about-features__item.about-features__item--combos
 							img.about-features__icon(src="./img/about/2.png", alt="")
 							span.about-features__text Библиотека связок
-						button.about-features__item
+						button.about-features__item.about-features__item--projects
 							img.about-features__icon(src="./img/about/3.png", alt="")
 							span.about-features__text Биржа проектов
 
 					.about-features-wrap.about-features-wrap-2
-						button.about-features__item
+						button.about-features__item.about-features__item--chats
 							img.about-features__icon(src="./img/about/4.png", alt="")
 							span.about-features__text Система чатов
-						button.about-features__item
+						button.about-features__item.about-features__item--database
 							img.about-features__icon(src="./img/about/5.png", alt="")
 							span.about-features__text Пополняемая
 							span.about-features__text база знаний
 
 					.about-features-wrap.about-features-wrap-3
-						button.about-features__item
+						button.about-features__item.about-features__item--classes
 							img.about-features__icon(src="./img/about/6.png", alt="")
 							span.about-features__text Виртуальные<br>классы
-						button.about-features__item
+						button.about-features__item.about-features__item--giving
 							img.about-features__icon(src="./img/about/7.png", alt="")
 							span.about-features__text Набор раздаток
 
 					.about-features-wrap.about-features-wrap-4
-						button.about-features__item
+						button.about-features__item.about-features__item--meetups
 							img.about-features__icon(src="./img/about/8.png", alt="")
 							span.about-features__text Регулярные<br>видеоконференции
-						button.about-features__item
+						button.about-features__item.about-features__item--buddying
 							img.about-features__icon(src="./img/about/9.png", alt="")
 							span.about-features__text Buddying
 
 					.about-features-wrap--single
-						button.about-features__item
+						button.about-features__item.about-features__item--psycho
 							img.about-features__icon(src="./img/about/10.png", alt="")
 							span.about-features__text Штатный психолог
 				.about-description
@@ -847,16 +847,16 @@ block content
 
 		.popups
 			.main-callback-pop
-				form.callback-for#000m(method="POST")
-					p.text__pop-centered Привет, как тебя зовут?
-					.input-wrapper
+				form.callback-form(method="POST")
+					label.input-wrapper
+						p.pop__title.text__centered Привет, как тебя зовут?
 						input(
 							name="name"
 							type="text"
 							placeholder="Василий"
 						required).input-regular
-					p.text__pop-centered Как с тобой связаться?
-					.input-wrapper
+					label.input-wrapper
+						p.pop__title.text__centered Как с тобой связаться?
 						input(name="phone" 
 						type="text"
 						placeholder="Введи номер телефона"
@@ -868,5 +868,159 @@ block content
 							+vkIcon({className: 'form-socials__icon', color: '#fff'})
 						a(href=`${telegram}`).form-socials__item
 							+telegramIconCircle({className: 'form-socials__icon', color: '#fff'})
-					button.button-primary.form-button.callback-form__button(type="submit") Забронировать место
+					.input-wrapper
+						button.button-primary.button-centered.callback-form__button(type="submit") Забронировать место
 					p.form-privacy Нажимая на кнопку, вы подтверждаете согласие на обработку<br>персональных данных и соглашаетесь с политикой<br>конфиденциальности
+
+
+			.pop-ilnaz
+				h3.pop__title Галеев Ильназ
+				.pop-inner
+					p.pop__text Освоено
+						span.text__bold  154 тысячи
+						span  рублей и приведено
+						span.text__bold  2748
+						span  регистраций по 56р за 8 дней в нише по заработку на арбитраже.
+					p.pop__text
+						span.text__bold За 4 месяца привели 16 371 подписчиков по 53 руб.
+						span Сумасшедшему. Освоено рекламного бюджета на
+						span.text__bold  873 893
+						span  рублей.
+					p.pop__text 
+						span.text__bold 1960
+						span  подписчиков в нише ЕГЭ по 15 рублей.
+					p.pop__text Приведено 120 заявок по 250 рублей в детскую нишу.
+					p.pop__text Рекорды, сделанные благодаря полученным знаниям в ВШМ: 
+					p.pop__text.text__golden Освоил на рекламу более 3 млн рублей и привел 50 000 регистрации.
+
+
+
+			.pop-nastya
+				.pop-scrolling
+					.pop-plus-left
+						h3.pop__title Кирилова Анастасия
+						p.pop__text.text__golden.text__bold Со-основатель и руководитель Высшей Школы Маркетинга, методолог онлайн-школы.
+						p.pop__text
+							span.text__bold Регалии в HR:<br>
+							span Организовала:
+							span.text__golden  VI Поволжский кадровый форум
+						p.pop__text
+							span.text__bold В обучении:<br>
+							span В крупнейшем автохолдинге Самары:<br>— внедрила систему обучения продавцов<br>— 2 года вела продающие тренинги<br>— вывела 2 ДЦ-аутсайдера в 3 лидеров по качеству обслуживания клиентов<br>— подобрала и обучила с нуля всю команду вновь открывающегося ДЦ
+						p.pop__text
+							span.text__bold В маркетинге:<br>
+							span — открытие салона и бара Харлей Дэвидсон в Самаре.<br>—
+							span.text__bold 5000 человек за 2 дня
+							span  посетили мероприятие<br>— из волонтеров (бесплатно) в личные ассистенты главного организатора Volga Fashion Week Samara (за деньги)
+						p.pop__text — Из СММ-спеца выросла до младшего партнера единственного в Самаре организатора джазовых концертов.
+					.pop-plus-right.pop-nastya-pics
+						img.pop-nastya__pic(src="./img/pops/nastya/1.jpg", alt="Фото насти 1")
+						img.pop-nastya__pic(src="./img/pops/nastya/2.jpg", alt="Фото насти 2")
+						img.pop-nastya__pic(src="./img/pops/nastya/3.jpg", alt="Фото насти 3")
+
+			.pop-about-learn
+				.pop-inner.pop-inner--wider
+					p.pop__text.text__bold 194 урока или 70 часов видео на платформе Getcourse
+					p.pop__text Уроки разделены на 13 раундов. Один раунд — 2–3 недели. К каждому раунду — ДЗ. ДЗ проверяет шеф-маркетолог
+					p.pop__text
+						span.text__golden На платформе работает техподдержка 
+						span  (пн–пт, 9-18)
+					p.pop__text
+						span.text__bold Но задать вопрос ты можешь 24/7.
+						span  Наш бот очень старательный и по мере сил ответит тебе
+					img.pop__img(src="./img/pops/about/programm.png", alt="")
+
+
+
+
+			.pop-about-projects
+				.pop-inner
+					p.pop__text
+						span.text__golden Поток клиентов от ВШМ для своих учеников.
+						span  Площадка с проектами для разного уровня, ниш и специализаций
+					p.pop__text У тебя слишком много проектов и некуда брать новые? Отправь их на биржу как заказчик и найди себе помощника
+					img.pop__img(src="./img/pops/about/market.png", alt="")
+
+
+			.pop-about-database
+				.pop-inner
+					p.pop__text
+						span.pop__text База знаний будет регулярно пополняться
+						span новыми инструментами, которые мы тестируем и получаем результат. Например,
+					p.pop__text — обновления по инсте,<br>— обновления по ВК<br>— модуль по Тик-Току
+					p.pop__text.text__golden Пополняемая база фишек от всех учеников ВШМ
+					p.pop__text.text__bold 100+ фишек от поиска первого клиента до именных голосовых сообщений в рассылках
+					img.pop__img(src="./img/pops/about/base.png", alt="")
+
+			.pop-about-giving
+				.pop-inner
+					p.pop__text.text__bold 20+ майнд-карт по анализу ЦА, упаковке оффера, нейромаркетингу, автоворонкам, запускам
+					p.pop__text.text__golden.text__bold 10+ шаблонов квизов, кейсов и КП, чек-листов и таблиц
+					img.pop__img(src="./img/pops/about/mindmaps.png", alt="")
+
+
+			.pop-about-buddying
+				.pop-inner
+					.swiper-button-prev.buddying-button-prev
+					.swiper-button-next.buddying-button-next
+					.pop-buddying-slider.swiper-container
+						.swiper-wrapper.swiper-wrapper-buddying
+							.swiper-slide
+								p.pop__text
+									span.text__bold Мы искали лучшие мировые практики по выращиванию супер-профи.
+									span  И вселенная<br>(а точнее Англия) нам дала ответ.
+								p.pop__text Buddying — это способ поддержки учеников в стиле партнёрства. Пока ты в ВШМ, за тобой закрепляется бадди (у нас это шеф-маркетолог). 
+								p.pop__text Специалист, который шарит в маркетинге, и может не просто по ДЗ дать обратную связь, а указать на твои точки роста и узкие места.
+								p.pop__text.text__bold
+									span.text__golden Такая поддержка даст тебе то, что ты можешь спокойно прийти с проектом и прокачать его.
+									span  А можешь прийти без проекта и найти его)
+							.swiper-slide
+								p.pop__text Это можно назвать поддержкой, но как устроена обычно поддержка у других — это жесть)) когда все варятся в одном чате, а тебе максимум ответят: «да, ДЗ принято» или «нет, не принято».
+								p.pop__text Buddying — это способ поддержки учеников в стиле партнёрства. 
+								p.pop__text Это не отношения ученик — куратор. Это общение на равных. Не только ты получаешь обратную связь от бадди, но и он от тебя.
+								p.pop__text.text__bold
+									span.text__golden Методика выращивания профессионалов
+									span  ”Buddying”, проверена 858 учениками.
+
+
+
+			.pop-about-psycho
+				.swiper-button-prev.psycho-button-prev
+				.swiper-button-next.psycho-button-next
+				.pop-psycho-slider.swiper-container
+					.swiper-wrapper.swiper-wrapper-psycho
+						.swiper-slide
+							.pop-inner
+								p.pop__text
+									span.text__bold Однажды Егор застыл на 50 000р.
+									span  Хоть убей, то сделает 30к, то 60к, то 50к. Но так и не мог дойти до 100к.
+									span.text__golden  Проблему эту он решил с психологом. Через 4 недели заработал 210к.
+
+								p.pop__text Потом он застыл на стабильных 100к. С одной стороны, меньше он уже не зарабатывал. Просто не получалось. Но он не мог сделать 200–300к стабильным доходом. Здесь помогла индивидуальная работа с психологом в течение 2 месяцев.
+
+								p.pop__text
+									span.text__bold Кстати, наш психолог Валентина сама маркетёр и продюсер с охрентиельными кейсами
+									span  (5 образований,
+									span.text__golden  13 лет практики в маркетинге
+									span ) . Как же долго мы ее искали
+								img.pop__img-psycho.pop__img(src="./img/pops/about/psycho.png", alt="")
+						.swiper-slide
+							h2.pop__title Вот, что говорят про нее студенты ВШМ
+							.psycho-pics
+								img.psycho-pic(src="./img/pops/about/psycho-1.jpg", alt="")
+								img.psycho-pic(src="./img/pops/about/psycho-2.jpg", alt="")
+								img.psycho-pic(src="./img/pops/about/psycho-3.jpg", alt="")
+
+
+			.pop-leaving
+				.pop-inner
+					p.pop__title.text__centered Уходишь?
+					p.pop__title.text__golden.text__centered Без подарка не отпустим:)
+					p.pop__text.text__centered Держи бонусный урок по маркетинговому исследованию с анализом ЦА — это фундамент всех профессий, связанных с маркетингом.
+
+					p.pop__text.text__centered
+						span.text__golden Забирай свой подарок и
+						span.text__bold  приходи на бесплатную
+						span  консультацию
+						span.text__golden  маркетолога .
+					button.button-primary.button-leaving.button-centered Забрать подарок

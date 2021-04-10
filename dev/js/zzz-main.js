@@ -8,8 +8,6 @@ const syndromeSlider = new Swiper('.syndrome-slider', {
 
 
 
-
-
 const machines = [...document.querySelectorAll('.look-wood')];
 let machinesWords = 0;
 machines.map(machine => {
@@ -49,10 +47,6 @@ const baseSlider2 = new Swiper('.base-slider-2', {
   },
 });
 
-
-// popa({
-//   pop
-// })
 
 
 
@@ -229,15 +223,106 @@ document.addEventListener('DOMContentLoaded',function(event){
         }, 150);
         // }, 20000);
      }
-     // check if dataText[i] exists
-    if (i < dataText[i].length) {
-      // text exists! start typewriter animation
-     typeWriter(dataText[i], 0, function(){
-       // after callback (and whole text has been animated), start next text
-       StartTextAnimation(i + 1);
-     });
+		 // check if dataText[i] exists
+		if (i < dataText[i].length) {
+			// text exists! start typewriter animation
+		 typeWriter(dataText[i], 0, function(){
+			 // after callback (and whole text has been animated), start next text
+			 StartTextAnimation(i + 1);
+		 });
     }
   }
   // start the text animation
-  StartTextAnimation(0);
+	StartTextAnimation(0);
 });
+
+
+popa({
+	pop: '.main-callback-pop',
+	clickTrigger: '.hero-button',
+	popCloser: '.close-hero',
+	popCloserType: 'outer',
+})
+
+// popa({
+//   pop: '.pop-leaving',
+//   clickTrigger: 'page-leaving',
+//   popCloser: '.closer',
+//   popCloserType: 'outer',
+// })
+
+
+
+
+popa({
+	pop: '.pop-ilnaz',
+	clickTrigger: '.pop-trigger--ilnaz',
+	// popCloser: '.closer-ilnaz',
+	popCloserType: 'outer',
+})
+
+
+
+
+popa({
+	pop: '.pop-nastya',
+	clickTrigger: '.pop-trigger--nastya',
+	popCloserType: 'inner',
+})
+
+popa({
+	clickTrigger: '.about-features__item--learn',
+	pop: '.pop-about-learn',
+	popCloserType: 'outer',
+})
+popa({
+	clickTrigger: '.about-features__item--projects',
+	pop: '.pop-about-projects',
+	popCloserType: 'outer',
+})
+
+popa({
+	clickTrigger: '.about-features__item--database',
+	pop: '.pop-about-database',
+	popCloserType: 'outer',
+})
+popa({
+	clickTrigger: '.about-features__item--giving',
+	pop: '.pop-about-giving',
+	popCloserType: 'outer',
+})
+
+
+
+function startBuddyingSlider(){
+	var buddyingSlider = new Swiper('.pop-buddying-slider', {
+		navigation: {
+			nextEl: '.swiper-button-next.buddying-button-next',
+			prevEl: '.swiper-button-prev.buddying-button-prev',
+		},
+	})
+}
+popa({
+	clickTrigger: '.about-features__item--buddying',
+	pop: '.pop-about-buddying',
+	popCloserType: 'outer',
+	onOpen: startBuddyingSlider,
+})
+
+
+function startPsychoSlider() {
+	var psychoSlider = new Swiper('.pop-psycho-slider', {
+		direction: 'vertical',
+		spaceBetween: 300,
+		navigation: {
+			nextEl: '.swiper-button-next.psycho-button-next',
+			prevEl: '.swiper-button-prev.psycho-button-prev',
+		},
+	})
+}
+popa({
+	clickTrigger: '.about-features__item--psycho',
+	pop: '.pop-about-psycho',
+	popCloserType: 'outer',
+	onOpen: startPsychoSlider,
+})

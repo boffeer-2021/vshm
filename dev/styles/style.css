@@ -373,6 +373,9 @@ button {
 .text__golden.title__button::after {
 	background-color: #eec39a;
 }
+.text__centered {
+	text-align: center;
+}
 .text__golden.title__button::after {
 	content: '';
 	position: absolute;
@@ -2464,14 +2467,36 @@ span {
 .pop {
 	padding-top: 54px;
 	padding-bottom: 54px;
+	padding-right: 70px;
+	padding-left: 70px;
+	/* padding-left: 35px; */
+	/* padding-right: 35px; */
+	box-sizing: border-box;
 	background: #0e0e0e;
 }
+.pop__img {
+	margin-left: auto;
+	margin-right: auto;
+}
+.pop-scrolling {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 50px;
+	/* overflow-x: hidden; */
+	/* overflow-y: auto; */
+}
 
-.text__pop-centered {
+.pop__title {
 	text-align: center;
 	font-size: 24px;
 	font-family: 'Akrobat';
 	font-weight: 600;
+	margin-bottom: 20px;
+}
+.pop__text {
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: var(--ls-text);
 	margin-bottom: 20px;
 }
 
@@ -2491,21 +2516,161 @@ span {
 	margin-right: 10px;
 	margin-left: 10px;
 }
-.form-button {
+.button-centered {
+	margin-top: 10px;
 	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto;
 }
+
+.pop-inner {
+	max-width: 370px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+.pop-plus-left {
+	max-width: 370px;
+	/* margin-left: auto; */
+}
+
 .form-privacy {
 	font-size: 14px;
 	line-height: 14px;
 	text-align: center;
 }
 
+.main-callback-pop {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.button-leving {
+	margin-top: 20px;
+}
 
 
 
+.pop-nastya {
+	display: flex;
+	max-height: 600px;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.pop-nastya-pics {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* margin-right: 70px; */
+}
+.pop-nastya__pic {
+	width: 100px;
+	margin-bottom: 30px;
+}
+.pop-nastya .pop__text {
+	font-size: 18px;
+	line-height: 1.2;
+}
+
+/* .pop-nastya .pop-plus-right, */
+.pop-nastya .pop-plus-left {
+	margin-bottom: 50px;
+	margin-right: 30px;
+	padding-bottom: 50px;
+}
+.pop-inner--wider {
+	max-width: 390px;
+}
+.pop-about-projects .pop__img {
+	max-width: 280px;
+}
+.pop-about-database .pop__img {
+	max-width: 230px;
+}
 
 
+.pop-buddying-slider {
+	width: 100%;
+}
 
+.buddying-button-prev {
+	left: unset;
+	right: 5%;
+}
+.buddying-button-next {
+	right: 5%;
+}
+.pop-buddying-slider {
+	overflow: hidden;
+}
+
+.pop-about-buddying .swiper-button-disabled {
+	display: none;
+}
+.pop-about-buddying .pop__text {
+	font-size: 18px;
+}
+
+.pop-psycho-slider {
+	overflow: visible;
+	max-height: 620px;
+	max-height: 520px;
+}
+.pop-about-psycho {
+	max-width: 910px;
+	width: 100%;
+}
+
+.pop-about-psycho .swiper-button-disabled {
+	display: none;
+}
+
+.pop-about-psycho .pop__text{
+	font-size: 18px;
+}
+.pop-about-psycho .pop-inner {
+	max-width: 370px;
+	/* max-width: 630px; */
+}
+.pop-about-psycho .pop__title {
+	margin-bottom: 30px;
+	font-size: 18px;
+}
+.psycho-pics {
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.psycho-pic {
+	max-width: 200px;
+}
+.pop__img-psycho {
+	max-width: 300px;
+	position: absolute;
+	bottom: -15%;
+	right: -7%;
+}
+.psycho-button-next {
+	top: unset;
+	bottom: 5%;
+	right: 0;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	transform: rotate(90deg);
+}
+.psycho-button-prev {
+	top: unset;
+	bottom: 5%;
+	right: 0;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	transform: rotate(90deg);
+}
 
 @import './max-width.css';
 @import './min-width.css';
