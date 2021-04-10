@@ -1230,6 +1230,7 @@ span {
 	color: #fff;
 	transition: all 0.3s;
 	position: relative;
+	outline: none;
 }
 .about-features__item:hover .about-features__icon {
 	transform: scale(1.2);
@@ -2671,6 +2672,158 @@ span {
 	margin-right: auto;
 	transform: rotate(90deg);
 }
+
+
+.pop-about-meetups {
+	max-width: 840px;
+}
+.pop-about-classes .pop__text,
+.pop-about-meetups .pop__text {
+	font-size: 18px;
+}
+.pop-about-meetups .pop-inner {
+	max-width: 570px;
+}
+
+.pop-about-classes {
+	max-width: 670px;
+	padding-bottom: 0;
+}
+.pop-about-classes .pop-inner {
+	max-width: 470px;
+}
+.pop-about-classes .pop__img {
+	margin-top: -30px;
+	max-width: 370px;
+	margin-bottom: 0;
+}
+
+.pop-about-chats {
+	max-width: 870px;
+	width: 100%;
+	box-sizing: border-box;
+	padding-bottom: 0;
+}
+.pop-about-chats .pop-inner {
+	display: flex;
+	max-width: 730px;
+	width: 100%;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-direction: row;
+}
+.pop-about-chats .pop__img {
+	max-width: 360px;
+	margin-right: 0px;
+	margin-left: 0;
+	margin-top: -20px;
+}
+.pop-about-chats .pop__text {
+	font-size: 18px;
+}
+
+.pop-text-wrapper--chats {
+	max-width: 370px;
+}
+
+
+.pop-about-combos {
+	max-width: 840px;
+	width: 100%;
+	padding-bottom: 0;
+}
+.pop-about-combos .pop-inner {
+	flex-direction: row;
+	justify-content: space-between;
+	max-width: 700px;
+	width: 100%;
+}
+.pop-about-combos .pop__text {
+	font-size: 18px;
+}
+.pop-about-combos .pop__img {
+	max-width: 400px;
+	margin-left: -100px;
+	margin-right: 0;
+}
+
+
+
+.pop-egor {
+	max-width: 770px;
+	box-sizing: border-box;
+	width: 100%;
+	padding-bottom: 0;
+}
+
+@media (max-width: 1400px) {
+	.pop-egor {
+		overflow-x: hidden;
+		overflow-y: auto;
+		max-height: 550px;
+	}
+}
+.pop-egor .pop-inner {
+	max-width: 570px;
+	width: 100%;
+}
+.pop-egor .pop-pics {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding-top: 20px;
+}
+.pop-egor .pop__text {
+	font-size: 18px;
+}
+.pop-egor .pop__img {
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 30px;
+}
+.pop__img--egor-1 {
+	width: 170px;
+}
+.pop__img--egor-2 {
+	max-width: 370px;
+}
+.pop__img--egor-3 {
+	width: 100%;
+}
+
+
+.pop-elective {
+	max-width: 940px;
+	height: 90vh;
+	/* overflow: hidden */
+}
+.pop-elective .pop__text {
+	font-size: 18px;
+}
+.elective-slider {
+	max-width: 100%;
+	overflow: visible;
+}
+.elective-slider .elective-button-prev{
+	left: -15%;
+	top: 35%;
+}
+.elective-slider .elective-button-next{
+	right: -15%;
+	top: 35%;
+}
+.elective__pic {
+	position: absolute;
+	bottom: -230px;
+	right: -50%;
+}
+.elective__pic--target {
+		bottom: -180px;
+}
+.elective__pic--branding {
+		bottom: -180px;
+}
+
 
 @import './max-width.css';
 @import './min-width.css';

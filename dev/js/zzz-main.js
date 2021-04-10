@@ -326,3 +326,51 @@ popa({
 	popCloserType: 'outer',
 	onOpen: startPsychoSlider,
 })
+
+popa({
+	clickTrigger: '.about-features__item--meetups',
+	pop: '.pop-about-meetups',
+	popCloserType: 'outer',
+})
+
+popa({
+	clickTrigger: '.about-features__item--classes',
+	pop: '.pop-about-classes',
+	popCloserType: 'outer',
+})
+
+popa({
+	clickTrigger: '.about-features__item--chats',
+	pop: '.pop-about-chats',
+	popCloserType: 'outer',
+})
+
+popa({
+	clickTrigger: '.about-features__item--combos',
+	pop: '.pop-about-combos',
+	popCloserType: 'outer',
+})
+
+popa({
+	clickTrigger: '.pop-trigger--egor',
+	pop: '.pop-egor',
+	popCloserType: 'inner',
+})
+
+
+function startElectiveSlider() {
+	var electiveSlider = new Swiper('.elective-slider', {
+		spaceBetween: 2000,
+		navigation: {
+			nextEl: '.swiper-button-next.elective-button-next',
+			prevEl: '.swiper-button-prev.elective-button-prev',
+		},
+
+	})
+}
+popa({
+	clickTrigger: '.button__elective',
+	pop: '.pop-elective',
+	popCloserType: 'outer',
+	onOpen: startElectiveSlider,
+})
