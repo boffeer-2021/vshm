@@ -5,7 +5,9 @@ block content
 	- var phone = '+7 (800) 600-01-90';
 	- var vk = ' https://vk.com/hellosales';
 	- var tiktok = 'https://vm.tiktok.com/ZSJ6nC9kQ/';
-	- var tiktok = 'https://t.me/babki_na_udalenke ';
+	- var telegram = 'https://t.me/babki_na_udalenke ';
+	- var whatsapp = 'https://whatsapp.com';
+
 	- var yagla = 'https://yagla.ru/';
 	- var senler = 'https://senler.ru/';
 	- var kia = 'https://www.kia.ru/';
@@ -107,7 +109,7 @@ block content
 			.container.bad-marketing
 				.bad-marketing-character
 					p.bad-marketing-character__text.text__italic Василий Петров,
-						span.bad-marketing-character__spec  маркетолог
+						span.bad-marketing-character__spec
 					img.bad-marketing__img(src="img/bad-marketing/bad-marketing-pic.png", alt="")
 				.bad-marketing-text
 					p Пока что уровень индустрии маркетинга — это что-то типа:<br>сделать таргет, написать тексты, запилить сайт, запустить контекст...
@@ -127,43 +129,50 @@ block content
 		section.look-wrapper
 			.look-wood.look-wood--top
 				.look-wood-small
+					//- img.look-wood-word.look-wood-word--top(src="./img/look/vasya-loh.png", alt="")
 					.look-wood-word.look-wood-word--top
-				img(src="./..img/look/machine.png", alt="")
+				img.look__machine--top.look__machine(src="./img/look/machine.png", alt="Шлифмашинка")
 			.container.look
 				h2.section__title.look__title Смотри, как всё может быть!
-
 				.before-after-slider
 					.before-after-slider__controller
 					.before-section
-						img.look__img.look__img-bad(src="./img/look/look-sad.png", alt="")
-						.look-before-text
-							h3.look-slide__title Твоя жизнь до ВШМ
-							ul.look-list.look-list--before
-								li.look-list__item.look-list__item--before Пашешь 24/7 за копейки
-								li.look-list__item.look-list__item--before Продаёшь одну-две услуги, в которых<br>разбираешься сам
-								li.look-list__item.look-list__item--before.look-list__item--bigger-margin Допекает синдром самозванца
-								li.look-list__item.look-list__item--before Постоянно ищешь клиентов
-								li.look-list__item.look-list__item--before Времени и сил не остаётся даже на себя
-				.after-section
-					.look-after-text
-						h3.look-slide__title Твоя жизнь после ВШМ
-						ul.look-list.look-list--after
-							li.look-list__item.look-list__item--after Высокие чеки, хозяин своего времени
-							li.look-list__item.look-list__item--after.look-list__item--bigger-margin Запускаешь комплексные проекты
-							li.look-list__item.look-list__item--after Уверен в себе, пользуешься репутацией<br>эксперта
-							li.look-list__item.look-list__item--after Клиенты сами выходят на тебя
-							li.look-list__item.look-list__item--after Есть свободное время тратить<br>заработанные деньги
-					.has-popup.look-img.look-img--good
-						button.pop-trigger.pop-trigger--ilnaz
-							span.pop-circle-1
-							span.pop-circle-2
-							span.pop-circle-3
-							span.pop-hover-glower
-						img.look__img.look__img--good(src="./img/look/ilnaz.png", alt="")
+						.before-item-wrapper
+							.before-after-slide-inner
+								.look-after-text
+									h3.look-slide__title Твоя жизнь
+										span.text__golden  после ВШМ
+									ul.look-list.look-list--after
+										li.look-list__item.look-list__item--after Высокие чеки, хозяин своего времени
+										li.look-list__item.look-list__item--after.look-list__item--bigger-margin Запускаешь комплексные проекты
+										li.look-list__item.look-list__item--after Уверен в себе, пользуешься репутацией<br>эксперта
+										li.look-list__item.look-list__item--after Клиенты сами выходят на тебя
+										li.look-list__item.look-list__item--after Есть свободное время тратить<br>заработанные деньги
+								.has-popup.look-img.look-img--good
+									button.pop-trigger.pop-trigger--ilnaz
+										span.pop-circle-1
+										span.pop-circle-2
+										span.pop-circle-3
+										span.pop-hover-glower
+									img.look__img.look__img--good(src="./img/look/ilnaz.png", alt="")
+
+					.after-section
+						.after-item-wrapper
+							.before-after-slide-inner
+								img.look__img.look__img-bad(src="./img/look/sad.png", alt="")
+								.look-before-text
+									h3.look-slide__title Твоя жизнь до ВШМ
+									ul.look-list.look-list--before
+										li.look-list__item.look-list__item--before Пашешь 24/7 за копейки
+										li.look-list__item.look-list__item--before Продаёшь одну-две услуги, в которых<br>разбираешься сам
+										li.look-list__item.look-list__item--before.look-list__item--bigger-margin Допекает синдром самозванца
+										li.look-list__item.look-list__item--before Постоянно ищешь клиентов
+										li.look-list__item.look-list__item--before Времени и сил не остаётся даже на себя
 			.look-wood.look-wood--bottom
 				.look-wood-small
 					.look-wood-word.look-wood-word--bottom
-				img(src="./..img/look/machine.png", alt="")
+					//- img.look-wood-word.look-wood-word--bottom(src="./img/look/vasya-loh.png", alt="")
+				img.look__machine--bottom.look__machine(src="./img/look/machine.png", alt="Шлифмашинка")
 
 
 
@@ -715,8 +724,8 @@ block content
 		section.pricing-wrapper#pricing
 			.container.pricing
 				h2.section__title.pricing__title Как думаешь, сколько это стоит? 
-				p.pricing__price 5 000 рублей/месяц
-				p.pricing__descriptor Пять тысяч рублей в месяц
+				p.pricing__price 4 700 рублей/месяц
+				p.pricing__descriptor Четыре тысячи семьсот рублей в месяц
 				.pricing-scheme
 					.pricing-in
 						img.in__img(src="./img/scheme/scheme-in.png", alt="")
@@ -757,24 +766,24 @@ block content
 						img.team__img(src="./img/team/team-pic.png", alt="")
 						h3.team-clients__title Клиенты команды:
 						div.team-client-list
-							a.team-clients-item(href=`${yagla}`)
+							a.team-clients-item(href=`${yagla}` target="_blank")
 								span.team-clients__logo-wrap
-									img.team-clients__logo(src="./img/team/team-yagla.png", alt="")
+									img.team-clients__logo(src="./img/team/team-yagla.png", alt="Yagla")
 								p Yagla
 
-							a.team-clients-item(href=`${senler}`)
+							a.team-clients-item(href=`${senler}` target="_blank")
 								span.team-clients__logo-wrap
-									img.team-clients__logo(src="./img/team/team-senler.png", alt="")
+									img.team-clients__logo(src="./img/team/team-senler.png", alt="Senler ")
 								p Senler 
 
-							a.team-clients-item(href=`${kia}`)
+							a.team-clients-item(href=`${kia}` target="_blank")
 								span.team-clients__logo-wrap
-									img.team-clients__logo(src="./img/team/team-kia.png", alt="")
+									img.team-clients__logo(src="./img/team/team-kia.png", alt="KIA")
 								p KIA
 
-							a.team-clients-item(href=`${lenfilm}`)
+							a.team-clients-item(href=`${lenfilm}` target="_blank")
 								span.team-clients__logo-wrap
-									img.team-clients__logo(src="./img/team/team-lenfilm.png", alt="")
+									img.team-clients__logo(src="./img/team/team-lenfilm.png", alt="Ленфильм")
 								p «Ленфильм»
 
 
@@ -838,7 +847,7 @@ block content
 
 		.popups
 			.main-callback-pop
-				form.callback-form(method="POST")
+				form.callback-for#000m(method="POST")
 					p.text__pop-centered Привет, как тебя зовут?
 					.input-wrapper
 						input(
@@ -846,6 +855,7 @@ block content
 							type="text"
 							placeholder="Василий"
 						required).input-regular
+					p.text__pop-centered Как с тобой связаться?
 					.input-wrapper
 						input(name="phone" 
 						type="text"
@@ -858,5 +868,5 @@ block content
 							+vkIcon({className: 'form-socials__icon', color: '#fff'})
 						a(href=`${telegram}`).form-socials__item
 							+telegramIconCircle({className: 'form-socials__icon', color: '#fff'})
-					button.button-primary.callback-form__button(type="submit") Забронировать место
-					p.form-privacy Нажимая на кнопку, вы подтверждаете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности
+					button.button-primary.form-button.callback-form__button(type="submit") Забронировать место
+					p.form-privacy Нажимая на кнопку, вы подтверждаете согласие на обработку<br>персональных данных и соглашаетесь с политикой<br>конфиденциальности

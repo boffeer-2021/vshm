@@ -712,6 +712,9 @@ span {
   background-position: 40px 40px;
   background-repeat: no-repeat;
 }
+.look__machine {
+	max-width: 400px;
+}
 
 .look {
   padding-top: 75px;

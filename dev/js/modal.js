@@ -1,13 +1,13 @@
 //TODO:
 // logErrors: parametr
 function showPop($popWrap, $pop) {
-	$popWrap.classList.add('pop-wrap--opened')
+	$popWrap.classList.add('pop-wrapper--opened')
 	$pop.classList.add('pop--opened');
 	document.querySelector('html').classList.add('pop-opened--html')
 }
 
 function closePop($popWrap, $pop) {
-	$popWrap.classList.remove('pop-wrap--opened')
+	$popWrap.classList.remove('pop-wrapper--opened')
 	$pop.classList.remove('pop--opened');
 	document.querySelector('html').classList.remove('pop-opened--html')
 }
@@ -33,7 +33,7 @@ function popToggle($popWrap, $pop){
 
 function popaAddClasses($popWrap, $pop) {
 	if ($popWrap != null || $popWrap != undefined) {
-		(!$popWrap.classList.contains('pop-wrap')) ? $popWrap.classList.add('pop-wrap') : false ;
+		(!$popWrap.classList.contains('pop-wrapper')) ? $popWrap.classList.add('pop-wrapper') : false ;
 	}
 	if ($pop != null || $pop != undefined) {
 		(!$pop.classList.contains('pop')) ? $pop.classList.add('pop') : false ;
@@ -41,11 +41,11 @@ function popaAddClasses($popWrap, $pop) {
 		
 }
 
-function createPopWrapper($) {
+function createPopStructure($) {
 	let jsPopWrapper = document.createElement('div');
 	jsPopWrapper;
 	jsPopWrapper.classList.add($.popWrap.replace('.', ''));
-	jsPopWrapper.classList.add('pop-wrap');
+	jsPopWrapper.classList.add('pop-wrapper');
 	document.querySelector('body').appendChild(jsPopWrapper);
 	// console.log('Wrapper created');
 
@@ -73,9 +73,11 @@ function popa($){
 	// let opener = [...document.querySelectorAll(data.clickTrigger)];
 	// let closer = [...document.querySelectorAll(data.popCloser)];
 	let popaData = $;
-	createPopWrapper(popaData);
 
-	let popWrap = document.querySelector( $.popWrap );
+	createPopStructure(popaData);
+
+	// let popWrap = document.querySelector( $.popWrap );
+	let popWrap = document.querySelector( $.pop + '-wrapper' );
 	let pop = document.querySelector( $.pop );
 	let opener = document.querySelector($.clickTrigger);
 	let closer = popWrap.querySelector( $.popCloser );
