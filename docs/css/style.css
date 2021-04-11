@@ -74,6 +74,7 @@
   font-family: Akrobat;
   font-style: normal;
   font-weight: 300;
+  font-display: swap;
   src: url(../fonts/Akrobat-Light.woff2) format("woff2");
   src: url(../fonts/Akrobat-Light.woff) format("woff");
 }
@@ -82,6 +83,7 @@
   font-family: Akrobat;
   font-style: normal;
   font-weight: 400;
+  font-display: swap;
   src: url(../fonts/Akrobat-Regular.woff2) format("woff2");
   src: url(../fonts/Akrobat-Regular.woff) format("woff");
 }
@@ -90,6 +92,7 @@
   font-family: Akrobat;
   font-style: normal;
   font-weight: 500;
+  font-display: swap;
   src: url(../fonts/Akrobat-SemiBold.woff2) format("woff2");
   src: url(../fonts/Akrobat-SemiBold.woff) format("woff");
 }
@@ -98,6 +101,7 @@
   font-family: Akrobat;
   font-style: normal;
   font-weight: 600;
+  font-display: swap;
   src: url(../fonts/Akrobat-Bold.woff2) format("woff2");
   src: url(../fonts/Akrobat-Bold.woff) format("woff");
 }
@@ -106,6 +110,7 @@
   font-family: Akrobat;
   font-style: normal;
   font-weight: 700;
+  font-display: swap;
   src: url(../fonts/Akrobat-ExtraBold.woff2) format("woff2");
   src: url(../fonts/Akrobat-ExtraBold.woff) format("woff");
 }
@@ -114,6 +119,7 @@
   font-family: Akrobat;
   font-style: normal;
   font-weight: 900;
+  font-display: swap;
   src: url(../fonts/Akrobat-Black.woff2) format("woff2");
   src: url(../fonts/Akrobat-Black.woff) format("woff");
 }
@@ -217,6 +223,8 @@ button {
   text-transform: uppercase;
   letter-spacing: .05em;
   padding: 18px 30px;
+  text-decoration: none;
+  text-align: center;
 }
 
 .button-primary:hover {
@@ -232,7 +240,7 @@ button {
 }
 
 .input-regular {
-  font: 300 24px Akrobat;
+  font: 300 24px Akrobat,sans-serif;
   width: 100%;
   height: 60px;
   border: 1px solid #1b1b1b;
@@ -472,6 +480,7 @@ p {
 
 a {
   color: #fff;
+  cursor: pointer;
 }
 
 .text__golden {
@@ -588,7 +597,7 @@ span {
 }
 
 .header-phone {
-  font: 18px Akrobat;
+  font: 18px Akrobat,sans-serif;
   letter-spacing: .2em;
   margin-bottom: 9px;
   letter-spacing: .18em;
@@ -613,7 +622,8 @@ span {
 }
 
 .hero-wrapper {
-  background: url(../img/learn/learn-bg.png);
+  background: url(../img/learn/learn-bg.png),#080808;
+  background: url(../img/learn/learn-bg.png),var(--bg);
   padding-bottom: 185px;
   background-size: contain;
   background-repeat: no-repeat;
@@ -644,6 +654,8 @@ span {
   flex-direction: column;
   align-items: center;
   margin-bottom: 40px;
+  position: relative;
+  z-index: 2;
 }
 
 .hero__prephrase {
@@ -657,6 +669,55 @@ span {
   font-size: 40px;
   line-height: 1.2em;
   margin-bottom: 65px;
+}
+
+.hero__tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+.hero__tooltip:before {
+  display: block;
+  bottom: -20px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid #000;
+}
+
+.hero__tooltip:after,
+.hero__tooltip:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__tooltip:after {
+  font: 300 18px Akrobat,sans-serif;
+  max-width: 500px;
+  bottom: -80px;
+  letter-spacing: var(--sl-text);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 25px;
+  padding-left: 25px;
+  border-radius: 12px;
+  background: #000;
+  height: 60px;
+  text-transform: none;
+}
+
+.hero__tooltip:hover:after {
+  content: attr(data-tooltip);
+}
+
+.hero__tooltip:hover:before {
+  content: "";
 }
 
 .hero__subtitle {
@@ -797,7 +858,7 @@ span {
 
 .swiper-button-next.syndrome-button-next,
 .swiper-button-prev.syndrome-button-prev {
-  top: 43%;
+  top: 23%;
 }
 
 .bad-marketing-wrapper {
@@ -891,7 +952,7 @@ span {
   max-width: 520px;
   margin-left: auto;
   margin-right: auto;
-  font-family: Akrobat;
+  font-family: Akrobat,sans-serif;
   font-weight: 300;
 }
 
@@ -1805,8 +1866,6 @@ span {
   flex-direction: column;
   max-width: 350px;
   width: 350px;
-  justify-content: center;
-  align-items: flex-start;
   margin-right: 70px;
 }
 
@@ -1815,19 +1874,24 @@ span {
   text-align: left;
   font-size: 24px;
   line-height: 72px;
-  position: relative;
   display: inline-block;
+  color: #fffefe;
 }
 
-.learn-faq__item:after {
+.learn-faq__item,
+.learn-faq__name {
+  position: relative;
+}
+
+.learn-faq__name:after {
   content: "";
   position: absolute;
-  bottom: 20px;
+  bottom: -3px;
   left: 0;
   display: block;
   width: 100%;
   height: 2px;
-  background: #a4a4a4;
+  background: #fffefe;
   z-index: 1;
 }
 
@@ -1922,6 +1986,7 @@ span {
   justify-content: center;
   align-items: center;
   text-align: center;
+  transition: all .5s;
 }
 
 .get-features-item-first,
@@ -1932,6 +1997,62 @@ span {
 
 .get-features-item-last {
   margin-top: -90px;
+}
+
+.js-get-features-item--1.active {
+  transform: translateY(400px);
+}
+
+.js-get-features-item--1.active,
+.js-get-features-item--2.active {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+}
+
+.js-get-features-item--2.active {
+  transform: translate(300px,220px);
+}
+
+.js-get-features-item--3.active {
+  transform: translate(-300px,220px);
+}
+
+.js-get-features-item--3.active,
+.js-get-features-item--4.active {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+}
+
+.js-get-features-item--4.active {
+  transform: translate(300px);
+}
+
+.js-get-features-item--5.active {
+  transform: translate(-300px);
+}
+
+.js-get-features-item--5.active,
+.js-get-features-item--6.active {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+}
+
+.js-get-features-item--6.active {
+  transform: translate(300px,-250px);
+}
+
+.js-get-features-item--7.active {
+  transform: translate(-300px,-250px);
+}
+
+.js-get-features-item--7.active,
+.js-get-features-item--8.active {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  opacity: 0;
+}
+
+.js-get-features-item--8.active {
+  transform: translateY(-330px);
 }
 
 .get-features__img {
@@ -2043,7 +2164,7 @@ span {
 }
 
 .tesimonials-all-cases {
-  max-width: 270px;
+  max-width: 320px;
   text-align: center;
   margin: -18px auto 75px;
 }
@@ -2251,14 +2372,21 @@ span {
 }
 
 .team__title {
-  font: 700px 40px Akrobat;
+  font-size: 40px;
   margin-bottom: 20px;
   text-transform: none;
+  font-weight: 700px;
+}
+
+.team__subtitle,
+.team__title {
+  font-family: Akrobat,sans-serif;
 }
 
 .team__subtitle {
-  font: 700 36px Akrobat;
   text-align: center;
+  font-size: 36px;
+  font-weight: 700;
   margin-bottom: 70px;
 }
 
@@ -2277,7 +2405,7 @@ span {
 }
 
 .team-bullet {
-  font: 500 20px Akrobat;
+  font: 500 20px Akrobat,sans-serif;
   margin-bottom: 25px;
   list-style: none;
   position: relative;
@@ -2351,18 +2479,18 @@ span {
 
 .changes {
   background: url(../img/ready/ready-bg.jpg);
-  padding-top: 100px;
-  padding-bottom: 90px;
+  padding-top: 90px;
+  padding-bottom: 80px;
   border-radius: 30px;
 }
 
 .changes__title {
-  font: 700 40px Akrobat;
+  font: 700 40px Akrobat,sans-serif;
   margin-bottom: 25px;
 }
 
 .changes__subtitle {
-  font: 500 20px Akrobat;
+  font: 500 20px Akrobat,sans-serif;
   margin-bottom: 60px;
 }
 
@@ -2395,6 +2523,11 @@ span {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.changes-offer__button {
+  margin-bottom: 20px;
+  display: block;
 }
 
 .changes-offer__title {
@@ -2511,7 +2644,7 @@ span {
 }
 
 .pop__title {
-  font: 600 24px Akrobat;
+  font: 600 24px Akrobat,sans-serif;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -3056,6 +3189,11 @@ span {
   max-width: 270px;
 }
 
+.programm__text--certificate.text__italic {
+  font-style: italic;
+  text-transform: uppercase;
+}
+
 @media (max-width:1400px) {
   .pop-drag-get-bonus__img,
   .pop-drag-get-skillcard__img {
@@ -3076,6 +3214,19 @@ span {
   .swiper-button-next.base-2-button-next,
   .swiper-button-prev.base-2-button-prev {
     top: 35%;
+  }
+}
+
+@media (min-width:1400px) {
+  .pop-nastya {
+    max-height: 700px;
+    overflow: visible;
+  }
+}
+
+@media (min-width:1800px) {
+  .look__machine--moving {
+    transform: translateX(1520px);
   }
 }
 /*# sourceMappingURL=style.css.map */

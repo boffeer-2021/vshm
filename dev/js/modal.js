@@ -1,5 +1,8 @@
 // TODO:
 // logErrors: parametr
+
+
+
 function showPop($popWrap, $pop, $onOpen = null) {
 	$popWrap.classList.add('pop-wrapper--opened');
 	$pop.classList.add('pop--opened');
@@ -9,6 +12,8 @@ function showPop($popWrap, $pop, $onOpen = null) {
 	}
 }
 
+
+
 function closePop($popWrap, $pop, $onClose = null) {
 	$pop.classList.remove('pop--opened');
 	$popWrap.classList.remove('pop-wrapper--opened')
@@ -17,6 +22,23 @@ function closePop($popWrap, $pop, $onClose = null) {
 		$onClose();
 	}
 }
+
+function closePopByOutsideClick($) {
+	// console.log('click outside init')
+	document.querySelector($.popWrap).addEventListener('click', function(event) {
+
+		/* Normally - event.tagert.class[0] on click outside the pop === 'pop-aligner'
+		 */
+		if (event.target.classList[0] === 'pop-aligner') {
+			let popWrap = document.querySelector($.popWrap);
+			let pop = document.querySelector($.pop);
+			let onClose = $.onClose;
+			closePop(popWrap, pop, onClose);
+		}
+	})
+}
+
+
 
 function popToggle($popWrap, $pop, $onOpen, $onClose){
 	let popWrap = $popWrap;
@@ -37,6 +59,7 @@ function popToggle($popWrap, $pop, $onOpen, $onClose){
 }
 
 
+
 function popaAddClasses($popWrap, $pop) {
 	if ($popWrap != null || $popWrap != undefined) {
 		(!$popWrap.classList.contains('pop-wrapper')) ? $popWrap.classList.add('pop-wrapper') : false ;
@@ -47,7 +70,11 @@ function popaAddClasses($popWrap, $pop) {
 		
 }
 
+
+
 function createPopStructure($) {
+
+	/* === Create main wrapper === */
 	let jsPopWrapper = document.createElement('div');
 	jsPopWrapper;
 	jsPopWrapper.classList.add($.popWrap.replace('.', ''));
@@ -60,6 +87,8 @@ function createPopStructure($) {
 	jsPopAlingner.classList.add('pop-aligner');
 	jsPopWrapper.appendChild(jsPopAlingner);
 	// console.log('Alginer created');
+	/* === /Create main wrapper === */
+
 
 	let jsPopCloser = document.createElement('button');
 	let closerCounter = 0;
@@ -135,6 +164,7 @@ function popa($){
 	popWrap.removeAttribute('hidden');
 	
 	closer.addEventListener('click', function() {closePop(popWrap, pop, $.onClose)});
+	closePopByOutsideClick(popaData);
 
 	// opener.map(mapped => mapped.addEventListener("click", () => popToggle(data.popWrap, data.pop)));
 	// closer.map(mapped => mapped.addEventListener('click', () => closePop(data.popWrap, data.pop)));

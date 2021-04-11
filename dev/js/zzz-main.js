@@ -1,3 +1,89 @@
+let dateFormattingOptions = {
+	// era: 'long',
+	// year: 'numeric',
+	month: 'long',
+	day: 'numeric',
+	// weekday: 'long',
+	// timezone: 'UTC',
+	// hour: 'numeric',
+	// minute: 'numeric',
+	// second: 'numeric'
+}
+let weeks = 16;
+let now = new Date();
+now.setDate(now.getDate() + weeks * 7 + 8);
+now = now.toLocaleString("ru", dateFormattingOptions);
+
+document.querySelector('.hero__deadline').innerText = now;
+
+let popButtonType;
+
+if (window.innerWidth > 1400) {
+	popButtonType = 'outer';
+} else {
+	popButtonType = 'inner';
+}
+
+
+
+
+/* 
+ *	Gets
+ *	1. callback - function
+ *	2. offset - number of pixels while script fires
+ *	3. target - className of element
+ *	4. targets
+ *	5. numberOfFires
+ *
+ * */
+
+function waitUntilPixels($) {
+	let target = document.querySelector($.target);
+	// let targets = [...$.targets];
+	let callback = $.callback;
+	let offset = $.offset;
+	let pageOffset;
+
+	// let firesNumber = $.firesNumber;
+	let firesNumber = 0;
+
+
+	window.addEventListener('scroll', function() {
+		let currentOffset = window.pageYOffset;
+		
+			if (currentOffset >= (target.offsetTop - offset)) {
+				if (firesNumber < 1) {
+					callback();
+					firesNumber++;
+				}
+			}
+	})
+}
+
+
+
+
+function throwBullets() {
+	let bullets = [...document.querySelectorAll('.get-features-item')];
+	bullets.map(bullet => {
+		// console.log(bullet)
+		bullet.classList.remove('active');
+	})
+}
+waitUntilPixels({
+	callback: throwBullets,
+	offset: 200,
+	target: '.get__title',
+})
+
+
+
+
+
+
+
+
+
 const syndromeSlider = new Swiper('.syndrome-slider', {
   // loop: true,
   navigation: {
@@ -22,7 +108,6 @@ machines.map(machine => {
 		}
 	})
 })
-
 
 
 
@@ -224,7 +309,7 @@ document.addEventListener('DOMContentLoaded',function(event){
         // }, 20000);
      }
 		 // check if dataText[i] exists
-		if (i < dataText[i].length) {
+	if (i < dataText[i].length) {
 			// text exists! start typewriter animation
 		 typeWriter(dataText[i], 0, function(){
 			 // after callback (and whole text has been animated), start next text
@@ -244,12 +329,13 @@ popa({
 	popCloserType: 'outer',
 })
 
-// popa({
-//   pop: '.pop-leaving',
-//   clickTrigger: 'page-leaving',
-//   popCloser: '.closer',
-//   popCloserType: 'outer',
-// })
+document.querySelector('.button__callback').addEventListener('click', function(){
+	popToggle(document.querySelector('.main-callback-pop-wrapper'), document.querySelector('.main-callback-pop'))
+})
+document.querySelector('.button__consult').addEventListener('click', function(){
+	popToggle(document.querySelector('.main-callback-pop-wrapper'), document.querySelector('.main-callback-pop'))
+})
+
 
 
 
@@ -267,7 +353,8 @@ popa({
 popa({
 	pop: '.pop-nastya',
 	clickTrigger: '.pop-trigger--nastya',
-	popCloserType: 'inner',
+	// popCloserType: 'inner',
+	popCloserType: popButtonType,
 })
 
 popa({
@@ -313,7 +400,7 @@ popa({
 function startPsychoSlider() {
 	var psychoSlider = new Swiper('.pop-psycho-slider', {
 		direction: 'vertical',
-		spaceBetween: 300,
+		spaceBetween: 3000,
 		navigation: {
 			nextEl: '.swiper-button-next.psycho-button-next',
 			prevEl: '.swiper-button-prev.psycho-button-prev',
@@ -354,7 +441,8 @@ popa({
 popa({
 	clickTrigger: '.pop-trigger--egor',
 	pop: '.pop-egor',
-	popCloserType: 'inner',
+	// popCloserType: 'inner',
+	popCloserType: popButtonType,
 })
 
 
@@ -491,13 +579,14 @@ function startDragSlider1() {
 		},
 	})
 }
-
 popa({
 	clickTrigger: '.button-drag-more-1',
 	pop: '.pop-drag-1',
 	popCloserType: 'outer',
 	onOpen: startDragSlider1,
 })
+
+
 
 function startDragSlider2() {
 	var dargSlider2 = new Swiper('.drag-slider-2', {
@@ -508,7 +597,6 @@ function startDragSlider2() {
 		},
 	})
 }
-
 popa({
 	clickTrigger: '.button-drag-more-2',
 	pop: '.pop-drag-2',
@@ -526,10 +614,17 @@ function startDragSlider3() {
 		},
 	})
 }
-
 popa({
 	clickTrigger: '.button-drag-more-3',
 	pop: '.pop-drag-3',
 	popCloserType: 'outer',
 	onOpen: startDragSlider3,
+})
+
+
+popa({
+  pop: '.pop-leaving',
+  clickTrigger: 'page-leaving',
+  popCloser: '.closer',
+  popCloserType: 'outer',
 })

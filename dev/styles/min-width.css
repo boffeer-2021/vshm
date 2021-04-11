@@ -4,3 +4,15 @@
 		top: 35%;
 	}
 }
+
+@media (min-width: 1400px) {
+	.pop-nastya {
+		max-height: 700px;
+		overflow: visible;
+	}
+}
+@media (min-width: 1800px) {
+	.look__machine--moving {
+		transform: translateX(1520px);
+	}
+}
