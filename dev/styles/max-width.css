@@ -1,2 +1,13 @@
-@media (max-width: 480px) {
+@media (max-width: 1400px) {
+	.pop-drag-get-bonus__img,
+	.pop-drag-get-skillcard__img {
+		max-width: 145px;
+	}
+	.pop-drag .pop__text {
+		font-size: 16px;
+	}
+	.pop-drag {
+		padding-top: 20px;
+		padding-bottom: 0;
+	}
 }

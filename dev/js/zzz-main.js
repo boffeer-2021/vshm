@@ -479,3 +479,57 @@ popa({
 	popCloserType: 'outer',
 	onOpen: startEmployeSlider,
 })
+
+
+
+function startDragSlider1() {
+	var dargSlider1 = new Swiper('.drag-slider-1', {
+		spaceBetween: 2000,
+		navigation: {
+			nextEl: '.swiper-button-next.drag-1-button-next',
+			prevEl: '.swiper-button-prev.drag-1-button-prev',
+		},
+	})
+}
+
+popa({
+	clickTrigger: '.button-drag-more-1',
+	pop: '.pop-drag-1',
+	popCloserType: 'outer',
+	onOpen: startDragSlider1,
+})
+
+function startDragSlider2() {
+	var dargSlider2 = new Swiper('.drag-slider-2', {
+		spaceBetween: 2000,
+		navigation: {
+			nextEl: '.swiper-button-next.drag-2-button-next',
+			prevEl: '.swiper-button-prev.drag-2-button-prev',
+		},
+	})
+}
+
+popa({
+	clickTrigger: '.button-drag-more-2',
+	pop: '.pop-drag-2',
+	popCloserType: 'outer',
+	onOpen: startDragSlider2,
+})
+
+
+function startDragSlider3() {
+	var dargSlider2 = new Swiper('.drag-slider-3', {
+		spaceBetween: 2000,
+		navigation: {
+			nextEl: '.swiper-button-next.drag-3-button-next',
+			prevEl: '.swiper-button-prev.drag-3-button-prev',
+		},
+	})
+}
+
+popa({
+	clickTrigger: '.button-drag-more-3',
+	pop: '.pop-drag-3',
+	popCloserType: 'outer',
+	onOpen: startDragSlider3,
+})
