@@ -374,3 +374,108 @@ popa({
 	popCloserType: 'outer',
 	onOpen: startElectiveSlider,
 })
+
+
+function startNuclearSlider() {
+	var nuclearSlider = new Swiper('.nuclear-slider', {
+		spaceBetween: 2000,
+		navigation: {
+			nextEl: '.swiper-button-next.nuclear-button-next',
+			prevEl: '.swiper-button-prev.nuclear-button-prev',
+		},
+
+	})
+}
+popa({
+	clickTrigger: '.button__nuclear',
+	pop: '.pop-nuclear',
+	popCloserType: 'outer',
+	onOpen: startNuclearSlider,
+})
+
+
+popa({
+	clickTrigger: '.pop-trigger--mikhail',
+	pop: '.pop-mikhail',
+	popCloserType: 'outer',
+})
+popa({
+	clickTrigger: '.pop-trigger--dim',
+	pop: '.pop-dim',
+	popCloserType: 'outer',
+})
+popa({
+	clickTrigger: '.pop-trigger--nikolai',
+	pop: '.pop-nikolai',
+	popCloserType: 'outer',
+})
+popa({
+	clickTrigger: '.pop-trigger--bogdan',
+	pop: '.pop-bogdan',
+	popCloserType: 'outer',
+})
+
+
+
+popa({
+	clickTrigger: '.learn-faq__coursework',
+	pop: '.pop-coursework',
+	popCloserType: 'outer',
+})
+
+
+function startProgrammSlider() {
+	var programmSlider = new Swiper('.programm-slider', {
+		spaceBetween: 2000,
+		navigation: {
+			nextEl: '.swiper-button-next.programm-button-next',
+			prevEl: '.swiper-button-prev.programm-button-prev',
+		},
+	})
+}
+
+popa({
+	clickTrigger: '.learn-faq__programm',
+	pop: '.pop-programm',
+	popCloserType: 'outer',
+	onOpen: startProgrammSlider,
+})
+
+popa({
+	clickTrigger: '.learn-faq__homework',
+	pop: '.pop-homework',
+	popCloserType: 'outer',
+})
+popa({
+	clickTrigger: '.learn-faq__flex',
+	pop: '.pop-flex',
+	popCloserType: 'outer',
+})
+popa({
+	clickTrigger: '.learn-faq__warranties',
+	pop: '.pop-warranties',
+	popCloserType: 'outer',
+})
+popa({
+	clickTrigger: '.learn-faq__communication',
+	pop: '.pop-communication',
+	popCloserType: 'outer',
+})
+
+
+
+function startEmployeSlider() {
+	var employeSlider = new Swiper('.employe-slider', {
+		spaceBetween: 2000,
+		navigation: {
+			nextEl: '.swiper-button-next.employe-button-next',
+			prevEl: '.swiper-button-prev.employe-button-prev',
+		},
+	})
+}
+popa({
+	clickTrigger: '.learn-faq__employe',
+	pop: '.pop-employe',
+	popCloserType: 'outer',
+	onOpen: startEmployeSlider,
+})
