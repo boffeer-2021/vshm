@@ -6,7 +6,6 @@ block content
 	- var vk = ' https://vk.com/hellosales';
 	- var tiktok = 'https://vm.tiktok.com/ZSJ6nC9kQ/';
 	- var telegram = 'https://t.me/babki_na_udalenke ';
-	- var whatsapp = 'https://whatsapp.com';
 
 	- var yagla = 'https://yagla.ru/';
 	- var senler = 'https://senler.ru/';
@@ -49,7 +48,8 @@ block content
 					p.hero__prephrase От создателей «Ядерного Чемоданчика»
 					h1.section__title.hero__title Перестань чувствовать себя<br> маркетологом-самозванцем
 					p.hero__subtitle 
-						span.text__golden.hero__tooltip(data-tooltip="2,2 раза — средняя статистика среди выпускников программы") и увеличь свой доход в 2,2 раза
+						span.text__golden.hero__tooltip(data-tooltip="2,2 раза — средняя статистика среди выпускников программы") и увеличь свой доход в
+							span.text__bold-underline  2,2 раза
 						span.hero__date до
 							time.hero__deadline 
 						span с помощью стратегического маркетинга
@@ -59,7 +59,7 @@ block content
 				.hero-bullets
 					.hero-warranty
 						img.hero-warranty__img(src="./img/hero/warranty.png", alt="")
-						p.hero__bullet-text Окупишь обучение, изучив 35 из 95 часов<br>программы, или мы вернём деньги!
+						p.hero__bullet-text Окупишь обучение, изучив 35 из 95 часов<br class="only-desktop">программы, или мы вернём деньги!
 					.hero-diploma
 						img.hero-diploma__img(src="./img/hero/diploma.png", alt="")
 						p.hero__bullet-text Диплом государственного образца
@@ -107,7 +107,7 @@ block content
 
 
 		section.bad-marketing-wrapper
-			h2.section__title.bad-marketing__title Знаешь, в чём дело?... Ты просто используешь не тот маркетинг!
+			h2.section__title.bad-marketing__title Знаешь, в чём дело?...<br class="no-desktop">Ты просто используешь не тот маркетинг!
 			.container.bad-marketing
 				.bad-marketing-character
 					p.bad-marketing-character__text.text__italic Василий Петров,
@@ -117,7 +117,7 @@ block content
 					p Пока что уровень индустрии маркетинга — это что-то типа:<br>сделать таргет, написать тексты, запилить сайт, запустить контекст...
 					p.bad-marketing-text__em
 						span.text__golden Изучи стратегический маркетинг:
-						span  от анализа целевой аудитории до подбора команды
+						span  <br class="no-desktop">от анализа целевой аудитории<br class="no-desktop">до подбора команды
 					p Заведи знакомства с опытными коллегами маркетологами
 					p Автоматизируй и шаблонизируй рабочий процесс
 					p Научись поддерживать ресурсное состояние
@@ -181,10 +181,11 @@ block content
 
 		section.about-wrapper
 			.container.about
-				h2.section__title.about__title Как-то красиво всё выглядит... что вообще за ВШМ?
+				h2.section__title.about__title Как-то красиво всё выглядит...<br class="no-desktop">что вообще за ВШМ?
 				p.about-descr
 					span.text__golden.text__bold ВШМ
-					span  — это не онлайн-школа или университет, не очередной курс<br>по профессия в интернете.
+					span  — это не онлайн-школа или университет,<br class="only-desktop"> не очередной курс<br class="only-desktop">по профессия в интернете.
+					span <br> И даже не обычный клуб по подписке.
 				.about-features
 					.about-features-wrap--single
 						button.about-features__item.about-features__item--learn
@@ -408,10 +409,10 @@ block content
 				.container
 					.programm-drag.programm-drag-1
 						.programm-certificates
-							p.text__italic.text__golden.programm__text--certificate.programm-certificates__text За каждый раунд ты получаешь скилл-карточку.
+							p.text__italic.text__golden.programm__text--certificate.programm-certificates__text За каждый раунд ты получаешь<br class="no-desktop">скилл-карточку.
 							p.text__italic.programm-certificates__text Скилл-карточка, подтверждает, что ты освоил(а) очередной навык маркетолога.
 							img.programm__skillcard-pic(src="./img/programm/programm-cards.png", alt="")
-							p.text__italic.programm-certificates__text Соберёшь все скилл-карточки драга и получишь квалификационный сертификат первого уровня.
+							p.text__italic.programm-certificates__text Соберёшь все скилл-карточки драга и получишь квалификационный сертификат<br class="no-desktop">первого уровня.
 							img.programm__certificate-pic(src="./img/programm/programm-certificate.png", alt="")
 						.programm-about
 							h3.programm-about__title
@@ -423,7 +424,7 @@ block content
 							p.programm__content — Раунд 3: упаковка
 							p.programm__content — Раунд 4: копирайтинг
 							button.button-thirdly.text__italic.button-drag-more.button-drag-more-1 Подробнее о драге 1 
-							a.button-primary.button-drag-1(href=`${demo}` target="_blank") Получить пробный бесплатный доступ
+							a.button-primary.button-drag-1.only-desktop(href=`${demo}` target="_blank") Получить пробный бесплатный доступ
 						.has-popup.drag-img
 							button.pop-trigger.pop-trigger--mikhail
 								span.pop-circle-1
@@ -431,6 +432,7 @@ block content
 								span.pop-circle-3
 								span.pop-hover-glower
 							img.drag__img.img__mikhail(src="./img/programm/michail.png", alt="")
+						a.button-primary.button-drag-1.no-desktop(href=`${demo}` target="_blank") Получить пробный бесплатный доступ
 
 
 			.programm-drag-wrapper
@@ -491,14 +493,14 @@ block content
 						.programm-certificates
 							p.text__italic Получишь сертификат ВШМ
 							img.programm__certificate-pic(src="./img/programm/certificate-4.png", alt="")
-							p.text__italic По запросу, получишь диплом государственного образца по квалификации «Маркетолог».
+							p.text__italic По запросу, получишь диплом<br class="no-desktop"> государственного образца по<br class="no-desktop"> квалификации «Маркетолог».
 							img.programm__certificate-pic(src="./img/hero/diploma.png", alt="")
 						.programm-about
 							h3.programm-about__title
 								span.text__golden БОНУСНЫЙ РАУНД 13:
 								span  ФИШКИ и СЕКРЕТНЫЕ СЕКРЕТЫ 
-							h4.programm__subtitle Эти фишки по маркетингу собирались несколько лет. 
-							p.programm__content Здесь ты узнаешь 3 способа запустить сарафанку, как активировать триггер «инсайдинг» и хайпануть на нём, как раскочегарить активность у поста...  И это только малая часть, фишек будет столько, что трудно унести.
+							h4.programm__subtitle Эти фишки по маркетингу собирались <br class="no-desktop">несколько лет. 
+							p.programm__content Здесь ты узнаешь 3 способа запустить сарафанку,<br class="no-desktop"> как активировать триггер «инсайдинг» и хайпануть на <br class="no-desktop">нём, как раскочегарить активность у поста...<br class="no-desktop">  И это только малая часть, фишек будет столько,<br class="no-desktop"> что трудно унести.
 							p.programm__content.text__golden.text__bold.programm__bonus И дополнительный бонус: 
 							p.programm__content.text__bold бекстейдж Ядерного Чемоданчика
 						.drag-result
@@ -511,35 +513,7 @@ block content
 
 		section.learn-wrapper#learn
 			.container.learn
-				.learn-faq
-					button.button-thirdly.learn-faq__coursework.learn-faq__item
-						span —
-						span.text__golden  Про
-						span.learn-faq__name  курсовой проект
-					button.button-thirdly.learn-faq__programm.learn-faq__item
-						span —
-						span.text__golden  Про
-						span.learn-faq__name  платформу обучения
-					button.button-thirdly.learn-faq__homework.learn-faq__item
-						span —
-						span.text__golden  Про
-						span.learn-faq__name  домашки и бонусы
-					button.button-thirdly.learn-faq__flex.learn-faq__item
-						span —
-						span.text__golden  Про
-						span.learn-faq__name  гибкость и подстройку
-					button.button-thirdly.learn-faq__warranties.learn-faq__item
-						span —
-						span.text__golden  Про
-						span.learn-faq__name  гарантии и сертификаты
-					button.button-thirdly.learn-faq__communication.learn-faq__item
-						span —
-						span.text__golden  Про
-						span.learn-faq__name  общение
-					button.button-thirdly.learn-faq__employe.learn-faq__item
-						span —
-						span.text__golden  Про
-						span.learn-faq__name  трудоустройство
+				+learnFaqButtons({className: 'only-desktop'})
 				.learn-text
 					h2.section__title.learn-text__title Смотри, как ты будешь учиться:
 					p.learn-text__bullet.text__bold
@@ -556,9 +530,10 @@ block content
 						|, чей суммарный<br>месячный доход составляет
 						span.text__extrabold  50 млн рублей
 						| . 
+					+learnFaqButtons({className: 'no-desktop'})
 					h3.section__subtitle.learn-text__subtitle Хочешь пообщаться с<br>консультирующим<br>маркетологом?
-					p.learn-text__bullet Записывайся на индивидуальную консультацию к Богдану<br>Барбашову и узнай, какие быстрые результаты реально<br>получить по твоему проекту прямо сейчас!
-					button.button-primary.button__consult Получить консультацию
+					p.learn-text__bullet.only-desktop Записывайся на индивидуальную консультацию к Богдану<br>Барбашову и узнай, какие быстрые результаты реально<br>получить по твоему проекту прямо сейчас!
+					button.button-primary.button__consult.only-desktop Получить консультацию
 
 				.has-popup.drag-img.img-bogdan
 					button.pop-trigger.pop-trigger--bogdan
@@ -567,6 +542,8 @@ block content
 						span.pop-circle-3
 						span.pop-hover-glower
 					img.drag__img.img__bogdan(src="./img/learn/bogdan.png", alt="")
+				p.learn-text__bullet.no-desktop Записывайся на индивидуальную консультацию к Богдану<br>Барбашову и узнай, какие быстрые результаты реально<br>получить по твоему проекту прямо сейчас!
+				button.button-primary.button__consult.no-desktop Получить консультацию
 
 
 
@@ -601,7 +578,7 @@ block content
 					.get-features-wrapper.get-features-wrapper-3
 						.get-features-item.js-get-features-item--6.active
 							img.get-features__img(src="./img/get/6.png", alt="")
-							p.get-features__text Сопровождения психолога, который разбирается в маркетинге
+							p.get-features__text Сопровождения психолога, который разбирается<br class="no-desktop"> в маркетинге
 						.get-features-item.js-get-features-item--7.active
 							img.get-features__img(src="./img/get/7.png", alt="")
 							p.get-features__text Виртуальный класс для комфортной работы
@@ -621,18 +598,18 @@ block content
 
 
 
-		section.testimonials-wrapper#testimonials
+		section.testimonials-wrapper
 			.container.testimonials
-				h2.section__title.testimonials__title Что изменилось у тех, кто уже в ВШМ:
+				h2.section__title.testimonials__title#testimonials Что изменилось у тех, кто уже в ВШМ:
 				.testimonials-stats 
-					p
+					p.testimonials-stats__item
 						span.text__golden Доход
 						|  вырос
 						span.text__golden  в
 							span.text__bold  2-3 
 							|  раза
 
-					p
+					p.testimonials-stats__item.testimonials-stats__item--bg
 						span.text__golden Доход
 						|  более
 						span.text__bold  100 000 
@@ -641,7 +618,7 @@ block content
 							span.text__bold  30%
 							|  учащихся
 
-					p
+					p.testimonials-stats__item
 						span.text__golden Режим работы —
 							span.text__bold  6,5
 							|  часов
@@ -707,20 +684,20 @@ block content
 					.partner-item 
 						img.partner__img(src="./img/partners/partners-tele2.png", alt="")
 					.partner-item 
-						img.partner__img(src="./img/partners/partners-renault.png", alt="")
+						img.partner__img.partner__img--renault(src="./img/partners/partners-renault.png", alt="")
 					.partner-item 
 						img.partner__img(src="./img/partners/partners-volvo.png", alt="")
 					.partner-item 
 						img.partner__img(src="./img/partners/partners-kirieshki.png", alt="")
 					.partner-item 
-						img.partner__img(src="./img/partners/partners-peugeot.png", alt="")
+						img.partner__img.partner__img--peugeot(src="./img/partners/partners-peugeot.png", alt="")
 					.partner-item 
 						img.partner__img(src="./img/partners/partners-ford.png", alt="")
 					.partner-item 
 						img.partner__img(src="./img/partners/partners-hackathon.png", alt="")
-				h3.section__subtitle.partners__subtitle Наше агентство Dr. i-Bolit
-					span.text__golden  стабильно предоставляет проекты
-					| <br>выпускникам
+					h3.section__subtitle.partners__subtitle Наше агентство Dr. i-Bolit
+						span.text__golden  стабильно предоставляет проекты
+						| <br>выпускникам
 
 
 		section.pricing-wrapper#pricing
@@ -752,16 +729,16 @@ block content
 
 		section.team-wrapper
 			.container
-				h2.section__title.team__title Что делает команда «Высшей Школы Маркетинга» в полях?
+				h2.section__title.team__title Что делает команда<br class="no-desktop"> «Высшей Школы Маркетинга»<br class="no-desktop"> в полях?
 				h3.section__subtitle.team__subtitle.text__golden За последние 2 года сделали в 205 проектах такие результаты
 				.team
 					.team-about
 						ul.team-bullets
-							li.team-bullet Привели 700+ гостей на открытие роллердрома<br>Омска и 17 138 624 рублей выручки за год с одного<br>филиала.
+							li.team-bullet Привели 700+ гостей на открытие роллердрома<br class="only-desktop"> Омска и 17 138 624 рублей выручки за год с одного<br class="only-desktop"> филиала.
 							li.team-bullet Заработали  977 500руб. выручки в автошколу, при<br>бюджете 65 320руб.
 							li.team-bullet Увеличили месячный доход с 500 000руб. до<br>3 000 000руб. за 4 месяца в обучении массажистов.
 							li.team-bullet Увеличили в 3 раза прибыль микро-бизнеса по<br>автоподбору за 1 год.
-						button.team-thanks-button
+						button.team-thanks-button.only-desktop
 							img.team-thanks-button__img(src="./img/team/team-thanks.png", alt="")
 							span.button-thirdly Смотреть благодарности 
 					.team-clients
@@ -787,13 +764,16 @@ block content
 								span.team-clients__logo-wrap
 									img.team-clients__logo(src="./img/team/team-lenfilm.png", alt="Ленфильм")
 								p «Ленфильм»
+						button.team-thanks-button.no-desktop
+							img.team-thanks-button__img(src="./img/team/team-thanks.png", alt="")
+							span.button-thirdly Смотреть благодарности 
 
 
 
 		section.changes-wrapper
 			.container.changes
 				h2.section__title.changes__title Готов(а) к
-					span.text__golden  изменениям
+					span.text__golden  изменениям<br class="no-desktop">
 					span  прямо сегодня?
 				p.section__subtitle.changes__subtitle Тогда вступай в ряды студентов «Высшей Школы Маркетинга»<br>и забирай один из подарков на выбор 
 				.changes-course-list
@@ -803,7 +783,7 @@ block content
 
 					.changes-course
 						h3.changes-course__title.text__golden Курс<br>«Маркетинг в Кайф»
-						p Пошаговые уроки, как прийти к партнёрскому маркетингу и научиться работать с заказчиком за лиды или за %
+						p Пошаговые уроки, как прийти к партнёрскому маркетингу и научиться работать<br class="no-desktop"> с заказчиком за лиды или за %
 
 				.changes-offer
 					h3.changes-offer__title Внимание! Предложение актуально всего 10 часов
@@ -815,12 +795,13 @@ block content
 
 
 
+
 		.footer-wrapper
 			footer.container.footer
 				.footer-info
 					a.footer-link(href=`${privacy}`) Политика конфиденциальности
 					a.footer-link(href=`${license}`) Государственная лицензия
-					p.footer__caption Вся предоставленная на сайте информация ни при каких условиях не является публичной афертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ
+					p.footer__caption Вся предоставленная на сайте информация ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ
 				a(href=`${designerLink}`).designer
 					img.designer__logo(src="./img/common/designer-logo.png", alt="")
 					p.designer__name Design by Рома Король
@@ -866,15 +847,14 @@ block content
 						placeholder="Введи номер телефона"
 						required).input-regular
 					.form-socials
-						a(href=`${whatsapp}`).form-socials__item
-							+whatsappIcon({className: 'form-socials__icon', color: '#fff'})
 						a(href=`${vk}`).form-socials__item
 							+vkIcon({className: 'form-socials__icon', color: '#fff'})
 						a(href=`${telegram}`).form-socials__item
 							+telegramIconCircle({className: 'form-socials__icon', color: '#fff'})
 					.input-wrapper
 						button.button-primary.button-centered.callback-form__button(type="submit") Забронировать место
-					p.form-privacy Нажимая на кнопку, вы подтверждаете согласие на обработку<br>персональных данных и соглашаетесь с политикой<br>конфиденциальности
+					p.form-privacy Нажимая на кнопку, вы подтверждаете согласие на обработку<br>персональных данных и соглашаетесь с 
+						button.button-thirdly.button-privacy политикой<br>конфиденциальности
 
 
 			.pop-ilnaz

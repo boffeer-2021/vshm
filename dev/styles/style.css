@@ -196,21 +196,30 @@ button {
 	/* color: #fff; */
 }
 
+a:hover,
+a:focus,
+button:hover,
+button:focus {
+	outline: none;
+}
+
 
 @keyframes glowing {
 	0% {
-		box-shadow: 0px 0px 10px 10px rgba(220,160,103,0.85);
-		background:rgba(218,158,101,0.5);
-	}
-
-	50% {
 		box-shadow: none;
 		background: none;
 	}
 
-	100% {
-		background:rgba(218,158,101,0.5);
+	50% {
 		box-shadow: 0px 0px 10px 10px rgba(220,160,103,0.85);
+		background:rgba(218,158,101,0.5);
+	}
+
+	100% {
+		box-shadow: none;
+		background: none;
+		/* background:rgba(218,158,101,0.5); */
+		/* box-shadow: 0px 0px 10px 10px rgba(220,160,103,0.85); */
 	}
 }
 
@@ -309,7 +318,7 @@ button {
 	height: 28px;
 	z-index: 5;
 	background-blend-mode: multiply;
-	animation: 4s linear 2s infinite glowing;
+	animation: 2s linear infinite glowing;
 	transition: all 0.3s;
 }
 
@@ -449,6 +458,21 @@ a {
 	font-weight: 600 !important;
 	font-family: 'Akrobat', sans-serif;
 }
+.text__bold-underline {
+	position: relative;
+}
+.text__bold-underline::after {
+	content: '';
+	position: absolute;
+	display: block;
+	bottom: 0;
+	height: 2px;
+	width: 95%;
+	right: 0;
+	background: var(--c-primary);
+
+
+}
 .text__extrabold {
 	font-weight: 700 !important;
 	font-family: 'Akrobat', sans-serif;
@@ -516,6 +540,7 @@ span {
 .header-logo {
 	margin-right: 30px;
 	max-width: 270px;
+	max-width: 230px;
 }
 .logo {
 	width: 100%;
@@ -586,6 +611,7 @@ span {
 .hero__character-right {
 	position: absolute;
 	right: -285px;
+	right: -245px;
 	top: -235px;
 	max-width: 700px;
 	z-index: 1;
@@ -680,6 +706,7 @@ span {
 	display: flex;
 	justify-content: space-between;
 	max-width: 971px;
+	max-width: 921px;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -973,10 +1000,15 @@ span {
 	z-index: 10;
 	transition: all 3s;
 }
+.look__machine--bottom {
+	transform: translateX(1200px) scaleX(-1);
+}
 .look__machine--moving {
 	transform: translateX(950px);
 }
-
+.look__machine--bottom.look__machine--moving {
+	 transform: translateX(0) scaleX(-1);
+}
 
 
 
@@ -1037,21 +1069,24 @@ span {
 
 @keyframes slider-controller {
 	0% {
-		transform: translateX(-20px);
 	}
 	45% {
-		transform: translateX(0);
+		transform: translateX(-40px);
 	}
 	80% {
-		transform: translateX(-20px);
+		/* transform: translateX(10px); */
 	}
 	100% {
 		transform: translateX(0);
 	}
 }
 
+.before-after-slider__controller--preview:hover {
+	animation: none;
+	/* transition: 0.3s all; */
+}
 .before-after-slider__controller--preview {
-	animation: 2.5s slider-controller;
+	animation: 2.5s slider-controller 5s alternate;
 	/* transition: 0.3s all; */
 }
 .before-after-slider__controller::after {
@@ -1173,6 +1208,7 @@ span {
 .look-img--good {
 	margin-left: -200px;
 	margin-left: -180px;
+	margin-left: -150px;
 	margin-top: 60px;
 }
 
@@ -2034,8 +2070,10 @@ span {
 	margin-bottom: 15px;
 }
 .testimonials__more {
+	font-family: 'Akrobat';
 	font-style: italic;
 	margin-top: auto;
+	font-size: 18px;
 }
 
 .tesimonials-all-cases {
@@ -2056,6 +2094,7 @@ span {
 
 .partners-wrapper {
 	background: url(./../img/partners/partners-bg.png);
+	background-size: cover;
 	padding-top: 85px;
 	padding-bottom: 70px;
 }
@@ -2075,7 +2114,7 @@ span {
 	flex-wrap: wrap;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 50px;
+	/* margin-bottom: 50px; */
 	max-width: 570px;
 }
 .partner-item {
@@ -2094,6 +2133,10 @@ span {
 	object-fit: contain;
 	max-width: 110px;
 }
+.partner__img--peugeot,
+.partner__img--renault {
+	max-width: 82px;
+}
 
 .partners__subtitle {
 	color: #000;
@@ -2103,6 +2146,7 @@ span {
 	max-width: 500px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 50px;
 	text-align: center;
 	font-family: 'Akrobat', sans-serif;
 	font-weight: 700;
@@ -2121,6 +2165,7 @@ span {
 
 .pricing-wrapper {
 	background: url(./../img/scheme/scheme-bg.png);
+	background-size: cover;
 	padding-top: 65px;
 	padding-bottom: 70px;
 }
@@ -2270,7 +2315,7 @@ span {
 	margin-bottom: 20px;
 	text-transform: none;
 	font-family: 'Akrobat', sans-serif;
-	font-weight: 700px;
+	font-weight: 700;
 }
 .team__subtitle {
 	text-align: center;
@@ -3154,6 +3199,9 @@ span {
 }
 
 
+.no-desktop {
+	display: none;
+}
 
 @import './max-width.css';
 @import './min-width.css';

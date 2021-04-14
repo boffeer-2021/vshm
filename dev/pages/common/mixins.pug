@@ -2,7 +2,40 @@ include icons
 
 
 mixin pic(data)
-    picture(class= data.pictureClass)
-        source(srcset= data.src+".webp 1x,"+data.src+"@2x.webp 2x", type="image/webp")
-        img(class= data.imgClass, src= data.src+data.ext alt= data.alt)
-        img(class= data.imgClass, src= data.src+data.ext, srcset= data.src+"@2x"+data.ext+" 2x", alt= data.alt)
+	picture(class= data.pictureClass)
+		source(srcset= data.src+".webp 1x,"+data.src+"@2x.webp 2x", type="image/webp")
+		img(class= data.imgClass, src= data.src+data.ext alt= data.alt)
+		img(class= data.imgClass, src= data.src+data.ext, srcset= data.src+"@2x"+data.ext+" 2x", alt= data.alt)
+
+
+
+mixin learnFaqButtons($)
+	.learn-faq(class= $.className)
+		button.button-thirdly.learn-faq__coursework.learn-faq__item
+			span —
+			span.text__golden  Про
+			span.learn-faq__name  курсовой проект
+		button.button-thirdly.learn-faq__programm.learn-faq__item
+			span —
+			span.text__golden  Про
+			span.learn-faq__name  платформу обучения
+		button.button-thirdly.learn-faq__homework.learn-faq__item
+			span —
+			span.text__golden  Про
+			span.learn-faq__name  домашки и бонусы
+		button.button-thirdly.learn-faq__flex.learn-faq__item
+			span —
+			span.text__golden  Про
+			span.learn-faq__name  гибкость и подстройку
+		button.button-thirdly.learn-faq__warranties.learn-faq__item
+			span —
+			span.text__golden  Про
+			span.learn-faq__name  гарантии и сертификаты
+		button.button-thirdly.learn-faq__communication.learn-faq__item
+			span —
+			span.text__golden  Про
+			span.learn-faq__name  общение
+		button.button-thirdly.learn-faq__employe.learn-faq__item
+			span —
+			span.text__golden  Про
+			span.learn-faq__name  трудоустройство

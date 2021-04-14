@@ -26,7 +26,6 @@ if (window.innerWidth > 1400) {
 
 
 
-
 /* 
  *	Gets
  *	1. callback - function
@@ -86,10 +85,13 @@ waitUntilPixels({
 
 const syndromeSlider = new Swiper('.syndrome-slider', {
   // loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next.syndrome-button-next',
-    prevEl: '.swiper-button-prev.syndrome-button-prev',
-  },
+	autoplay: {
+		delay: 5000,
+	},
+	navigation: {
+		nextEl: '.swiper-button-next.syndrome-button-next',
+		prevEl: '.swiper-button-prev.syndrome-button-prev',
+	},
 });
 
 
@@ -417,7 +419,7 @@ popa({
 popa({
 	clickTrigger: '.about-features__item--meetups',
 	pop: '.pop-about-meetups',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
 })
 
 popa({
