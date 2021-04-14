@@ -622,9 +622,10 @@ popa({
 })
 
 
-popa({
-  pop: '.pop-leaving',
-  clickTrigger: 'page-leaving',
-  popCloser: '.closer',
-  popCloserType: 'outer',
-})
+
+// popa({
+//   pop: '.pop-leaving',
+//   clickTrigger: 'page-leaving',
+//   popCloser: '.closer',
+//   popCloserType: 'outer',
+// })

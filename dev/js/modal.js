@@ -143,6 +143,11 @@ function popa($){
 	let pop = document.querySelector( $.pop );
 
 	if ($.clickTrigger == 'page-leaving') {
+		// while(true) {
+		//     if (window.onbeforeunload != null) {
+		//         window.onbeforeunload = null;
+		//     }
+		// }
 		document.addEventListener('mouseleave', function() {
 			showPop(popWrap, pop);
 		})
