@@ -38,7 +38,7 @@ block content
 					a.nav-item(href="#learn") Как проходит
 					a.nav-item(href="#testimonials") Отзывы
 				.header-contact
-					a.header-phone.button-thirdly(href="tel" end="600-01-90") #{phone}
+					a.header-phone.button-thirdly(href="tel:+78006000190" end="600-01-90") #{phone}
 					button.button-primary.button__callback Заказать звонок
 
 
@@ -423,7 +423,7 @@ block content
 							p.programm__content — Раунд 3: упаковка
 							p.programm__content — Раунд 4: копирайтинг
 							button.button-thirdly.text__italic.button-drag-more.button-drag-more-1 Подробнее о драге 1 
-							a.button-primary.button-drag-1(href=`${demo}`) Получить пробный бесплатный доступ
+							a.button-primary.button-drag-1(href=`${demo}` target="_blank") Получить пробный бесплатный доступ
 						.has-popup.drag-img
 							button.pop-trigger.pop-trigger--mikhail
 								span.pop-circle-1
@@ -689,7 +689,7 @@ block content
 						p.testimonials__text До обучения пахал на заводе. Сейчас доход уже превысил З/П
 						button.button-thirdly.testimonials__more Смотреть отзыв
 
-		a.button-primary.tesimonials-all-cases(href=`${buttonTestimonials}`) показать ещё кейсы
+		a.button-primary.tesimonials-all-cases(href=`${buttonTestimonials}` target="_blank") показать ещё кейсы
 
 
 
@@ -744,7 +744,7 @@ block content
 						p.scheme__checklists.scheme__tag Чек-личты
 						p.scheme__mindmaps.scheme__tag Майнд-карты
 						p.pricing-action.pricing-action-out Получаешь от ВШМ
-				a.button-primary.pricing-button(href=`${buttonPricing}`) хочу в вшм
+				a.button-primary.pricing-button(href=`${buttonPricing}` target="_blank") хочу в вшм
 
 
 
@@ -807,7 +807,7 @@ block content
 
 				.changes-offer
 					h3.changes-offer__title Внимание! Предложение актуально всего 10 часов
-					a.button-primary.changes-offer__button(href=`${buttonLastForm}`) Вступить в ВШМ
+					a.button-primary.changes-offer__button(href=`${buttonLastForm}` target="_blank") Вступить в ВШМ
 					p.changes-people
 						span С нами уже
 						span.changes-people__counter 956
@@ -825,17 +825,17 @@ block content
 					img.designer__logo(src="./img/common/designer-logo.png", alt="")
 					p.designer__name Design by Рома Король
 				.footer-socials
-					a.footer-socials-item(href=`${telegram}`)
+					a.footer-socials-item(href=`${telegram}` target="_blank")
 						+telegramIcon({
 							color: '#dca067',
 							className: 'footer-socials-item__icon'
 						})
-					a.footer-socials-item(href=`${tiktok}`)
+					a.footer-socials-item(href=`${tiktok}` target="_blank")
 						+tiktokIcon({
 							color: '#dca067',
 							className: 'footer-socials-item__icon footer-socials-item__icon--tiktok'
 						})
-					a.footer-socials-item(href=`${vk}`)
+					a.footer-socials-item(href=`${vk}` target="_blank")
 						+vkIcon({
 							color: '#dca067',
 							className: 'footer-socials-item__icon'
