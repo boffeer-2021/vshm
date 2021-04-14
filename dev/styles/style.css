@@ -1,6 +1,7 @@
 @import 'modal/modal.css';
 
 
+
 @font-face {
     font-family: 'Akrobat';
     font-style: normal;
@@ -172,6 +173,8 @@ button {
 
 .input-wrapper {
 	max-width: 370px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .input-regular {
 	width: 100%;
@@ -1522,8 +1525,12 @@ span {
 	width: 80%;
 	height: 80%;
 }
-
-
+.swiper-button-prev.base-1-button-prev,
+.swiper-button-next.base-1-button-next,
+.swiper-button-prev.base-2-button-prev,
+.swiper-button-next.base-2-button-next {
+	top: 120px !important;
+}
 
 .base {
 	display: flex;
@@ -2076,7 +2083,7 @@ span {
 	font-size: 18px;
 }
 
-.tesimonials-all-cases {
+.testimonials-all-cases {
 	max-width: 320px;
 	margin-right: auto;
 	margin-left: auto;
@@ -2570,9 +2577,17 @@ span {
 	width: 80%;
 	height: 80%;
 }
+.footer-socials-item__icon--telegram {
+	width: 100%;
+	height: 100%;
+}
 .footer-socials-item__icon--tiktok {
 	height: 60%;
 	width: 60%;
+}
+.footer-socials-item__icon--vk {
+	height: 78%;
+	width: 78%;
 }
 
 
@@ -3196,6 +3211,12 @@ span {
 .programm__text--certificate.text__italic {
 	font-style: italic;
 	text-transform: uppercase;
+}
+
+
+.button-privacy {
+	display: inline;
+	font-size: 14px;
 }
 
 
