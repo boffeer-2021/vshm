@@ -627,6 +627,7 @@ popa({
 
 
 
+
 function startDragSlider1() {
 	var dargSlider1 = new Swiper('.drag-slider-1', {
 		spaceBetween: 2000,
@@ -796,9 +797,9 @@ waitUntilPixels({
 	target: '.testimonials',
 })
 
-// popa({
-//   pop: '.pop-leaving',
-//   clickTrigger: 'page-leaving',
-//   popCloser: '.closer',
-//   popCloserType: 'outer',
-// })
+popa({
+  pop: '.pop-leaving',
+  clickTrigger: 'page-leaving',
+  popCloser: '.closer',
+  popCloserType: 'outer',
+})

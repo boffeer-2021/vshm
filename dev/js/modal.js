@@ -148,8 +148,16 @@ function popa($){
 		//         window.onbeforeunload = null;
 		//     }
 		// }
+		let popShown = false;
 		document.addEventListener('mouseleave', function() {
-			showPop(popWrap, pop);
+			if (popShown === false) {
+				showPop(popWrap, pop);
+				popShown = true;
+				setTimeout(function(){
+					popShown = false
+				}, 90000)
+
+			}
 		})
 	} else {
 		// let opener = document.querySelector($.clickTrigger);

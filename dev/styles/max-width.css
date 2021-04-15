@@ -1824,6 +1824,48 @@
 	.programm-slider {
 		max-width: 300px;
 	}
+	.pop-programm .pop__text {
+		font-size: 16px;
+		max-width: 280px;
+	}
+	.pop__img--programm-1 {
+		max-width: 40%;
+		margin-left: 0;
+	}
+	.pop-programm .programm-button-next,
+	.pop-programm .programm-button-prev {
+		right: 2%;
+	}
+	.pop__img--programm-2 {
+		display: none;
+	}
+	.pop-flex .pop__img {
+		max-width: 150px;
+	}
+	.pop-homework .pop__img {
+		max-width: 150px;
+	}
+	.pop__img-warranty--1 {
+		max-width: 130px;
+	}
+	.pop-communication .pop__img {
+		max-width: 130px;
+	}
+	.pop-communication .pop__text {
+		font-size: 16px;
+	}
+	.employe-slider .pop__text {
+		font-size: 16px;
+		max-width: 90%;
+	}
+	.employe-slider {
+		max-width: 100%;
+	}
+	.employe-button-next,
+	.employe-button-prev {
+		right: -4%;
+	}
+	
 
 }
 

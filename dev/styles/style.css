@@ -648,7 +648,8 @@ span {
 .hero__tooltip::before {
 	display: block;
 	position: absolute;
-	bottom: -20px;
+	/* bottom: -20px; */
+	top: -10px;
 	left: 0;
 	right: 0;
 	margin-left: auto;
@@ -657,14 +658,15 @@ span {
 	height: 0; 
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
-	border-bottom: 20px solid black;
+	border-top: 20px solid black;
 }
 .hero__tooltip::after {
 	max-width: 500px;
 	margin-left: auto;
 	margin-right: auto;
 	position: absolute;
-	bottom: -80px;
+	/* bottom: -80px; */
+	top: -70px;
 	left: 0;
 	right: 0;
 	font-size: 18px;
@@ -2383,6 +2385,7 @@ span {
 	height: 100%;
 	display: flex;
 	justify-content: space-between;
+	position: relative;
 	align-items: center;
 }
 
@@ -2390,6 +2393,11 @@ span {
 	max-width: 100%;
 	height: 100%;
 	width: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
 }
 .pop-thanks {
 	height: 90%;
@@ -3276,6 +3284,12 @@ span {
 .pop-testimonials-7-wrapper .pop-aligner,
 .pop-testimonials-8-wrapper .pop-aligner {
 	align-items: flex-end;
+}
+
+
+
+.pop-leaving {
+	box-shadow: 0 0 50px rgb(255,255,255,.1);
 }
 
 
