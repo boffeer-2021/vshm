@@ -338,18 +338,14 @@
         </div>
       </section>
       <section class="programm-wrapper" id="programm">
-        <h2 class="section__title programm__title">
-          Основной курс —<br class="only-mobile"> 3
-          <button class="text__silver title__button"> драга </button> 13
-          <button class="text__golden title__button"> раундов</button>
-        </h2>
+        <h2 class="section__title programm__title">Основной курс —<br class="only-mobile"> 3 драга 13 раундов</h2>
         <div class="programm-drag-wrapper programm-drag-wrapper-1">
           <div class="container">
             <div class="programm-drag programm-drag-1">
               <div class="programm-certificates">
                 <p class="text__italic text__golden programm__text--certificate programm-certificates__text">За каждый раунд ты получаешь<br class="no-desktop">скилл-карточку.</p>
                 <p class="text__italic programm-certificates__text">Скилл-карточка, подтверждает, что ты освоил(а) очередной навык маркетолога.</p><img class="programm__skillcard-pic" src="./img/programm/programm-cards.png" alt="">
-                <p class="text__italic programm-certificates__text">Соберёшь все скилл-карточки драга и получишь квалификационный сертификат<br class="no-desktop">первого уровня.</p><img class="programm__certificate-pic" src="./img/programm/programm-certificate.png" alt="">
+                <p class="text__italic programm-certificates__text">Соберёшь все скилл-карточки драга и получишь квалификационный сертификат<br class="no-desktop">первого уровня.</p><img class="programm__certificate-pic programm__certificate-pic-1" src="./img/programm/programm-certificate.png" alt="">
               </div>
               <div class="programm-about">
                 <h3 class="programm-about__title"><span class="text__golden">Драг 1:</span><span>МАРКЕТИНГОВАЯ СТРАТЕГИЯ.</span></h3>
@@ -383,7 +379,7 @@
               </div>
               <div class="programm-certificates">
                 <p class="text__italic text__right">4 скилл-карточки на драг.</p><img class="programm__skillcard-pic" src="./img/programm/programm-cards.png" alt="">
-                <p class="text__italic text__right">Квалификационный сертификат<br>второго уровня.</p><img class="programm__certificate-pic" src="./img/programm/certificate-2.png" alt="">
+                <p class="text__italic text__right">Квалификационный сертификат<br>второго уровня.</p><img class="programm__certificate-pic programm__certificate-pic-2" src="./img/programm/certificate-2.png" alt="">
               </div>
             </div>
           </div>
@@ -393,7 +389,7 @@
             <div class="programm-drag programm-drag-3">
               <div class="programm-certificates">
                 <p class="text__italic">4 скилл-карточки на драг.</p><img class="programm__skillcard-pic" src="./img/programm/programm-cards.png" alt="">
-                <p class="text__italic">Квалификационный сертификат<br>третьего уровня.</p><img class="programm__certificate-pic" src="./img/programm/certificate-3.png" alt="">
+                <p class="text__italic">Квалификационный сертификат<br>третьего уровня.</p><img class="programm__certificate-pic programm__certificate-pic-3" src="./img/programm/certificate-3.png" alt="">
               </div>
               <div class="programm-about">
                 <h3 class="programm-about__title"><span class="text__golden">Драг 3</span><span>ДЕЛЕГИРОВАНИЕ и АВТОМАТИЗАЦИЯ МАРКЕТИНГОВЫХ ПРОЦЕССОВ. </span></h3>
@@ -414,7 +410,7 @@
           <div class="container programm-drag--4-container">
             <div class="programm-drag programm-drag-4">
               <div class="programm-certificates">
-                <p class="text__italic">Получишь сертификат ВШМ</p><img class="programm__certificate-pic" src="./img/programm/certificate-4.png" alt="">
+                <p class="text__italic">Получишь сертификат ВШМ</p><img class="programm__certificate-pic programm__certificate-pic-4" src="./img/programm/certificate-4.png" alt="">
                 <p class="text__italic">По запросу, получишь диплом<br class="no-desktop"> государственного образца по<br class="no-desktop"> квалификации «Маркетолог».</p><img class="programm__certificate-pic" src="./img/hero/diploma.png" alt="">
               </div>
               <div class="programm-about">
@@ -741,7 +737,8 @@
       </section>
       <div class="footer-wrapper">
         <footer class="container footer">
-          <div class="footer-info"><a class="footer-link" href="">Политика конфиденциальности</a><a class="footer-link" href="">Государственная лицензия</a>
+          <div class="footer-info">
+            <button class="footer-link footer-link-privacy button-thirdly" href="" type="button">Политика конфиденциальности</button><a class="footer-link" href="">Государственная лицензия</a>
             <p class="footer__caption">Вся предоставленная на сайте информация ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ</p>
           </div><a class="designer" href=""><img class="designer__logo" src="./img/common/designer-logo.png" alt="">
             <p class="designer__name">Design by Рома Король</p></a>
@@ -762,8 +759,9 @@
       <div class="burger-menu">
         <div class="burger-menu-links"><a class="burger-menu-links__link" href="#programm"><span class="text__golden">—</span><span class="burger-menu-links__text"> Программа</span></a><a class="burger-menu-links__link" href="#pricing"><span class="text__golden">—</span><span class="burger-menu-links__text"> Стоимость</span></a><a class="burger-menu-links__link" href="#learning"><span class="text__golden">—</span><span class="burger-menu-links__text"> Как проходит</span></a><a class="burger-menu-links__link" href="#testimonials"><span class="text__golden">—</span><span class="burger-menu-links__text"> Отзывы</span></a></div>
       </div>
-      <div class="main-callback-pop">
+      <div class="pop-book">
         <form class="callback-form" method="POST">
+          <input name="formname" hidden value="Забронировать место">
           <label class="input-wrapper">
             <p class="pop__title text__centered">Привет, как тебя зовут?</p>
             <input class="input-regular" name="name" type="text" placeholder="Василий" required>
@@ -781,10 +779,64 @@
                 <rect x="0" y="0" width="1792" height="1792" fill="rgba(0, 0, 0, 0)"></rect>
               </svg></a></div>
           <div class="input-wrapper">
-            <button class="button-primary button-centered callback-form__button" type="submit">Забронировать место</button>
+            <button class="button-primary button-centered book-form__button" type="submit">Забронировать место</button>
           </div>
           <p class="form-privacy">Нажимая на кнопку, вы подтверждаете согласие на обработку<br>персональных данных и соглашаетесь с 
-            <button class="button-thirdly button-privacy">политикой конфиденциальности</button>
+            <button class="button-thirdly button-privacy" type="button">политикой конфиденциальности</button>
+          </p>
+        </form>
+      </div>
+      <div class="main-callback-pop">
+        <form class="callback-form" method="POST">
+          <input name="formname" hidden value="Заказать звонок">
+          <label class="input-wrapper">
+            <p class="pop__title text__centered">Привет, как тебя зовут?</p>
+            <input class="input-regular" name="name" type="text" placeholder="Василий" required>
+          </label>
+          <label class="input-wrapper input-wrapper--phone">
+            <p class="pop__title text__centered">Как с тобой связаться?</p>
+            <input class="input-regular input--phone" name="phone" type="text" placeholder="Введи номер телефона" required>
+          </label>
+          <div class="form-socials"><a class="form-socials__item" href=" https://vk.com/hellosales">
+              <svg class="form-socials__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveaspectratio="xMidYMid meet" viewbox="0 0 876 614">
+                <path d="M530 339c-16-6-16-29-17-45c-4-57 16-144-8-181c-17-22-99-20-149-17c-14 2-31 5-43 11s-24 16-24 25c0 13 30 11 41 28c12 18 12 57 12 89c0 37-6 86-21 88c-23 1-36-22-48-39c-24-33-48-74-66-114c-9-21-14-44-27-53c-20-14-56-15-91-14c-32 1-78-3-87 16c-7 21 8 41 16 58c41 89 85 167 139 241c50 69 97 124 189 153c26 8 140 31 163 0c8-12 6-39 10-59s9-40 28-41c16-1 25 13 35 23c11 11 20 20 28 30c19 19 39 45 63 55c33 14 84 10 132 8c39-1 67-9 70-32c2-18-18-44-30-59c-30-37-44-48-78-82c-15-15-34-31-34-49c-1-11 8-21 16-32c35-52 70-89 102-143c9-16 30-53 22-71c-9-20-59-14-90-14c-40 0-92-3-102 5c-19 13-27 34-36 54c-20 46-47 93-75 128c-10 12-29 37-40 33z" fill="#fff"></path>
+              </svg></a><a class="form-socials__item" href="https://t.me/babki_na_udalenke ">
+              <svg class="form-socials__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveaspectratio="xMidYMid meet" viewbox="0 0 1792 1792">
+                <path d="M1189 1307l147-693q9-44-10.5-63t-51.5-7L410 877q-29 11-39.5 25t-2.5 26.5t32 19.5l221 69l513-323q21-14 32-6q7 5-4 15l-415 375l-16 228q23 0 45-22l108-104l224 165q64 36 81-38zm603-411q0 182-71 348t-191 286t-286 191t-348 71t-348-71t-286-191t-191-286T0 896t71-348t191-286T548 71T896 0t348 71t286 191t191 286t71 348z" fill="#fff"></path>
+                <rect x="0" y="0" width="1792" height="1792" fill="rgba(0, 0, 0, 0)"></rect>
+              </svg></a></div>
+          <div class="input-wrapper">
+            <button class="button-primary button-centered callback-form__button" type="submit">Заказать звонок</button>
+          </div>
+          <p class="form-privacy">Нажимая на кнопку, вы подтверждаете согласие на обработку<br>персональных данных и соглашаетесь с 
+            <button class="button-thirdly button-privacy" type="button">политикой конфиденциальности</button>
+          </p>
+        </form>
+      </div>
+      <div class="pop-consult">
+        <form class="callback-form" method="POST">
+          <input name="formname" hidden value="Консультация">
+          <label class="input-wrapper">
+            <p class="pop__title text__centered">Привет, как тебя зовут?</p>
+            <input class="input-regular" name="name" type="text" placeholder="Василий" required>
+          </label>
+          <label class="input-wrapper input-wrapper--phone">
+            <p class="pop__title text__centered">Как с тобой связаться?</p>
+            <input class="input-regular input--phone" name="phone" type="text" placeholder="Введи номер телефона" required>
+          </label>
+          <div class="form-socials"><a class="form-socials__item" href=" https://vk.com/hellosales">
+              <svg class="form-socials__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveaspectratio="xMidYMid meet" viewbox="0 0 876 614">
+                <path d="M530 339c-16-6-16-29-17-45c-4-57 16-144-8-181c-17-22-99-20-149-17c-14 2-31 5-43 11s-24 16-24 25c0 13 30 11 41 28c12 18 12 57 12 89c0 37-6 86-21 88c-23 1-36-22-48-39c-24-33-48-74-66-114c-9-21-14-44-27-53c-20-14-56-15-91-14c-32 1-78-3-87 16c-7 21 8 41 16 58c41 89 85 167 139 241c50 69 97 124 189 153c26 8 140 31 163 0c8-12 6-39 10-59s9-40 28-41c16-1 25 13 35 23c11 11 20 20 28 30c19 19 39 45 63 55c33 14 84 10 132 8c39-1 67-9 70-32c2-18-18-44-30-59c-30-37-44-48-78-82c-15-15-34-31-34-49c-1-11 8-21 16-32c35-52 70-89 102-143c9-16 30-53 22-71c-9-20-59-14-90-14c-40 0-92-3-102 5c-19 13-27 34-36 54c-20 46-47 93-75 128c-10 12-29 37-40 33z" fill="#fff"></path>
+              </svg></a><a class="form-socials__item" href="https://t.me/babki_na_udalenke ">
+              <svg class="form-socials__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveaspectratio="xMidYMid meet" viewbox="0 0 1792 1792">
+                <path d="M1189 1307l147-693q9-44-10.5-63t-51.5-7L410 877q-29 11-39.5 25t-2.5 26.5t32 19.5l221 69l513-323q21-14 32-6q7 5-4 15l-415 375l-16 228q23 0 45-22l108-104l224 165q64 36 81-38zm603-411q0 182-71 348t-191 286t-286 191t-348 71t-348-71t-286-191t-191-286T0 896t71-348t191-286T548 71T896 0t348 71t286 191t191 286t71 348z" fill="#fff"></path>
+                <rect x="0" y="0" width="1792" height="1792" fill="rgba(0, 0, 0, 0)"></rect>
+              </svg></a></div>
+          <div class="input-wrapper">
+            <button class="button-primary button-centered callback-form__button" type="submit">Получить консультацию</button>
+          </div>
+          <p class="form-privacy">Нажимая на кнопку, вы подтверждаете согласие на обработку<br>персональных данных и соглашаетесь с 
+            <button class="button-thirdly button-privacy" type="button">политикой конфиденциальности</button>
           </p>
         </form>
       </div>
@@ -815,7 +867,7 @@
       <div class="pop-about-learn">
         <div class="pop-inner pop-inner--wider">
           <p class="pop__text text__bold">194 урока или 70 часов видео на платформе Getcourse</p>
-          <p class="pop__text">Уроки разделены на 13 раундов. Один раунд — 2–3 недели. К каждому раунду — ДЗ. ДЗ проверяет шеф-маркетолог</p>
+          <p class="pop__text">Уроки разделены на 13 раундов. Один раунд — 2–3 недели. К каждому раунду — Домашнее задание. ДЗ проверяет шеф-маркетолог</p>
           <p class="pop__text"><span class="text__golden">На платформе работает техподдержка </span><span> (пн–пт, 9-18)</span></p>
           <p class="pop__text"><span class="text__bold">Но задать вопрос ты можешь 24/7.</span><span> Наш бот очень старательный и по мере сил ответит тебе</span></p><img class="pop__img" src="./img/pops/about/programm.png" alt="">
         </div>
@@ -1505,7 +1557,7 @@
           <div class="swiper-button-prev thanks-button-prev"></div>
           <div class="swiper-button-next thanks-button-next"></div>
           <div class="thanks-slider swiper-container">
-            <div class="swiper-wrapper swiper-wrapper-buddying">
+            <div class="swiper-wrapper swiper-wrapper-thanks">
               <div class="swiper-slide">
                 <div class="thanks-slide-inner"><img src="./img/pops/thanks-1.jpg" alt=""></div>
               </div>
@@ -1516,6 +1568,55 @@
           </div>
         </div>
       </div>
+      <div class="pop-privacy">
+        <div class="pop-inner">
+          <p class="text__bold text__golden">Политика в отношении обработки персональных данных</p>
+          <p class="text__bold">1. Общие положения</p>
+          <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. №152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных ИП Гонин Е. Н. (далее – Оператор).</p>
+          <p>1. Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</p>
+          <p>2. Настоящая политика Оператора в отношении обработки персональных данных (далее – Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта Crazymarketer.ru</p>
+          <p class="text__bold">2. Основные понятия, используемые в Политике</p>
+          <p>1. Автоматизированная обработка персональных данных – обработка персональных данных с помощью средств вычислительной техники;</p>
+          <p>2. Блокирование персональных данных – временное прекращение обработки персональных данных (за исключением случаев, если обработка необходима для уточнения персональных данных);</p>
+          <p>3. Веб-сайт – совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу Crazymarketer.ru</p>
+          <p>4. Информационная система персональных данных — совокупность содержащихся в базах данных персональных данных, и обеспечивающих их обработку информационных технологий и технических средств;</p>
+          <p>5. Обезличивание персональных данных — действия, в результате которых невозможно определить без использования дополнительной информации принадлежность персональных данных конкретному Пользователю или иному субъекту персональных данных;</p>
+          <p>6. Обработка персональных данных – любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных;</p>
+          <p>7. Оператор – государственный орган, муниципальный орган, юридическое или физическое лицо, самостоятельно или совместно с другими лицами организующие и (или) осуществляющие обработку персональных данных, а также определяющие цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными;</p>
+          <p>8. Персональные данные – любая информация, относящаяся прямо или косвенно к определенному или определяемому Пользователю веб-сайта Crazymarketer.ru</p>
+          <p>9. Пользователь – любой посетитель веб-сайта Crazymarketer.ru</p>
+          <p>10. Предоставление персональных данных – действия, направленные на раскрытие персональных данных определенному лицу или определенному кругу лиц;</p>
+          <p>11. Распространение персональных данных – любые действия, направленные на раскрытие персональных данных неопределенному кругу лиц (передача персональных данных) или на ознакомление с персональными данными неограниченного круга лиц, в том числе обнародование персональных данных в средствах массовой информации, размещение в информационно-телекоммуникационных сетях или предоставление доступа к персональным данным каким-либо иным способом;</p>
+          <p>12. Трансграничная передача персональных данных – передача персональных данных на территорию иностранного государства органу власти иностранного государства, иностранному физическому или иностранному юридическому лицу;</p>
+          <p>13. Уничтожение персональных данных – любые действия, в результате которых персональные данные уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания персональных данных в информационной системе персональных данных и (или) результате которых уничтожаются материальные носители персональных данных.</p>
+          <p class="text__bold">3. Оператор может обрабатывать следующие персональные данные Пользователя</p>
+          <p>1. Фамилия, имя, отчество;</p>
+          <p>2. Электронный адрес;</p>
+          <p>3. Номера телефонов;</p>
+          <p>4. Также на сайте происходит сбор и обработка обезличенных данных о посетителях (в т.ч. файлов «cookie») с помощью сервисов интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).</p>
+          <p>5. Вышеперечисленные данные далее по тексту Политики объединены общим понятием Персональные данные.</p>
+          <p class="text__bold">4. Цели обработки персональных данных</p>
+          <p>1. Цель обработки персональных данных Пользователя — Уточнение деталей заказа услуги.</p>
+          <p>2. Также Оператор имеет право направлять Пользователю уведомления о новых продуктах и услугах, специальных предложениях и различных событиях. Пользователь всегда может отказаться от получения информационных сообщений, направив Оператору письмо на адрес электронной почты Egor@crazymarketer.ru с пометкой «Отказ от уведомлениях о новых продуктах и услугах и специальных предложениях».</p>
+          <p>3. Обезличенные данные Пользователей, собираемые с помощью сервисов интернет-статистики, служат для сбора информации о действиях Пользователей на сайте, улучшения качества сайта и его содержания.</p>
+          <p class="text__bold">5. Правовые основания обработки персональных данных</p>
+          <p>1. Оператор обрабатывает персональные данные Пользователя только в случае их заполнения и/или отправки Пользователем самостоятельно через специальные формы, расположенные на сайте Crazymarketer.ru Заполняя соответствующие формы и/или отправляя свои персональные данные Оператору, Пользователь выражает свое согласие с данной Политикой.</p>
+          <p>2. Оператор обрабатывает обезличенные данные о Пользователе в случае, если это разрешено в настройках браузера Пользователя (включено сохранение файлов «cookie» и использование технологии JavaScript).</p>
+          <p class="text__bold">6. Порядок сбора, хранения, передачи и других видов обработки персональных данных</p>
+          <p>Безопасность персональных данных, которые обрабатываются Оператором, обеспечивается путем реализации правовых, организационных и технических мер, необходимых для выполнения в полном объеме требований действующего законодательства в области защиты персональных данных.</p>
+          <p>1. Оператор обеспечивает сохранность персональных данных и принимает все возможные меры, исключающие доступ к персональным данным неуполномоченных лиц.</p>
+          <p>2. Персональные данные Пользователя никогда, ни при каких условиях не будут переданы третьим лицам, за исключением случаев, связанных с исполнением действующего законодательства.</p>
+          <p>3. В случае выявления неточностей в персональных данных, Пользователь может актуализировать их самостоятельно, путем направления Оператору уведомление на адрес электронной почты Оператора Egor@crazymarketer.ru с пометкой «Актуализация персональных данных».</p>
+          <p>4. Срок обработки персональных данных является неограниченным. Пользователь может в любой момент отозвать свое согласие на обработку персональных данных, направив Оператору уведомление посредством электронной почты на электронный адрес Оператор Egor@crazymarketer.ru с пометкой «Отзыв согласия на обработку персональных данных».</p>
+          <p class="text__bold">7. Трансграничная передача персональных данных</p>
+          <p>1. Оператор до начала осуществления трансграничной передачи персональных данных обязан убедиться в том, что иностранным государством, на территорию которого предполагается осуществлять передачу персональных данных, обеспечивается надежная защита прав субъектов персональных данных.</p>
+          <p>2. Трансграничная передача персональных данных на территории иностранных государств, не отвечающих вышеуказанным требованиям, может осуществляться только в случае наличия согласия в письменной форме субъекта персональных данных на трансграничную передачу его персональных данных и/или исполнения договора, стороной которого является субъект персональных данных.</p>
+          <p class="text__bold">8. Заключительные положения</p>
+          <p>1. Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору с помощью электронной почты Egor@crazymarketer.ru</p>
+          <p>2. В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.</p>
+          <p>3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу Egor@crazymarketer.ru</p>
+        </div>
+      </div><img class="pop-certificate-1" src="./img/pops/certs/1.jpg" alt=""><img class="pop-certificate-2" src="./img/pops/certs/2.jpg" alt=""><img class="pop-certificate-3" src="./img/pops/certs/3.jpg" alt=""><img class="pop-certificate-4" src="./img/pops/certs/4.jpg" alt="">
       <div class="pop-leaving">
         <div class="pop-inner">
           <p class="pop__title text__centered">Уходишь?</p>

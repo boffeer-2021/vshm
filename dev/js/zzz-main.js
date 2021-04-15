@@ -338,17 +338,23 @@ document.addEventListener('DOMContentLoaded',function(event){
 
 popa({
 	pop: '.main-callback-pop',
+	clickTrigger: '.button__callback',
+	popCloser: '.close-hero',
+	popCloserType: 'outer',
+})
+popa({
+	pop: '.pop-consult',
+	clickTrigger: '.button__consult',
+	popCloser: '.close-hero',
+	popCloserType: 'outer',
+})
+popa({
+	pop: '.pop-book',
 	clickTrigger: '.hero-button',
 	popCloser: '.close-hero',
 	popCloserType: 'outer',
 })
 
-document.querySelector('.button__callback').addEventListener('click', function(){
-	popToggle(document.querySelector('.main-callback-pop-wrapper'), document.querySelector('.main-callback-pop'))
-})
-document.querySelector('.button__consult').addEventListener('click', function(){
-	popToggle(document.querySelector('.main-callback-pop-wrapper'), document.querySelector('.main-callback-pop'))
-})
 
 
 
@@ -527,6 +533,25 @@ popa({
 	// popCloserType: 'outer',
 	onOpen: startNuclearSlider,
 })
+popa({
+	clickTrigger: '.programm__certificate-pic-1',
+	pop: '.pop-certificate-1',
+})
+popa({
+	clickTrigger: '.programm__certificate-pic-2',
+	pop: '.pop-certificate-2',
+})
+
+popa({
+	clickTrigger: '.programm__certificate-pic-3',
+	pop: '.pop-certificate-3',
+})
+
+popa({
+	clickTrigger: '.programm__certificate-pic-4',
+	pop: '.pop-certificate-4',
+})
+
 
 
 popa({
@@ -742,7 +767,7 @@ popa({
 // })
 
 function startThanksSlider() {
-	var employeSlider = new Swiper('.thanks-slider', {
+	var thanksSlider = new Swiper('.thanks-slider', {
 		spaceBetween: 300,
 		navigation: {
 			nextEl: '.swiper-button-next.thanks-button-next',
@@ -797,6 +822,15 @@ waitUntilPixels({
 	target: '.testimonials',
 })
 
+
+popa({
+	pop: '.pop-privacy',
+	clickTrigger: '.button-privacy',
+})
+
+document.querySelector('.footer-link-privacy').addEventListener('click', function(){
+	showPop(document.querySelector('.pop-privacy-wrapper'), document.querySelector('.pop-privacy'))
+})
 popa({
   pop: '.pop-leaving',
   clickTrigger: 'page-leaving',

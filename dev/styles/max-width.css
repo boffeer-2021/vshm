@@ -1865,6 +1865,24 @@
 	.employe-button-prev {
 		right: -4%;
 	}
+
+
+	.pop-nastya .pop-scrolling{
+		flex-direction: column;
+	}
+	.pop-nastya .pop-plus-left{
+		margin-right: 0;
+		padding-bottom: 0;
+	}
+	.pop-nastya-pics {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+	.pop-nastya__pic {
+		margin-right: 15px;
+		margin-left: 15px;
+	}
 	
 
 }

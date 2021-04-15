@@ -710,7 +710,7 @@ span {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 20px solid #000;
+  border-top: 20px solid #d59b64;
 }
 
 .hero__tooltip:after,
@@ -723,18 +723,18 @@ span {
 }
 
 .hero__tooltip:after {
-  font: 300 18px Akrobat,sans-serif;
+  font: 500 18px Akrobat,sans-serif;
   max-width: 500px;
   top: -70px;
   letter-spacing: var(--sl-text);
-  color: #fff;
+  color: #080808;
   display: flex;
   align-items: center;
   justify-content: center;
   padding-right: 25px;
   padding-left: 25px;
   border-radius: 12px;
-  background: #000;
+  background: #d59b64;
   height: 60px;
   text-transform: none;
 }
@@ -3325,6 +3325,15 @@ span {
   box-shadow: 0 0 50px hsla(0,0%,100%,.1);
 }
 
+.pop-privacy {
+  max-height: 600px;
+  overflow: auto;
+}
+
+.pop-privacy p {
+  margin-bottom: 10px;
+}
+
 @media (max-width:1300px) and (min-width:700px) {
   .programm-drag--4-container {
     margin-left: auto;
@@ -5155,6 +5164,26 @@ span {
   .employe-button-next,
   .employe-button-prev {
     right: -4%;
+  }
+
+  .pop-nastya .pop-scrolling {
+    flex-direction: column;
+  }
+
+  .pop-nastya .pop-plus-left {
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+
+  .pop-nastya-pics {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pop-nastya__pic {
+    margin-right: 15px;
+    margin-left: 15px;
   }
 }
 

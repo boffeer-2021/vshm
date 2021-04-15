@@ -658,7 +658,7 @@ span {
 	height: 0; 
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
-	border-top: 20px solid black;
+	border-top: 20px solid #d59b64;
 }
 .hero__tooltip::after {
 	max-width: 500px;
@@ -671,16 +671,16 @@ span {
 	right: 0;
 	font-size: 18px;
 	font-family: 'Akrobat', sans-serif;
-	font-weight: 300;
+	font-weight: 500;
 	letter-spacing: var(--sl-text);
-	color: #fff;
+	color: #080808;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding-right: 25px;
 	padding-left: 25px;
 	border-radius: 12px;
-	background: #000;
+	background: #d59b64;
 	height: 60px;
 	text-transform: none;
 }
@@ -3290,6 +3290,13 @@ span {
 
 .pop-leaving {
 	box-shadow: 0 0 50px rgb(255,255,255,.1);
+}
+.pop-privacy {
+	max-height: 600px;
+	overflow: auto;
+}
+.pop-privacy p {
+	margin-bottom: 10px;
 }
 
 

@@ -403,11 +403,7 @@ block content
 
 
 		section.programm-wrapper#programm
-			h2.section__title.programm__title Основной курс —<br class="only-mobile">
-				|  3
-				button.text__silver.title__button  драга 
-				|  13
-				button.text__golden.title__button  раундов
+			h2.section__title.programm__title Основной курс —<br class="only-mobile"> 3 драга 13 раундов
 
 			.programm-drag-wrapper.programm-drag-wrapper-1
 				.container
@@ -417,7 +413,7 @@ block content
 							p.text__italic.programm-certificates__text Скилл-карточка, подтверждает, что ты освоил(а) очередной навык маркетолога.
 							img.programm__skillcard-pic(src="./img/programm/programm-cards.png", alt="")
 							p.text__italic.programm-certificates__text Соберёшь все скилл-карточки драга и получишь квалификационный сертификат<br class="no-desktop">первого уровня.
-							img.programm__certificate-pic(src="./img/programm/programm-certificate.png", alt="")
+							img.programm__certificate-pic.programm__certificate-pic-1(src="./img/programm/programm-certificate.png", alt="")
 						.programm-about
 							h3.programm-about__title
 								span.text__golden Драг 1:
@@ -463,7 +459,7 @@ block content
 							p.text__italic.text__right 4 скилл-карточки на драг.
 							img.programm__skillcard-pic(src="./img/programm/programm-cards.png", alt="")
 							p.text__italic.text__right Квалификационный сертификат<br>второго уровня.
-							img.programm__certificate-pic(src="./img/programm/certificate-2.png", alt="")
+							img.programm__certificate-pic.programm__certificate-pic-2(src="./img/programm/certificate-2.png", alt="")
 
 			.programm-drag-wrapper.programm-drag-wrapper-3
 				.container
@@ -472,7 +468,7 @@ block content
 							p.text__italic 4 скилл-карточки на драг.
 							img.programm__skillcard-pic(src="./img/programm/programm-cards.png", alt="")
 							p.text__italic Квалификационный сертификат<br>третьего уровня.
-							img.programm__certificate-pic(src="./img/programm/certificate-3.png", alt="")
+							img.programm__certificate-pic.programm__certificate-pic-3(src="./img/programm/certificate-3.png", alt="")
 						.programm-about
 							h3.programm-about__title
 								span.text__golden Драг 3
@@ -496,7 +492,7 @@ block content
 					.programm-drag.programm-drag-4
 						.programm-certificates
 							p.text__italic Получишь сертификат ВШМ
-							img.programm__certificate-pic(src="./img/programm/certificate-4.png", alt="")
+							img.programm__certificate-pic.programm__certificate-pic-4(src="./img/programm/certificate-4.png", alt="")
 							p.text__italic По запросу, получишь диплом<br class="no-desktop"> государственного образца по<br class="no-desktop"> квалификации «Маркетолог».
 							img.programm__certificate-pic(src="./img/hero/diploma.png", alt="")
 						.programm-about
@@ -926,7 +922,7 @@ block content
 		.footer-wrapper
 			footer.container.footer
 				.footer-info
-					a.footer-link(href=`${privacy}`) Политика конфиденциальности
+					button.footer-link.footer-link-privacy.button-thirdly(href=`${privacy}` type="button") Политика конфиденциальности
 					a.footer-link(href=`${license}`) Государственная лицензия
 					p.footer__caption Вся предоставленная на сайте информация ни при каких условиях не является публичной офертой, определяемой положениями Статьи 437 (2) Гражданского кодекса РФ
 				a(href=`${designerLink}`).designer
