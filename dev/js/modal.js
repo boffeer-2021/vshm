@@ -152,8 +152,13 @@ function popa($){
 			showPop(popWrap, pop);
 		})
 	} else {
-		let opener = document.querySelector($.clickTrigger);
-		opener.addEventListener("click", function() { popToggle(popWrap, pop, $.onOpen, $.onClose);
+		// let opener = document.querySelector($.clickTrigger);
+		const opener = [...document.querySelectorAll($.clickTrigger)];
+		opener.map(trigger => {
+			trigger.addEventListener("click", function() { popToggle(popWrap, pop, $.onOpen, $.onClose);
+
+			})
+		// opener.addEventListener("click", function() { popToggle(popWrap, pop, $.onOpen, $.onClose);
 		});
 	}
 

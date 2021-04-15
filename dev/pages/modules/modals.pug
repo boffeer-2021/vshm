@@ -1,4 +1,18 @@
 .popups
+	.burger-menu
+		.burger-menu-links
+			a.burger-menu-links__link(href="#programm")
+				span.text__golden —
+				span.burger-menu-links__text  Программа
+			a.burger-menu-links__link(href="#pricing")
+				span.text__golden —
+				span.burger-menu-links__text  Стоимость
+			a.burger-menu-links__link(href="#learning")
+				span.text__golden —
+				span.burger-menu-links__text  Как проходит
+			a.burger-menu-links__link(href="#testimonials")
+				span.text__golden —
+				span.burger-menu-links__text  Отзывы
 	.main-callback-pop
 		form.callback-form(method="POST")
 			label.input-wrapper
@@ -166,16 +180,13 @@
 
 	.pop-about-meetups
 		.pop-inner
-			p.pop__text Спикеры маркетологи по вашим запросам
-			p.pop__text Интервью с лидерами области (да, тоже по вашим запросам)
+			p.pop__text.text__bold.text__golden Спикеры маркетологи по вашим запросам
+			p.pop__text.text__bold Интервью с лидерами области (да, тоже по вашим запросам)
 			p.pop__text Эксперты по сторонним областям (soft skills)
-			p.pop__text Внутренние конференции с учениками
+			p.pop__text.text__golden Внутренние конференции с учениками
 			p.pop__text Оффлайн-нетворкинги и конференции
-			p.pop__text Внутренние конфы с учениками. 
-			p.pop__text Публичное выступление — это лучший убийца синдрома самозванца и неумения презентовать себя заказчику.
-			p.pop__text Появляется понимание: «Я эксперт. Я по этой теме на конфе выступал.»
-			img.pop__img(src="./img/pops/about/meetups.jpg", alt="")
-
+			p.pop__text.text__bold Публичное выступление — это лучший убийца синдрома самозванца и неумения презентовать себя заказчику.
+			p.pop__text.text__golden.text__bold Появляется понимание: «Я эксперт. Я по этой теме на конфе выступал.»
 
 	.pop-about-classes
 		.pop-inner
@@ -837,6 +848,18 @@
 								p.pop__text.text__bold.text__golden Как нам помог этот раунд:  
 								p.pop__text.text__bold вырасти  за год до 12 человек, сделавших более 100 проектов за&nbsp;год 
 
+	.pop-thanks
+		.pop-inner
+			.swiper-button-prev.thanks-button-prev
+			.swiper-button-next.thanks-button-next
+			.thanks-slider.swiper-container
+				.swiper-wrapper.swiper-wrapper-buddying
+					.swiper-slide
+						.thanks-slide-inner
+							img(src="./img/pops/thanks-1.jpg", alt="")
+					.swiper-slide
+						.thanks-slide-inner
+							img(src="./img/pops/thanks-2.jpg", alt="")
 
 
 
@@ -855,3 +878,7 @@
 				span  консультацию
 				span.text__golden  маркетолога .
 			a.button-primary.button-leaving.button-centered(href=`${leavingPop}`) Забрать подарок
+.burger
+	span.burger__line.burger__line--top
+	span.burger__line.burger__line--center
+	span.burger__line.burger__line--bottom

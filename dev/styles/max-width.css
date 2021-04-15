@@ -134,10 +134,16 @@
 
 
 
+	.syndrome-wrapper {
+		background: url(../img/syndrome/syndrome-bg.png);
+		background-position: center;
+		background-size: cover;
+	}
 	.syndrome {
 		background-size: 100%;
 		background-position: center;
-		background-repeat: no-repeat
+		background-repeat: no-repeat;
+		background: none;
 	}
 	.syndrome__title {
 		transform: none;
@@ -854,7 +860,7 @@
 		position: fixed;
 		top: 20px;
 		right: 20px;
-		z-index: 9999999999999;
+		z-index: 10;
 	}
 	.burger__line {
 		height: 3px;
@@ -864,13 +870,36 @@
 	}
 	.burger__line--top {
 		background-color: #dca067;
+		transform: translate(0, -7px);
+		transition: all 0.3s;
 	}
 	.burger__line--center {
 		background-color: #ba7f4f;
+		transition: all 0.3s;
 	}
 	.burger__line--bottom {
 		background-color: #985e36;
+		transform: translate(0, 7px);
+		transition: all 0.3s;
 	}
+	.burger--opened {
+		z-index: 100000001;
+	}
+	.burger--opened .burger__line--top {
+		transform: translate(0, 3px) rotate(-45deg);
+		transition: all 0.3s;
+
+	} 
+	.burger--opened .burger__line--center {
+		transition: all 0.3s;
+		background: transparent;
+
+	} 
+	.burger--opened .burger__line--bottom {
+		transform: translate(0, -3px) rotate(45deg);
+		transition: all 0.3s;
+
+	} 
 
 
 
@@ -976,6 +1005,87 @@
 
 
 
+	.after-item-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.before-after-slide-inner {
+		flex-direction: column;
+	}
+	.look-slide__title {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	.look-before-text {
+		max-width: 280px;
+		margin-left: 40px;
+	}
+	.look__img-bad {
+		margin-top: 90px;
+	}
+	.look-list__item--bigger-margin {
+		margin-bottom: 20px;
+	}
+	.look-list__item {
+		font-size: 16px;
+	}
+	.after-item-wrapper {
+
+	}
+	.look-after-text {
+		margin-left: 0;
+	}
+	.before-item-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+	.before-item-wrapper .before-after-slide-inner {
+		flex-direction: column-reverse;
+	}
+	.look-img--good {
+		max-width: 200px;
+		margin-left: 40px;
+
+	}
+	.look-list--after {
+		max-width: 280px;
+		margin-left: auto;
+	}
+	.look-wood-small {
+		transform: scale(0.8);
+	}
+	.look__machine {
+		max-width: 120px;
+		top: 0;
+	}
+	.look-machine--top.look__machine--moving {
+		transform: translateX(70vw);
+	}
+	.before-after-slider__controller {
+		left: 0;
+		background: linear-gradient(0deg,#fff,hsla(0,0%,100%,.5),transparent);
+	}
+	.before-after-slider__controller:after {
+		left: -50px;
+		width: 90px;
+		height: 60px;
+		top: unset;
+		bottom: 0;
+	}
+	.look__title:before {
+		bottom: -850px;
+	}
+
+	.look__machine--bottom.look__machine--moving {
+		  transform: translateX(-40vw) scaleX(-1);
+	}
+
+	.look-wood-word--bottom {
+		background-position: 50px 50px;
+	}
+
+
+
 
 	.bad-marketing__title {
 		font-size: 24px;
@@ -1039,6 +1149,9 @@
 		justify-content: space-between;
 		z-index: 3;
 		margin-top: -60px;
+		max-width: 300px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 	.about-features__item  {
 		max-width: 125px;
@@ -1475,6 +1588,39 @@
 	.scheme__hacks {
 		transform: translate(150px,90px) rotate(-36deg);
 	}
+	.scheme__pro {
+		transform: translate(160px, 250px) rotate(17deg);
+	}
+	.scheme__tutorials {
+		transform: translate(10px,190px) rotate(-5deg);
+	}
+	.scheme__checklists {
+		transform: translate(240px,135px) rotate(-5deg);
+	}
+	.scheme__mindmaps {
+		transform: translate(45px,230px) rotate(-40deg);
+	}
+
+
+	.pricing-out::before {
+		content: url(./../img/scheme/mobile-pricing-arrow-in.png);
+		transform: scale(-.6,.6);
+		bottom: unset;
+		top: -120px;
+		right: 100px;
+	}
+
+	.pricing-action-out {
+		margin-top: 20px;
+		margin-bottom: 10px;
+	}
+	.pricing-action-out--color-mobile {
+		color: var(--c-primary);
+	}
+
+	.pricing-button {
+		margin-top: 0;
+	}
 
 
 
@@ -1482,6 +1628,202 @@
 
 
 
+
+
+
+
+
+
+
+
+
+	.team__title {
+		font-size: 30px;
+	}
+	.team__subtitle {
+		font-size: 24px;
+		max-width: 180px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 30px;
+	}
+	.team-bullet {
+		max-width: 260px;
+		text-align: center;
+	}
+
+	.team-client-list {
+		flex-wrap: wrap;
+		justify-content: space-between;
+		max-width: 230px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.team-clients__title {
+		font-size: 20px;
+	}
+	.team-clients-item {
+		margin-bottom: 20px;
+	}
+
+
+
+
+
+
+
+
+
+
+	.changes {
+		background-size: cover;
+		padding-bottom: 60px;
+	}
+	.changes__title {
+		font-size: 26px;
+	}
+	.changes-course-list {
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 0;
+	}
+	.changes-course {
+		margin-bottom: 32px;
+	}
+
+	.changes__subtitle {
+		margin-bottom: 20px;
+	}
+	.changes-offer__title {
+		max-width: 230px;
+		text-align: center;
+	}
+
+
+
+
+
+
+
+
+
+	.footer {
+		justify-content: center;
+	}
+	.footer-socials {
+		margin-left: auto;
+		margin-right: auto;
+		order: -1;
+		margin-bottom: 30px;
+	}
+	.footer-socials-item {
+		max-width: 80px;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.footer-socials-item__icon--tiktok {
+		height: 90%;
+	}
+	.footer-socials-item__icon--vk {
+		height: 74%;
+	}
+	.footer-socials-item__icon--telegram {
+		transform: scale(1.3);
+	}
+	.footer-info {
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.burger-menu-wrapper {
+		background: rgba(14, 14, 14, 0.949);
+	}
+	.burger-menu-links {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.burger-menu-links__link {
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 18px;
+		line-height: 48px;
+		font-family: 'Akrobat';
+		letter-spacing: 0.2em;
+	}
+	.burger-menu {
+		background: none;
+		padding: 0;
+	}
+	.burger-menu-wrapper .pop-closer {
+		display: none !important;
+	}
+	.pop {
+		min-width: 300px;
+		max-width: 90vw;
+		padding: 30px 20px;
+	}
+	.pop-about-psycho .pop__text {
+		font-size: 14px;
+	}
+	.pop-about-psycho .pop__title {
+		margin-bottom: 10px;
+	}
+	.pop__img-psycho {
+		max-width: 170px;
+		bottom: -5%;
+		right: -7%;
+	}
+	.pop-closer--inner {
+		top: 5px;
+		right: 5px;
+	}
+	.psycho-pics {
+		overflow-x: auto
+	}
+	.psycho-pic {
+		margin-right: 10px;
+	}
+	.pop-about-combos .pop-inner {
+		flex-direction: column;
+	}
+	.pop-about-combos .pop__img {
+		margin-left: 0;
+	}
+	.pop-about-chats .pop-inner {
+		flex-direction: column-reverse;
+	}
+	.pop-about-chats .pop__img {
+		max-width: 160px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.pop-about-chats .pop__text {
+		text-align: left !important;
+	}
+	.pop-about-database .pop__img {
+		max-width: 130px;
+	}
+	.pop-about-classes .pop__img {
+		margin-top: -30px;
+		max-width: 180px;
+	}
+	.pop-about-giving .pop__img{
+		max-width: 184px;
+	}
+	.pop__img--egor-1,
+	.pop__img--egor-2,
+	.pop__img--egor-3 {
+		max-width: 100%;
+		width: 100%;
+	}
+	.pop-mikhail .pop__text{
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+	.programm-slider {
+		max-width: 300px;
+	}
 
 }
 

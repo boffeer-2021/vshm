@@ -255,7 +255,14 @@ function pauseEvent(e){
 	e.returnValue=false;
 	return false;
 }
+
+if (window.innerWidth < 1200) {
+	
+before.style.width = '0'
+} else {
+
 before.style.width = '50px'
+}
 
 
 
@@ -346,6 +353,26 @@ document.querySelector('.button__consult').addEventListener('click', function(){
 
 
 
+function openBurger() {
+	document.querySelector('.burger').classList.add('burger--opened')
+}
+function closeBurger() {
+	document.querySelector('.burger').classList.remove('burger--opened')
+}
+
+const burgerLinks = [...document.querySelectorAll('.burger-menu-links__link')];
+burgerLinks.map(link => {
+	link.addEventListener('click', function() {
+		closePop(document.querySelector('.burger-menu-wrapper'), document.querySelector('.burger-menu'), closeBurger);
+	})
+})
+
+popa({
+	pop: '.burger-menu',
+	clickTrigger: '.burger',
+	onOpen: openBurger,
+	onClose: closeBurger,
+})
 
 popa({
 	pop: '.pop-ilnaz',
@@ -367,23 +394,27 @@ popa({
 popa({
 	clickTrigger: '.about-features__item--learn',
 	pop: '.pop-about-learn',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'popButtonType',
 })
 popa({
 	clickTrigger: '.about-features__item--projects',
 	pop: '.pop-about-projects',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 })
 
 popa({
 	clickTrigger: '.about-features__item--database',
 	pop: '.pop-about-database',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 })
 popa({
 	clickTrigger: '.about-features__item--giving',
 	pop: '.pop-about-giving',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 })
 
 
@@ -399,8 +430,9 @@ function startBuddyingSlider(){
 popa({
 	clickTrigger: '.about-features__item--buddying',
 	pop: '.pop-about-buddying',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
 	onOpen: startBuddyingSlider,
+	popCloserType: 'outer',
 })
 
 
@@ -417,8 +449,9 @@ function startPsychoSlider() {
 popa({
 	clickTrigger: '.about-features__item--psycho',
 	pop: '.pop-about-psycho',
-	popCloserType: 'outer',
 	onOpen: startPsychoSlider,
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 })
 
 popa({
@@ -430,19 +463,22 @@ popa({
 popa({
 	clickTrigger: '.about-features__item--classes',
 	pop: '.pop-about-classes',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 })
 
 popa({
 	clickTrigger: '.about-features__item--chats',
 	pop: '.pop-about-chats',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 })
 
 popa({
 	clickTrigger: '.about-features__item--combos',
 	pop: '.pop-about-combos',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 })
 
 popa({
@@ -466,7 +502,7 @@ function startElectiveSlider() {
 popa({
 	clickTrigger: '.button__elective',
 	pop: '.pop-elective',
-	popCloserType: 'outer',
+	popCloserType: 'inner',
 	onOpen: startElectiveSlider,
 })
 
@@ -481,10 +517,14 @@ function startNuclearSlider() {
 
 	})
 }
+
+
+
 popa({
 	clickTrigger: '.button__nuclear',
 	pop: '.pop-nuclear',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 	onOpen: startNuclearSlider,
 })
 
@@ -492,22 +532,26 @@ popa({
 popa({
 	clickTrigger: '.pop-trigger--mikhail',
 	pop: '.pop-mikhail',
-	popCloserType: 'outer',
+	// popCloserType: 'iner',
+	popCloserType: popButtonType,
 })
 popa({
 	clickTrigger: '.pop-trigger--dim',
 	pop: '.pop-dim',
-	popCloserType: 'outer',
+	// popCloserType: 'outer',
+	popCloserType: popButtonType,
 })
 popa({
 	clickTrigger: '.pop-trigger--nikolai',
 	pop: '.pop-nikolai',
-	popCloserType: 'outer',
+	// popCloserType: 'outer',
+	popCloserType: popButtonType,
 })
 popa({
 	clickTrigger: '.pop-trigger--bogdan',
 	pop: '.pop-bogdan',
-	popCloserType: 'outer',
+	// popCloserType: 'outer',
+	popCloserType: popButtonType,
 })
 
 
@@ -515,7 +559,8 @@ popa({
 popa({
 	clickTrigger: '.learn-faq__coursework',
 	pop: '.pop-coursework',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 })
 
 
@@ -532,29 +577,33 @@ function startProgrammSlider() {
 popa({
 	clickTrigger: '.learn-faq__programm',
 	pop: '.pop-programm',
-	popCloserType: 'outer',
+	popCloserType: 'inner',
 	onOpen: startProgrammSlider,
 })
 
 popa({
 	clickTrigger: '.learn-faq__homework',
 	pop: '.pop-homework',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 })
 popa({
 	clickTrigger: '.learn-faq__flex',
 	pop: '.pop-flex',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 })
 popa({
 	clickTrigger: '.learn-faq__warranties',
 	pop: '.pop-warranties',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 })
 popa({
 	clickTrigger: '.learn-faq__communication',
 	pop: '.pop-communication',
-	popCloserType: 'outer',
+	popCloserType: popButtonType,
+	// popCloserType: 'outer',
 })
 
 
@@ -571,7 +620,8 @@ function startEmployeSlider() {
 popa({
 	clickTrigger: '.learn-faq__employe',
 	pop: '.pop-employe',
-	popCloserType: 'outer',
+	// popCloserType: 'inner',
+	popCloserType: popButtonType,
 	onOpen: startEmployeSlider,
 })
 
@@ -589,7 +639,7 @@ function startDragSlider1() {
 popa({
 	clickTrigger: '.button-drag-more-1',
 	pop: '.pop-drag-1',
-	popCloserType: 'outer',
+	popCloserType: 'inner',
 	onOpen: startDragSlider1,
 })
 
@@ -607,7 +657,7 @@ function startDragSlider2() {
 popa({
 	clickTrigger: '.button-drag-more-2',
 	pop: '.pop-drag-2',
-	popCloserType: 'outer',
+	popCloserType: 'inner',
 	onOpen: startDragSlider2,
 })
 
@@ -624,70 +674,126 @@ function startDragSlider3() {
 popa({
 	clickTrigger: '.button-drag-more-3',
 	pop: '.pop-drag-3',
-	popCloserType: 'outer',
+	popCloserType: 'inner',
 	onOpen: startDragSlider3,
 })
 
 
 
-// ==== Smooth scrolling
-var app = {
-    scrolled: 0,
-    newPosition: 0,
-    interval: null,
-    speed: 0,
+// // ==== Smooth scrolling
+// var app = {
+//     scrolled: 0,
+//     newPosition: 0,
+//     interval: null,
+//     speed: 0,
+//
+//     scrollTo: function(el) {
+//         var link = el.getAttribute('href').replace('#', ''),
+//             anchor = document.getElementById(link);
+//
+//         var location = 0;
+//         if (anchor.offsetParent) {
+//             do {
+//                 location += anchor.offsetTop;
+//                 anchor = anchor.offsetParent;
+//             } while (anchor);
+//         }
+//         location = location >= 0 ? location : 0;
+//
+//         this.animateScroll(location);
+//         return false;
+//     },
+//
+//     animateScroll: function(pos) {
+//         document.documentElement.scrollTop = 1;
+//         var element = (document.documentElement && document.documentElement.scrollTop) ? document.documentElement : document.body,
+//             start = element.scrollTop,
+//             change = pos - start,
+//             currentTime = 0,
+//             increment = 20,
+//             duration = 300;
+//
+//         var animateScroll = function(){
+//             currentTime += increment;
+//             var val = Math.easeInOutQuad(currentTime, start, change, duration);
+//             element.scrollTop = val;
+//             if(currentTime < duration) {
+//                 setTimeout(animateScroll, increment);
+//             }
+//         };
+//         animateScroll();
+//     }
+// };
+//
+// Math.easeInOutQuad = function (t, b, c, d) {
+//     t /= d/2;
+//     if (t < 1) return c/2*t*t + b;
+//     t--;
+//     return -c/2 * (t*(t-2) - 1) + b;
+// };
+//
+// const anchors = [...document.querySelectorAll('a')]
+//
+// anchors.map(anchor => {
+//     anchor.addEventListener('click', function() {
+//         return app.scrollTo(this);
+//     })
+// })
 
-    scrollTo: function(el) {
-        var link = el.getAttribute('href').replace('#', ''),
-            anchor = document.getElementById(link);
-
-        var location = 0;
-        if (anchor.offsetParent) {
-            do {
-                location += anchor.offsetTop;
-                anchor = anchor.offsetParent;
-            } while (anchor);
-        }
-        location = location >= 0 ? location : 0;
-
-        this.animateScroll(location);
-        return false;
-    },
-
-    animateScroll: function(pos) {
-        document.documentElement.scrollTop = 1;
-        var element = (document.documentElement && document.documentElement.scrollTop) ? document.documentElement : document.body,
-            start = element.scrollTop,
-            change = pos - start,
-            currentTime = 0,
-            increment = 20,
-            duration = 300;
-
-        var animateScroll = function(){
-            currentTime += increment;
-            var val = Math.easeInOutQuad(currentTime, start, change, duration);
-            element.scrollTop = val;
-            if(currentTime < duration) {
-                setTimeout(animateScroll, increment);
-            }
-        };
-        animateScroll();
-    }
-};
-
-Math.easeInOutQuad = function (t, b, c, d) {
-    t /= d/2;
-    if (t < 1) return c/2*t*t + b;
-    t--;
-    return -c/2 * (t*(t-2) - 1) + b;
-};
-
-const anchors = [...document.querySelectorAll('a')]
-
-anchors.map(anchor => {
-	anchor.addEventListener('click', function() {
-		return app.scrollTo(this);
+function startThanksSlider() {
+	var employeSlider = new Swiper('.thanks-slider', {
+		spaceBetween: 300,
+		navigation: {
+			nextEl: '.swiper-button-next.thanks-button-next',
+			prevEl: '.swiper-button-prev.thanks-button-prev',
+		},
 	})
+}
+popa({
+	clickTrigger: '.team-thanks-button',
+	pop: '.pop-thanks',
+	popCloserType: 'inner',
+	onOpen: startThanksSlider,
+})
+
+function makeTestimonialsPops() {
+	popa({
+		clickTrigger: '.testimonials-more-1',
+		pop: '.pop-testimonials-1',
+	})
+	popa({
+		clickTrigger: '.testimonials-more-2',
+		pop: '.pop-testimonials-2',
+	})
+	popa({
+		clickTrigger: '.testimonials-more-3',
+		pop: '.pop-testimonials-3',
+	})
+	popa({
+		clickTrigger: '.testimonials-more-4',
+		pop: '.pop-testimonials-4',
+	})
+	popa({
+		clickTrigger: '.testimonials-more-5',
+		pop: '.pop-testimonials-5',
+	})
+	popa({
+		clickTrigger: '.testimonials-more-6',
+		pop: '.pop-testimonials-6',
+	})
+	popa({
+		clickTrigger: '.testimonials-more-7',
+		pop: '.pop-testimonials-7',
+	})
+	popa({
+		clickTrigger: '.testimonials-more-8',
+		pop: '.pop-testimonials-8',
+	})
+}
+waitUntilPixels({
+	callback: makeTestimonialsPops,
+	offset: 1000,
+	target: '.testimonials',
 })
 
 // popa({

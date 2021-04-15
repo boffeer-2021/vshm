@@ -986,7 +986,7 @@ span {
 	opacity: 0;
 	/* width: 0; */
 	/* left: 0; */
-	transition: 1.5s all;
+	transition: 2.3s all;
 	/* object-position: 900px center; */
 	/* transition: 2s all; */
 }
@@ -2378,7 +2378,24 @@ span {
 	margin-bottom: 20px;
 }
 
+.thanks-slide-inner {
+	max-width: 300px;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
 
+.thanks-slide-inner img {
+	max-width: 100%;
+	height: 100%;
+	width: 100%;
+}
+.pop-thanks {
+	height: 90%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
 .team-clients {
 	max-width: 570px;
 }
@@ -2997,7 +3014,7 @@ span {
 .pop-elective {
 	max-width: 940px;
 	height: 90vh;
-	/* overflow: hidden */
+	overflow: hidden
 }
 .pop-nuclear .pop__text, 
 .pop-programm .pop__text, 
@@ -3027,14 +3044,17 @@ span {
 }
 .elective__pic {
 	position: absolute;
-	bottom: -230px;
-	right: -50%;
+	/* bottom: -230px; */
+	bottom: -180px;
+	/* right: -50%; */
+	right: -22%;
+	max-width: 310px;
 }
 .elective__pic--target {
-		bottom: -180px;
+	bottom: -120px;
 }
 .elective__pic--branding {
-		bottom: -180px;
+	bottom: -140px;
 }
 
 .nuclear__pic--yach-1,
@@ -3132,6 +3152,9 @@ span {
 
 
 
+.pop-employe {
+	overflow: hidden;
+}
 .employe-slider {
 	max-width: 400px;
 	overflow: visible;
@@ -3177,6 +3200,9 @@ span {
 	line-height: 18px;
 }
 
+.pop-drag {
+	overflow: hidden;
+}
 .pop-drag-bonuses {
 	max-width: 270px;
 	display: flex;
@@ -3225,6 +3251,38 @@ span {
 
 .no-desktop {
 	display: none;
+}
+
+.pop-testimonials {
+	padding: 20px;
+	max-width: 400px;
+	min-width: 280px;
+	width: 100%;
+	max-height: 78vh;
+	box-sizing: border-box;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.pop-testimonials p {
+	margin-bottom: 15px;
+	max-width: 100%;
+}
+.pop-testimonials-1-wrapper .pop-aligner,
+.pop-testimonials-2-wrapper .pop-aligner,
+.pop-testimonials-3-wrapper .pop-aligner,
+.pop-testimonials-4-wrapper .pop-aligner,
+.pop-testimonials-5-wrapper .pop-aligner,
+.pop-testimonials-6-wrapper .pop-aligner,
+.pop-testimonials-7-wrapper .pop-aligner,
+.pop-testimonials-8-wrapper .pop-aligner {
+	align-items: flex-end;
+}
+
+
+@media (max-width: 1300px) and (min-width: 700px) {
+	.programm-drag--4-container {
+		margin-left: auto;
+	}
 }
 
 @import './max-width.css';
