@@ -28,6 +28,10 @@ block content
 
 	main
 		header.header-wrapper
+			.burger
+				span.burger__line.burger__line--top
+				span.burger__line.burger__line--center
+				span.burger__line.burger__line--bottom
 			.container.header
 				.header-logo
 					img.logo(src="./img/hero/hero-logo.png", alt="")
@@ -44,9 +48,10 @@ block content
 		section.hero-wrapper
 			.hero.container
 				img.hero__character-left(src="./img/hero/nastya.png", alt="")
+				img.hero__character-mobile.only-mobile(src="./img/hero/mobile-hero.png", alt="")
 				.hero-offer
-					p.hero__prephrase От создателей «Ядерного Чемоданчика»
-					h1.section__title.hero__title Перестань чувствовать себя<br> маркетологом-самозванцем
+					p.hero__prephrase От создателей<br class="only-mobile"> «Ядерного Чемоданчика»
+					h1.section__title.hero__title Перестань чувствовать себя<br class="only-desktop"> маркетологом-самозванцем
 					p.hero__subtitle 
 						span.text__golden.hero__tooltip(data-tooltip="2,2 раза — средняя статистика среди выпускников программы") и увеличь свой доход в
 							span.text__bold-underline  2,2 раза
@@ -54,7 +59,7 @@ block content
 							time.hero__deadline 
 						span с помощью стратегического маркетинга
 
-					p.hero__caption *Программа соответствует гос.профстандарту профессии<br>маркетолог по уровням квалификации 6 и 7.
+					p.hero__caption *Программа соответствует гос.профстандарту профессии<br class="only-desktop"> маркетолог по уровням квалификации 6 и 7.
 					button.button-primary.hero-button Забронировать место
 				.hero-bullets
 					.hero-warranty
@@ -107,22 +112,24 @@ block content
 
 
 		section.bad-marketing-wrapper
-			h2.section__title.bad-marketing__title Знаешь, в чём дело?...<br class="no-desktop">Ты просто используешь не тот маркетинг!
+			h2.section__title.bad-marketing__title Знаешь, в чём дело?...<br class="no-desktop">Ты просто используешь<br class="only-mobile"> не тот маркетинг!
 			.container.bad-marketing
 				.bad-marketing-character
 					p.bad-marketing-character__text.text__italic Василий Петров,
 						span.bad-marketing-character__spec
 					img.bad-marketing__img(src="img/bad-marketing/bad-marketing-pic.png", alt="")
 				.bad-marketing-text
-					p Пока что уровень индустрии маркетинга — это что-то типа:<br>сделать таргет, написать тексты, запилить сайт, запустить контекст...
+					p.only-desktop Пока что уровень индустрии маркетинга — это что-то типа:<br>сделать таргет, написать тексты, запилить сайт, запустить контекст...
+					p.only-mobile.bad-marketing-text__par Пока что уровень индустрии маркетинга — это что-то типа:
+					p.only-mobile сделать таргет, написать тексты, запилить сайт, запустить контекст...
 					p.bad-marketing-text__em
 						span.text__golden Изучи стратегический маркетинг:
-						span  <br class="no-desktop">от анализа целевой аудитории<br class="no-desktop">до подбора команды
+						span  <br class="only-tablet">от анализа целевой аудитории<br class="only-tablet">до подбора команды
 					p Заведи знакомства с опытными коллегами маркетологами
 					p Автоматизируй и шаблонизируй рабочий процесс
 					p Научись поддерживать ресурсное состояние
 					p Обеспечь себя проектами с договорами от 3-х месяцев 
-					h3.text__golden Изменить ситуацию возможно в вшм
+					h3.text__golden.bad-marketing-text__cta Изменить ситуацию возможно в вшм
 
 
 
