@@ -263,10 +263,10 @@ block content
 		section.base-wrapper
 			h2.section__title.base__title В основе обучения — 
 				button.text__silver.title__button.button__elective электив
-				span  «
+				span  <br class="only-mobile">«
 				button.text__golden.title__button.button__nuclear Ядерный Чемоданчик
 				span »
-			h3.section__subtitle.base__subtitle Сначала ты проходишь бонусные курсы...
+			h3.section__subtitle.base__subtitle Сначала ты проходишь<br class="only-mobile">бонусные курсы...
 			.base.container
 				.has-popup.base-img
 					button.pop-trigger.pop-trigger--egor
@@ -406,13 +406,13 @@ block content
 
 
 		section.programm-wrapper#programm
-			h2.section__title.programm__title Основной курс —
+			h2.section__title.programm__title Основной курс —<br class="only-mobile">
 				|  3
 				button.text__silver.title__button  драга 
 				|  13
 				button.text__golden.title__button  раундов
 
-			.programm-drag-wrapper
+			.programm-drag-wrapper.programm-drag-wrapper-1
 				.container
 					.programm-drag.programm-drag-1
 						.programm-certificates
@@ -442,7 +442,7 @@ block content
 						a.button-primary.button-drag-1.no-desktop(href=`${demo}` target="_blank") Получить пробный бесплатный доступ
 
 
-			.programm-drag-wrapper
+			.programm-drag-wrapper.programm-drag-wrapper-2
 				.container
 					.programm-drag.programm-drag-2
 						.has-popup.drag-img
@@ -468,7 +468,7 @@ block content
 							p.text__italic.text__right Квалификационный сертификат<br>второго уровня.
 							img.programm__certificate-pic(src="./img/programm/certificate-2.png", alt="")
 
-			.programm-drag-wrapper
+			.programm-drag-wrapper.programm-drag-wrapper-3
 				.container
 					.programm-drag.programm-drag-3
 						.programm-certificates
@@ -494,8 +494,8 @@ block content
 								span.pop-hover-glower
 							img.drag__img(src="./img/programm/nikolai.png", alt="")
 
-			.programm-drag-wrapper
-				.container
+			.programm-drag-wrapper.programm-drag-wrapper-4
+				.container.programm-drag--4-container
 					.programm-drag.programm-drag-4
 						.programm-certificates
 							p.text__italic Получишь сертификат ВШМ
@@ -507,7 +507,7 @@ block content
 								span.text__golden БОНУСНЫЙ РАУНД 13:
 								span  ФИШКИ и СЕКРЕТНЫЕ СЕКРЕТЫ 
 							h4.programm__subtitle Эти фишки по маркетингу собирались <br class="no-desktop">несколько лет. 
-							p.programm__content Здесь ты узнаешь 3 способа запустить сарафанку,<br class="no-desktop"> как активировать триггер «инсайдинг» и хайпануть на <br class="no-desktop">нём, как раскочегарить активность у поста...<br class="no-desktop">  И это только малая часть, фишек будет столько,<br class="no-desktop"> что трудно унести.
+							p.programm__content Здесь ты узнаешь 3 способа запустить сарафанку,<br class="only-tablet"> как активировать триггер «инсайдинг» и хайпануть на <br class="only-tablet">нём, как раскочегарить активность у поста...<br class="no-desktop">  И это только малая часть, фишек будет столько,<br class="only-tablet"> что трудно унести.
 							p.programm__content.text__golden.text__bold.programm__bonus И дополнительный бонус: 
 							p.programm__content.text__bold бекстейдж Ядерного Чемоданчика
 						.drag-result
@@ -530,11 +530,11 @@ block content
 						span , за счёт британской методики<br>выращивания профессионалов “Buddying”
 					p.learn-text__bullet — Курс построен на опыте
 						span.text__extrabold  205
-						|  реальных проектов с<br>учётом трендов на ближайшие
+						|  реальных проектов с<br class="only-tablet">учётом трендов на ближайшие
 						span.text__extrabold  5 лет
-						| . Включает<br>бонусы
+						| . Включает<br class="only-tablet">бонусы
 						span.text__extrabold  от 10 лидеров маркетинга
-						|, чей суммарный<br>месячный доход составляет
+						|, чей суммарный<br class="only-tablet">месячный доход составляет
 						span.text__extrabold  50 млн рублей
 						| . 
 					+learnFaqButtons({className: 'no-desktop'})
@@ -549,7 +549,7 @@ block content
 						span.pop-circle-3
 						span.pop-hover-glower
 					img.drag__img.img__bogdan(src="./img/learn/bogdan.png", alt="")
-				p.learn-text__bullet.no-desktop Записывайся на индивидуальную консультацию к Богдану<br>Барбашову и узнай, какие быстрые результаты реально<br>получить по твоему проекту прямо сейчас!
+				p.learn-text__bullet.no-desktop Записывайся на индивидуальную консультацию к Богдану<br class="no-mobile">Барбашову и узнай, какие быстрые результаты реально<br class="no-mobile">получить по твоему проекту прямо сейчас!
 				button.button-primary.button__consult.no-desktop Получить консультацию
 
 
@@ -597,7 +597,8 @@ block content
 
 					.get-decor
 						img.get-logo(src="./img/get/get-logo.png", alt="")
-						img.get-circle(src="./img/get/get-circles.png", alt="")
+						img.get-circle.get-circle--mobile(src="./img/get/mobile-get-circle.png", alt="")
+						img.get-circle.get-circle--regular(src="./img/get/get-circles.png", alt="")
 
 
 

@@ -2001,6 +2001,9 @@ span {
 	margin-left: auto;
 	margin-right: auto;
 }
+.get-circle--mobile {
+	display: none;
+}
 .get-circle {
 	/* max-width: 770px; */
 	max-width: 100%;
