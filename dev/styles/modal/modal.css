@@ -63,7 +63,7 @@
 	transition: all 0.3s;
 	border-radius: 10px;
 	/* overflow: hidden; */
-	min-width: 570px;
+	/* min-width: 570px; */
 	position: relative;
 }
 .pop--opened {

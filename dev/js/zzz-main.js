@@ -176,14 +176,14 @@ let active = false;
 //Sort overflow out for Overlay Image
 document.addEventListener("DOMContentLoaded", function() {
 	let width = slider.offsetWidth;
-	console.log(width);
+	// console.log(width);
 	beforeImage.style.width = width + 'px';
 });
 
 //Adjust width of image on resize 
 window.addEventListener('resize', function() {
 	let width = slider.offsetWidth;
-	console.log(width);
+	// console.log(width);
 	beforeImage.style.width = width + 'px';
 })
 
@@ -339,20 +339,20 @@ document.addEventListener('DOMContentLoaded',function(event){
 popa({
 	pop: '.main-callback-pop',
 	clickTrigger: '.button__callback',
-	popCloser: '.close-hero',
-	popCloserType: 'outer',
+	// popCloserType: 'outer',
+	popCloserType: 'inner',
 })
 popa({
 	pop: '.pop-consult',
 	clickTrigger: '.button__consult',
-	popCloser: '.close-hero',
-	popCloserType: 'outer',
+	popCloserType: 'inner',
+	// popCloserType: 'outer',
 })
 popa({
 	pop: '.pop-book',
 	clickTrigger: '.hero-button',
-	popCloser: '.close-hero',
-	popCloserType: 'outer',
+	popCloserType: 'inner',
+	// popCloserType: 'outer',
 })
 
 
@@ -384,7 +384,8 @@ popa({
 	pop: '.pop-ilnaz',
 	clickTrigger: '.pop-trigger--ilnaz',
 	// popCloser: '.closer-ilnaz',
-	popCloserType: 'outer',
+	popCloserType: 'inner',
+	// popCloserType: 'outer',
 })
 
 
@@ -393,33 +394,37 @@ popa({
 popa({
 	pop: '.pop-nastya',
 	clickTrigger: '.pop-trigger--nastya',
-	// popCloserType: 'inner',
-	popCloserType: popButtonType,
+	popCloserType: 'inner',
+	// popCloserType: popButtonType,
+	// popCloserType: popButtonType,
 })
 
 popa({
 	clickTrigger: '.about-features__item--learn',
 	pop: '.pop-about-learn',
-	popCloserType: popButtonType,
-	// popCloserType: 'popButtonType',
+	// popCloserType: popButtonType,
+	popCloserType: 'inner',
 })
 popa({
 	clickTrigger: '.about-features__item--projects',
 	pop: '.pop-about-projects',
-	popCloserType: popButtonType,
+	popCloserType: 'inner',
+	// popCloserType: popButtonType,
 	// popCloserType: 'outer',
 })
 
 popa({
 	clickTrigger: '.about-features__item--database',
 	pop: '.pop-about-database',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
+	popCloserType: 'inner',
 	// popCloserType: 'outer',
 })
 popa({
 	clickTrigger: '.about-features__item--giving',
 	pop: '.pop-about-giving',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
+	popCloserType: 'inner',
 	// popCloserType: 'outer',
 })
 
@@ -438,7 +443,8 @@ popa({
 	pop: '.pop-about-buddying',
 	popCloserType: popButtonType,
 	onOpen: startBuddyingSlider,
-	popCloserType: 'outer',
+	// popCloserType: 'outer',
+	popCloserType: 'inner',
 })
 
 
@@ -456,34 +462,39 @@ popa({
 	clickTrigger: '.about-features__item--psycho',
 	pop: '.pop-about-psycho',
 	onOpen: startPsychoSlider,
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
 	// popCloserType: 'outer',
+	popCloserType: 'inner',
 })
 
 popa({
 	clickTrigger: '.about-features__item--meetups',
 	pop: '.pop-about-meetups',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
+	popCloserType: 'inner',
 })
 
 popa({
 	clickTrigger: '.about-features__item--classes',
 	pop: '.pop-about-classes',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
 	// popCloserType: 'outer',
+	popCloserType: 'inner',
 })
 
 popa({
 	clickTrigger: '.about-features__item--chats',
 	pop: '.pop-about-chats',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
 	// popCloserType: 'outer',
+	popCloserType: 'inner',
 })
 
 popa({
 	clickTrigger: '.about-features__item--combos',
 	pop: '.pop-about-combos',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
+	popCloserType: 'inner',
 	// popCloserType: 'outer',
 })
 
@@ -491,7 +502,8 @@ popa({
 	clickTrigger: '.pop-trigger--egor',
 	pop: '.pop-egor',
 	// popCloserType: 'inner',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
+	popCloserType: 'inner',
 })
 
 
@@ -529,9 +541,10 @@ function startNuclearSlider() {
 popa({
 	clickTrigger: '.button__nuclear',
 	pop: '.pop-nuclear',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
 	// popCloserType: 'outer',
 	onOpen: startNuclearSlider,
+	popCloserType: 'inner',
 })
 popa({
 	clickTrigger: '.programm__certificate-pic-1',
@@ -558,25 +571,29 @@ popa({
 	clickTrigger: '.pop-trigger--mikhail',
 	pop: '.pop-mikhail',
 	// popCloserType: 'iner',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
+	popCloserType: 'inner',
 })
 popa({
 	clickTrigger: '.pop-trigger--dim',
 	pop: '.pop-dim',
 	// popCloserType: 'outer',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
+	popCloserType: 'inner',
 })
 popa({
 	clickTrigger: '.pop-trigger--nikolai',
 	pop: '.pop-nikolai',
 	// popCloserType: 'outer',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
+	popCloserType: 'inner',
 })
 popa({
 	clickTrigger: '.pop-trigger--bogdan',
 	pop: '.pop-bogdan',
 	// popCloserType: 'outer',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
+	popCloserType: 'inner',
 })
 
 
@@ -584,7 +601,8 @@ popa({
 popa({
 	clickTrigger: '.learn-faq__coursework',
 	pop: '.pop-coursework',
-	popCloserType: popButtonType,
+	popCloserType: 'inner',
+	// popCloserType: popButtonType,
 	// popCloserType: 'outer',
 })
 
@@ -607,27 +625,31 @@ popa({
 })
 
 popa({
+	popCloserType: 'inner',
 	clickTrigger: '.learn-faq__homework',
 	pop: '.pop-homework',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
 	// popCloserType: 'outer',
 })
 popa({
 	clickTrigger: '.learn-faq__flex',
 	pop: '.pop-flex',
-	popCloserType: popButtonType,
+	popCloserType: 'inner',
+	// popCloserType: popButtonType,
 	// popCloserType: 'outer',
 })
 popa({
 	clickTrigger: '.learn-faq__warranties',
 	pop: '.pop-warranties',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
+	popCloserType: 'inner',
 	// popCloserType: 'outer',
 })
 popa({
 	clickTrigger: '.learn-faq__communication',
 	pop: '.pop-communication',
-	popCloserType: popButtonType,
+	// popCloserType: popButtonType,
+	popCloserType: 'inner',
 	// popCloserType: 'outer',
 })
 
@@ -645,8 +667,8 @@ function startEmployeSlider() {
 popa({
 	clickTrigger: '.learn-faq__employe',
 	pop: '.pop-employe',
-	// popCloserType: 'inner',
-	popCloserType: popButtonType,
+	popCloserType: 'inner',
+	// popCloserType: popButtonType,
 	onOpen: startEmployeSlider,
 })
 
@@ -786,34 +808,42 @@ function makeTestimonialsPops() {
 	popa({
 		clickTrigger: '.testimonials-more-1',
 		pop: '.pop-testimonials-1',
+		popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-2',
 		pop: '.pop-testimonials-2',
+		popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-3',
 		pop: '.pop-testimonials-3',
+		popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-4',
 		pop: '.pop-testimonials-4',
+		popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-5',
 		pop: '.pop-testimonials-5',
+		popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-6',
 		pop: '.pop-testimonials-6',
+		popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-7',
 		pop: '.pop-testimonials-7',
+		popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-8',
 		pop: '.pop-testimonials-8',
+		popCloserType: 'inner',
 	})
 }
 waitUntilPixels({
@@ -826,14 +856,16 @@ waitUntilPixels({
 popa({
 	pop: '.pop-privacy',
 	clickTrigger: '.button-privacy',
+	popCloserType: 'inner',
 })
 
 document.querySelector('.footer-link-privacy').addEventListener('click', function(){
 	showPop(document.querySelector('.pop-privacy-wrapper'), document.querySelector('.pop-privacy'))
 })
 popa({
-  pop: '.pop-leaving',
-  clickTrigger: 'page-leaving',
-  popCloser: '.closer',
-  popCloserType: 'outer',
+	pop: '.pop-leaving',
+	clickTrigger: 'page-leaving',
+	popCloser: '.closer',
+	popCloserType: 'inner',
+  // popCloserType: 'outer',
 })

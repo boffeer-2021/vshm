@@ -1,6 +1,22 @@
 @import 'modal/modal.css';
 
+*:focus {
+	outline: none;
+}
 
+/* Chrome, Safari */
+*::-webkit-scrollbar {
+width: 3px;
+height: 3px;
+}
+*::-webkit-scrollbar-track-piece  {
+background-color: transparent;
+}
+*::-webkit-scrollbar-thumb:vertical {
+/* height: 30px; */
+background-color: #555;
+opacity: 0.5;
+}
 
 @font-face {
     font-family: 'Akrobat';
@@ -375,6 +391,9 @@ button:focus {
 	left: unset;
 	top: 21%;
 	right: 15%;
+}
+.pop-bogdan .pop__text {
+	font-size: 18px;
 }
 
 .title__button {
@@ -2227,6 +2246,7 @@ span {
 	bottom: -70px;
 	/* transform: scale(-0.5, 0.4) rotate(50deg); */
 	transform: scale(0.6);
+	transform: scale(-.6, .6) rotate(25deg);
 }
 .in__img {
 	width: 100%;
@@ -2244,6 +2264,7 @@ span {
 	bottom: -80px;
 	/* transform: scale(-0.7, 0.7) rotate(20deg); */
 	transform: scale(0.6);
+	transform: scale(-.6, .6) rotate(-25deg);
 }
 .pricing__out {
 	width: 100%;
@@ -2384,35 +2405,23 @@ span {
 	margin-bottom: 20px;
 }
 
-.thanks-slide-inner {
-	max-width: 340px;
-	width: 100%;
-	height: 100%;
-	display: flex;
-	justify-content: space-between;
-	position: relative;
-	align-items: center;
-}
 
-.thanks-slide-inner img {
-	max-width: 100%;
-	height: 100%;
-	width: 100%;
-	/* position: absolute; */
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	object-fits: contain;
-	object-position: center;
-	margin-left: 30px;
+.thanks-slider {
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
 }
-.pop-thanks {
-	background: none;
-	height: 90%;
-	max-height: 440px;
-	padding-top: 20px;
-	padding-bottom: 0px;
+.pop-inner--thanks {
+	max-width: 400px;
+}
+.thanks-slide-inner {
+	max-width: 400px;
+	width: 100%;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	justify-content: center;
 }
 .thanks-button-prev {
 	left: 5%;
@@ -2713,6 +2722,7 @@ span {
 .pop {
 	padding-top: 54px;
 	padding-bottom: 54px;
+	padding-bottom: 34px;
 	padding-right: 70px;
 	padding-left: 70px;
 	/* padding-left: 35px; */
@@ -2739,8 +2749,15 @@ span {
 	font-weight: 600;
 	margin-bottom: 20px;
 }
+.pop__subtitle {
+	font-size: 18px;
+	margin-top: -23px;
+	margin-bottom: 20px;
+	font-family: 'Akrobat', sans-serif;
+	font-weight: 400;
+}
 .pop__text {
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 24px;
 	letter-spacing: var(--ls-text);
 	margin-bottom: 20px;
@@ -2810,7 +2827,11 @@ span {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	margin-top: 105px;
 	/* margin-right: 70px; */
+}
+.pop__end {
+	padding-bottom: 40px;
 }
 .pop-nastya__pic {
 	width: 100px;
@@ -2837,6 +2858,10 @@ span {
 	max-width: 230px;
 }
 
+.pop__img--communication,
+.pop__img--market {
+	margin-top: -50px;
+}
 
 .pop-buddying-slider {
 	width: 100%;
@@ -2855,9 +2880,6 @@ span {
 
 .pop-about-buddying .swiper-button-disabled {
 	display: none;
-}
-.pop-about-buddying .pop__text {
-	font-size: 18px;
 }
 
 .pop-psycho-slider {
@@ -2973,7 +2995,7 @@ span {
 
 
 .pop-about-combos {
-	max-width: 840px;
+	max-width: 770px;
 	width: 100%;
 	padding-bottom: 0;
 }
@@ -3037,34 +3059,61 @@ span {
 }
 
 
-.pop-nuclear,
 .pop-programm,
 .pop-elective {
 	max-width: 940px;
 	height: 90vh;
 	overflow: hidden
 }
+
 .pop-nuclear .pop__text, 
 .pop-programm .pop__text, 
 .pop-elective .pop__text {
 	font-size: 18px;
 }
+.pop-inner--nuclear {
+	max-width: 570px;
+	width: 100%;
+	box-sizing: border-box;
+
+}
 .nuclear-slider {
 	max-width: 100%;
 	overflow: hidden;
+}
+.pop-nuclear {
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	overflow-x: hidden;
+	overflow-y: visible;
+}
+.nuclear-inner {
+	max-width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 50px;
+	padding-bottom: 100px;
+	padding-right: 50px;
 }
 .programm-slider,
 .elective-slider {
 	max-width: 100%;
 	overflow: visible;
 }
-.nuclear-slider .nuclear-button-prev,
+.nuclear-slider .nuclear-button-prev {
+	top: 35%;
+	left: 5%;
+}
 .programm-slider .programm-button-prev,
 .elective-slider .elective-button-prev{
 	left: -15%;
 	top: 35%;
 }
-.nuclear-slider .nuclear-button-next,
+.nuclear-slider .nuclear-button-next {
+	top: 35%;
+	right: 5%;
+}
 .programm-slider .programm-button-next,
 .elective-slider .elective-button-next{
 	right: -15%;
@@ -3079,7 +3128,8 @@ span {
 	max-width: 310px;
 }
 .elective__pic--target {
-	bottom: -120px;
+	bottom: -140px;
+	right: -22%;
 }
 .elective__pic--branding {
 	bottom: -140px;
@@ -3087,13 +3137,17 @@ span {
 
 .nuclear__pic--yach-1,
 .nuclear__pic--yach-2 {
-	bottom: -120px;
+	bottom: -10px;
 	position: absolute;
-	right: -120px;
+	right: 0px;
 	max-width: 283px;
+	max-width: 253px;
 }
 .nuclear__pic--yach-2 {
-	bottom: -200px;
+	bottom: -100px;
+}
+.button__nuclear--quote {
+	margin-right: -8px;
 }
 
 
@@ -3104,7 +3158,8 @@ span {
 
 
 .pop-programm {
-	max-width: 940px;
+	max-width: 670px;
+	width: 100%;
 }
 .programm-slider {
 	max-width: 400px;
@@ -3263,6 +3318,9 @@ span {
 .pop-additional {
 	max-width: 270px;
 }
+.pop-additional--round-7 {
+	padding-top: 70px;
+}
 
 
 .programm__text--certificate.text__italic {
@@ -3301,6 +3359,9 @@ span {
 .pop-leaving {
 	box-shadow: 0 0 50px rgb(255,255,255,.1);
 }
+.pop-leaving .pop__text {
+	font-size: 20px;
+}
 .pop-privacy {
 	max-height: 600px;
 	overflow: auto;
@@ -3309,6 +3370,18 @@ span {
 	margin-bottom: 10px;
 }
 
+.pop-about-buddying .pop__text {
+	font-size: 16px;
+}
+.pop__img--buddying {
+	max-height: 250px;
+	object-fit: cover;
+	object-position: center;
+}
+.pop__img--giving {
+	max-height: 219px;
+	object-fit: contain;
+}
 
 @media (max-width: 1300px) and (min-width: 700px) {
 	.programm-drag--4-container {
