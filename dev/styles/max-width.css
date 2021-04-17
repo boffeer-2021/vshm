@@ -714,6 +714,9 @@
 		margin-right: auto;
 	}
 
+.thanks-slide-inner {
+	max-width: 240px;
+}
 
 
 
@@ -1094,7 +1097,9 @@
 		flex-wrap: wrap;
 	}
 	.bad-marketing-character {
+		padding-top: 10px;
 		margin-bottom: 15px;
+		margin-right: 0;
 	}
 	.bad-marketing-text p {
 		font-size: 16px;
@@ -1108,6 +1113,10 @@
 	}
 	.bad-marketing-text__cta {
 		text-align: center;
+	}
+	.bad-marketing-character__text {
+		font-size: 16px;
+		margin-bottom: 15px;
 	}
 
 
@@ -1199,7 +1208,7 @@
 		width: 450px;
 		height: 450px;
 		margin-left: -65px;
-		top: 460px;
+		top: 420px;
 	}
 	.text__golden.text__bold.about__name,
 	.about__description {
@@ -1211,9 +1220,9 @@
 	}
 
 	.about__description {
-		left: -20px;
+		left: 0;
 		z-index: 2;
-		top: -190px;
+		top: -210px;
 	}
 	.about__description::before {
 		content: '';
@@ -1230,6 +1239,11 @@
 		font-size: 20px;
 		line-height: 30px;
 		margin-bottom: 20px;
+		max-width: 320px;
+		font-size: 17px;
+		line-height: 24px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 

@@ -557,6 +557,10 @@ span {
 	margin-right: 55px;
 	font-family: 'Akrobat', sans-serif;
 }
+.nav-item:hover {
+	text-decoration: underline;
+	transition: all 0.3s;
+}
 
 .header-contact {
 	margin-left: auto;
@@ -2381,7 +2385,7 @@ span {
 }
 
 .thanks-slide-inner {
-	max-width: 280px;
+	max-width: 340px;
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -2399,11 +2403,26 @@ span {
 	right: 0;
 	top: 0;
 	bottom: 0;
+	object-fits: contain;
+	object-position: center;
+	margin-left: 30px;
 }
 .pop-thanks {
+	background: none;
 	height: 90%;
+	max-height: 440px;
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 0px;
+}
+.thanks-button-prev {
+	left: 5%;
+}
+.thanks-button-next {
+	right: 5%;
+}
+.pop-thanks .swiper-slide{
+	margin-top: auto;
+	margin-bottom: auto;
 }
 .team-clients {
 	max-width: 570px;
@@ -3275,16 +3294,6 @@ span {
 .pop-testimonials p {
 	margin-bottom: 15px;
 	max-width: 100%;
-}
-.pop-testimonials-1-wrapper .pop-aligner,
-.pop-testimonials-2-wrapper .pop-aligner,
-.pop-testimonials-3-wrapper .pop-aligner,
-.pop-testimonials-4-wrapper .pop-aligner,
-.pop-testimonials-5-wrapper .pop-aligner,
-.pop-testimonials-6-wrapper .pop-aligner,
-.pop-testimonials-7-wrapper .pop-aligner,
-.pop-testimonials-8-wrapper .pop-aligner {
-	align-items: flex-end;
 }
 
 
