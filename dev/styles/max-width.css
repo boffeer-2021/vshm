@@ -425,6 +425,9 @@
 		margin-right: auto;
 		margin-left: auto;
 	}
+	.base-slider-1-wrapper:after {
+		display: none;
+	}
 	
 
 
@@ -715,18 +718,33 @@
 	}
 
 	.thanks-slider {
-		max-width: 300px;
+		max-width: 260px;
 	}
 	.pop-inner--thanks {
-		max-width: 240px;
+		max-width: 260px;
+		max-height: 60vh;
 	}
 	.pop-inner--thanks img {
 		object-fit: contain;
+		/* object-position: top; */
 		object-position: center;
+		max-height: 400px;
 	}
-/* .thanks-slide-inner { */
-/*     max-width: 240px; */
-/* } */
+
+	/* .pop-thanks .swiper-slide { */
+	/*     margin-top: 0; */
+	/*     margin-bottom: 0; */
+	/* } */
+
+	.thanks-slide-inner {
+		max-width: 260px;
+	}
+	.thanks-button-next,
+	.thanks-button-prev {
+		color: #fff;
+		background-color: var(--c-primary);
+
+	}
 
 
 
@@ -770,6 +788,10 @@
 	.designer__logo {
 		max-width: 30px;
 		margin-right: 10px;
+	}
+
+	.footer-socials-item__icon--telegram {
+		transform: scale(1.3) !important;
 	}
 
 }
@@ -822,6 +844,22 @@
 	display: block;
 }
 @media (max-width: 768px) {
+	.header-contact {
+		position: relative;
+	}
+	.header-contact:before {
+		content: '';
+		background-size: contain;
+		background-image: url(./../img/hero/phone.png);
+		background-repeat: no-repeat;
+		display: block;
+		max-width: 20px;
+		width: 100%;
+		position: absolute;
+		top: 3px;
+		left: -20px;
+		height: 20px;
+	}
 	.no-mob {
 		display: none;
 	}
@@ -1035,12 +1073,15 @@
 		margin-top: 20px;
 		margin-bottom: 10px;
 	}
+	.look-after-text,
 	.look-before-text {
-		max-width: 280px;
+		max-width: 300px;
+		width: 100%;
 		margin-left: 40px;
 	}
 	.look__img-bad {
 		margin-top: 90px;
+		margin-left: 0;
 	}
 	.look-list__item--bigger-margin {
 		margin-bottom: 20px;
@@ -1061,10 +1102,15 @@
 	.before-item-wrapper .before-after-slide-inner {
 		flex-direction: column-reverse;
 	}
+	.look-wrapper {
+		background: none;
+	}
 	.look-img--good {
-		max-width: 200px;
-		margin-left: 40px;
-
+		max-width: 250px;
+		margin-left: 0;
+		order: -1;
+		transform: none;
+		margin-right: 0;
 	}
 	.look-list--after {
 		max-width: 280px;
@@ -1075,28 +1121,48 @@
 	}
 	.look__machine {
 		max-width: 120px;
-		top: 0;
+		top: 20px;
 	}
-	.look-machine--top.look__machine--moving {
-		transform: translateX(70vw);
+	.look__machine--top {
+		/* transform: scale(-1, 1) translateX(90vw); */
+		transform: scale(-1, 1) translateX(10vw);
 	}
-	.before-after-slider__controller {
-		left: 0;
-		background: linear-gradient(0deg,#fff,hsla(0,0%,100%,.5),transparent);
+	.look__machine--top.look__machine--moving {
+		transform: scale(-1, 1) translateX(-65vw);
 	}
-	.before-after-slider__controller:after {
-		left: -50px;
-		width: 90px;
-		height: 60px;
-		top: unset;
-		bottom: 0;
+	.before-section,
+	.after-section,
+	.before-after-slider {
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin-right: 0;
 	}
+	/* .before-after-slider__controller { */
+	/*     left: 0; */
+	/*     background: linear-gradient(0deg,#fff,hsla(0,0%,100%,.5),transparent); */
+	/* } */
+	/* .before-after-slider__controller:after { */
+	/*     left: -50px; */
+	/*     width: 90px; */
+	/*     height: 60px; */
+	/*     top: unset; */
+	/*     bottom: 0; */
+	/* } */
 	.look__title:before {
 		bottom: -850px;
 	}
 
+	.look__machine--bottom {
+		/* transform: translateX(80vw) scale(1); */
+		transform: translateX(87vw) scale(1);
+	}
+	.look__machine--bottom:after {
+		right: 80px;
+	}
 	.look__machine--bottom.look__machine--moving {
-		  transform: translateX(-40vw) scaleX(-1);
+		  transform: translateX(-50vw) scaleX(1);
 	}
 
 	.look-wood-word--bottom {
@@ -1104,6 +1170,10 @@
 	}
 
 
+	.nuclear__pic--yach-1 {
+		max-width: 183px;
+		bottom: -10px;
+	}
 
 
 	.bad-marketing__title {
@@ -1326,7 +1396,7 @@
 	.nuclear-inner .pop__text {
 		margin-right: auto;
 		margin-left: auto;
-		max-width: 80%;
+		max-width: 74%;
 		width: 100%;
 		line-height: 1.2em;
 		margin-bottom: 15px;
@@ -1470,7 +1540,8 @@
 
 	.programm-drag--4-container {
 		padding-left: 0;
-		margin-right: 0;
+		margin-right: auto;
+		padding-right: 0;
 	}
 	.programm-about__title {
 		margin-bottom: 15px;
@@ -1785,6 +1856,7 @@
 	.changes {
 		background-size: cover;
 		padding-bottom: 60px;
+		background-position: center;
 	}
 	.changes__title {
 		font-size: 26px;
@@ -1834,9 +1906,6 @@
 	.footer-socials-item__icon--vk {
 		height: 74%;
 	}
-	.footer-socials-item__icon--telegram {
-		transform: scale(1.3);
-	}
 	.footer-info {
 		justify-content: center;
 		align-items: center;
@@ -1868,7 +1937,22 @@
 	.pop {
 		min-width: 300px;
 		max-width: 90vw;
-		padding: 30px 20px;
+		padding: 30px 20px 30px 20px;
+		/* padding: 30px 45px 30px 20px; */
+		max-height: 90vh;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.pop-about-buddying .pop__text {
+		padding-right: 15px;
+		line-height: 1;
+		font-size: 15px;
+	}
+	.buddying-button-next {
+		right: 2%;
+	}
+	.buddying-button-prev {
+		right: 2%;
 	}
 	.pop-about-psycho .pop__text {
 		font-size: 14px;
@@ -1918,11 +2002,23 @@
 	.pop-about-giving .pop__img{
 		max-width: 184px;
 	}
-	.pop__img--egor-1,
-	.pop__img--egor-2,
+	.pop__img--egor-1 {
+		max-width: 30%;
+		width: 100%;
+		height: 95px;
+		object-fit: cover;
+	}
+	.pop__img--egor-2 {
+		max-width: 60%;
+		width: 100%;
+		height: 95px;
+		object-fit: cover;
+	}
 	.pop__img--egor-3 {
 		max-width: 100%;
 		width: 100%;
+		height: 95px;
+		object-fit: cover;
 	}
 	.pop-mikhail .pop__text{
 		font-size: 16px;
@@ -1936,8 +2032,8 @@
 		max-width: 280px;
 	}
 	.pop__img--programm-1 {
-		max-width: 40%;
-		margin-left: 0;
+		max-width: 60%;
+		margin-left: auto;
 	}
 	.pop-programm .programm-button-next,
 	.pop-programm .programm-button-prev {
@@ -2007,6 +2103,12 @@
 		height: 90vh;
 		padding-bottom: 0;
 	}
+	.pop-drag-lessons {
+		text-align: center;
+	}
+	.pop-drag-lessons .text__bold {
+		margin-bottom: 0;
+	}
 	.drag-content {
 		display: block;
 		display: flex;
@@ -2024,25 +2126,36 @@
 		order: -2;
 		padding-top: 20px;
 	}
+	.pop-drag {
+		overflow-y: hidden;
+	}
 	
+	.drag-slide {
+		text-align: center;
+	}
 	.pop-nuclear {
 		padding-left: 0;
 		padding-right: 0;
+	}
+	.pop-additional .pop__text:last-child {
+		margin-bottom: 80px;
 	}
 	.hero__tooltip:after {
 		font-size: 14px;
 		line-height: 1.2em;
 	}
-
-}
-
-@media (max-width: 320px) {
 	.pop .button-primary {
 		padding-left: 10px;
 		padding-right: 10px;
-		padding-top: 10px;
-		padding-bottom: 10px;
+		padding-top: 15px;
+		width: 100%;
+		padding-bottom: 15px;
 
 	}
+	.pop-communication .pop__img {
+		margin-top: 0px;
+	}
+
+
 }
 

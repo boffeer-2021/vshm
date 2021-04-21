@@ -137,48 +137,47 @@ block content
 				.look-wood-small
 					//- img.look-wood-word.look-wood-word--top(src="./img/look/vasya-loh.png", alt="")
 					.look-wood-word.look-wood-word--top
-				img.look__machine--top.look__machine(src="./img/look/machine.png", alt="Шлифмашинка")
+				.look__machine--top.look__machine
+					img(src="./img/look/rubber.png", alt="Шлифмашинка")
 			.container.look
 				h2.section__title.look__title Смотри, как всё может быть!
+				.look-subtitle
+					img.look-subtitle__img(src="./img/look/look-subtitle.png", alt="")
 				.before-after-slider
-					.before-after-slider__controller
 					.before-section
-						.before-item-wrapper
-							.before-after-slide-inner
-								.look-after-text
-									h3.look-slide__title Твоя жизнь
-										span.text__golden  после ВШМ
-									ul.look-list.look-list--after
-										li.look-list__item.look-list__item--after Высокие чеки, хозяин своего времени
-										li.look-list__item.look-list__item--after.look-list__item--bigger-margin Запускаешь комплексные проекты
-										li.look-list__item.look-list__item--after Уверен в себе, пользуешься репутацией<br>эксперта
-										li.look-list__item.look-list__item--after Клиенты сами выходят на тебя
-										li.look-list__item.look-list__item--after Есть свободное время тратить<br>заработанные деньги
-								.has-popup.look-img.look-img--good
-									button.pop-trigger.pop-trigger--ilnaz
-										span.pop-circle-1
-										span.pop-circle-2
-										span.pop-circle-3
-										span.pop-hover-glower
-									img.look__img.look__img--good(src="./img/look/ilnaz.png", alt="")
-
+						img.look__img.look__img-bad(src="./img/look/sad.png", alt="")
+						.look-before-text
+							h3.look-slide__title Твоя жизнь до ВШМ
+							ul.look-list.look-list--before
+								li.look-list__item.look-list__item--before Пашешь 24/7 за копейки
+								li.look-list__item.look-list__item--before Продаёшь одну-две услуги, в которых<br class="no-desktop"> разбираешься сам
+								li.look-list__item.look-list__item--before.look-list__item--bigger-margin Допекает синдром самозванца
+								li.look-list__item.look-list__item--before Постоянно ищешь клиентов
+								li.look-list__item.look-list__item--before Времени и сил не остаётся даже на себя
 					.after-section
-						.after-item-wrapper
-							.before-after-slide-inner
-								img.look__img.look__img-bad(src="./img/look/sad.png", alt="")
-								.look-before-text
-									h3.look-slide__title Твоя жизнь до ВШМ
-									ul.look-list.look-list--before
-										li.look-list__item.look-list__item--before Пашешь 24/7 за копейки
-										li.look-list__item.look-list__item--before Продаёшь одну-две услуги, в которых<br>разбираешься сам
-										li.look-list__item.look-list__item--before.look-list__item--bigger-margin Допекает синдром самозванца
-										li.look-list__item.look-list__item--before Постоянно ищешь клиентов
-										li.look-list__item.look-list__item--before Времени и сил не остаётся даже на себя
+						.look-after-text
+							h3.look-slide__title Твоя жизнь
+								span.text__golden  после ВШМ
+							ul.look-list.look-list--after
+								li.look-list__item.look-list__item--after Высокие чеки, хозяин своего времени
+								li.look-list__item.look-list__item--after.look-list__item--bigger-margin Запускаешь комплексные проекты
+								li.look-list__item.look-list__item--after Уверен в себе, пользуешься репутацией<br class="no-desktop"> эксперта
+								li.look-list__item.look-list__item--after Клиенты сами выходят на тебя
+								li.look-list__item.look-list__item--after Есть свободное время тратить<br>заработанные деньги
+						.has-popup.look-img.look-img--good.has-popup--ilnaz
+							button.pop-trigger.pop-trigger--ilnaz
+								span.pop-circle-1
+								span.pop-circle-2
+								span.pop-circle-3
+								span.pop-hover-glower
+							img.look__img.look__img--good(src="./img/look/ilnaz.png", alt="")
+
 			.look-wood.look-wood--bottom
 				.look-wood-small
 					.look-wood-word.look-wood-word--bottom
 					//- img.look-wood-word.look-wood-word--bottom(src="./img/look/vasya-loh.png", alt="")
-				img.look__machine--bottom.look__machine(src="./img/look/machine.png", alt="Шлифмашинка")
+				.look__machine--bottom.look__machine
+					img(src="./img/look/rubber.png", alt="Шлифмашинка")
 
 
 
@@ -245,7 +244,7 @@ block content
 							span.text__golden.text__bold.about__name Высшая Школа Маркетинга
 							span.about__name  —<br>
 							span это экосистема для маркетологов<br>со своими сервисами...
-				.has-popup.about-img
+				.has-popup.about-img.has-popup--nastya
 					button.pop-trigger.pop-trigger--nastya
 						span.pop-circle-1
 						span.pop-circle-2
@@ -265,7 +264,7 @@ block content
 				span »
 			h3.section__subtitle.base__subtitle Сначала ты проходишь<br class="only-mobile">бонусные курсы...
 			.base.container
-				.has-popup.base-img
+				.has-popup.base-img.has-popup--egor
 					button.pop-trigger.pop-trigger--egor
 						span.pop-circle-1
 						span.pop-circle-2
@@ -425,7 +424,7 @@ block content
 							p.programm__content — Раунд 4: копирайтинг
 							button.button-thirdly.text__italic.button-drag-more.button-drag-more-1 Подробнее о драге 1 
 							a.button-primary.button-drag-1.only-desktop(href=`${demo}` target="_blank") Получить пробный бесплатный доступ
-						.has-popup.drag-img
+						.has-popup.drag-img.has-popup--mikhail
 							button.pop-trigger.pop-trigger--mikhail
 								span.pop-circle-1
 								span.pop-circle-2
@@ -438,7 +437,7 @@ block content
 			.programm-drag-wrapper.programm-drag-wrapper-2
 				.container
 					.programm-drag.programm-drag-2
-						.has-popup.drag-img
+						.has-popup.drag-img.has-popup--dim
 							button.pop-trigger.pop-trigger--dim
 								span.pop-circle-1
 								span.pop-circle-2
@@ -479,7 +478,7 @@ block content
 							p.programm__content — Раунд 11: оффлайн и онлайн запуски.
 							p.programm__content — Раунд 12: масштабирование маркетинга. 
 							button.button-thirdly.text__italic.button-drag-more.button-drag-more-3 Подробнее о драге 3 
-						.has-popup.drag-img
+						.has-popup.drag-img.has-popup--nikolai
 							button.pop-trigger.pop-trigger--nikolai
 								span.pop-circle-1
 								span.pop-circle-2
@@ -535,7 +534,7 @@ block content
 					p.learn-text__bullet.only-desktop Записывайся на индивидуальную консультацию к Богдану<br>Барбашову и узнай, какие быстрые результаты реально<br>получить по твоему проекту прямо сейчас!
 					button.button-primary.button__consult.only-desktop Получить консультацию
 
-				.has-popup.drag-img.img-bogdan
+				.has-popup.drag-img.img-bogdan.has-popup--bogdan
 					button.pop-trigger.pop-trigger--bogdan
 						span.pop-circle-1
 						span.pop-circle-2

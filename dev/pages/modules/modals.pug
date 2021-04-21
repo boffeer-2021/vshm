@@ -7,14 +7,14 @@
 			a.burger-menu-links__link(href="#pricing")
 				span.text__golden —
 				span.burger-menu-links__text  Стоимость
-			a.burger-menu-links__link(href="#learning")
+			a.burger-menu-links__link(href="#learn")
 				span.text__golden —
 				span.burger-menu-links__text  Как проходит
 			a.burger-menu-links__link(href="#testimonials")
 				span.text__golden —
 				span.burger-menu-links__text  Отзывы
 	.pop-book
-		form.callback-form(method="POST")
+		form.callback-form.my-form.hero-book-form(method="POST")
 			input(name="formname" hidden value="Забронировать место")
 			label.input-wrapper
 				p.pop__title.text__centered Привет, как тебя зовут?
@@ -39,7 +39,7 @@
 			p.form-privacy Нажимая на кнопку, вы подтверждаете согласие на обработку<br>персональных данных и соглашаетесь с 
 				button.button-thirdly.button-privacy(type="button") политикой конфиденциальности
 	.main-callback-pop
-		form.callback-form(method="POST")
+		form.callback-form.my-form.callback(method="POST")
 			input(name="formname" hidden value="Заказать звонок")
 			label.input-wrapper
 				p.pop__title.text__centered Привет, как тебя зовут?
@@ -64,7 +64,7 @@
 			p.form-privacy Нажимая на кнопку, вы подтверждаете согласие на обработку<br>персональных данных и соглашаетесь с 
 				button.button-thirdly.button-privacy(type="button") политикой конфиденциальности
 	.pop-consult
-		form.callback-form(method="POST")
+		form.callback-form.my-form.consult-form(method="POST")
 			input(name="formname" hidden value="Консультация")
 			label.input-wrapper
 				p.pop__title.text__centered Привет, как тебя зовут?
@@ -199,7 +199,7 @@
 						p.pop__text.text__bold
 							span.text__golden Методика выращивания профессионалов
 							span  ”Buddying”, проверена 858 учениками.
-						img.pop__img.pop__img--buddying(src="./img/pops/about/buddying.png", alt="Buddying")
+						img.pop__img.pop__img--buddying(src="./img/pops/about/buddying.jpg", alt="Buddying")
 
 
 
@@ -242,7 +242,7 @@
 			p.pop__text Оффлайн-нетворкинги и конференции
 			p.pop__text Публичное выступление — это лучший убийца синдрома самозванца и неумения презентовать себя заказчику.
 			p.pop__text.text__bold Появляется понимание: «Я эксперт. Я по этой теме на конфе выступал.»
-			img.pop__img(src="./img/pops/about/meetups.jpg", alt="")
+			img.pop__img(src="./img/pops/about/meetup.png", alt="")
 
 	.pop-about-classes
 		.pop-inner

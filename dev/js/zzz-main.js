@@ -107,11 +107,11 @@ machines.map(machine => {
 	window.addEventListener('scroll', function() {
 		let machineOffset = window.pageYOffset;
 		if (machineOffset >= ( machine.offsetTop - 500 )) {
-			machine.querySelector('.look__machine').classList.add('look__machine--moving');
+			machine.querySelector('.look__machine').classList.add('look__machine--movings');
 
 		machine.querySelector('.look-wood-word').classList.add('look-word--effect');
 
-		document.querySelector('.before-after-slider__controller').classList.add('before-after-slider__controller--preview')
+		// document.querySelector('.before-after-slider__controller').classList.add('before-after-slider__controller--preview')
 		}
 	})
 })
@@ -123,32 +123,73 @@ machines.map(machine => {
 
 
 
-
-const baseSlider1 = new Swiper('.base-slider-1', {
-  // loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next.base-1-button-next',
-    prevEl: '.swiper-button-prev.base-1-button-prev',
-  },
-});
-const baseSlider2 = new Swiper('.base-slider-2', {
-  // loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next.base-2-button-next',
-    prevEl: '.swiper-button-prev.base-2-button-prev',
-  },
-});
-
-
-
-
-
-
-
-
-
+// function baseSliders() {
+	const baseSlider1 = new Swiper('.base-slider-1', {
+	  // loop: true,
+	  navigation: {
+		nextEl: '.swiper-button-next.base-1-button-next',
+		prevEl: '.swiper-button-prev.base-1-button-prev',
+	  },
+	});
+	const baseSlider2 = new Swiper('.base-slider-2', {
+	  // loop: true,
+	  navigation: {
+		nextEl: '.swiper-button-next.base-2-button-next',
+		prevEl: '.swiper-button-prev.base-2-button-prev',
+	  },
+	});
+	popa({
+		clickTrigger: '.has-popup--egor',
+		pop: '.pop-egor',
+		// popCloserType: 'inner',
+		// popCloserType: popButtonType,
+		popCloserType: 'inner',
+	})
 
 
+	function startElectiveSlider() {
+		var electiveSlider = new Swiper('.elective-slider', {
+			spaceBetween: 2000,
+			navigation: {
+				nextEl: '.swiper-button-next.elective-button-next',
+				prevEl: '.swiper-button-prev.elective-button-prev',
+			},
+
+		})
+	}
+	popa({
+		clickTrigger: '.button__elective',
+		pop: '.pop-elective',
+		popCloserType: 'inner',
+		onOpen: startElectiveSlider,
+	})
+
+
+	function startNuclearSlider() {
+		var nuclearSlider = new Swiper('.nuclear-slider', {
+			spaceBetween: 2000,
+			navigation: {
+				nextEl: '.swiper-button-next.nuclear-button-next',
+				prevEl: '.swiper-button-prev.nuclear-button-prev',
+			},
+
+		})
+	}
+	popa({
+		clickTrigger: '.button__nuclear',
+		pop: '.pop-nuclear',
+		// popCloserType: popButtonType,
+		// popCloserType: 'outer',
+		onOpen: startNuclearSlider,
+		popCloserType: 'inner',
+	})
+// }
+
+// waitUntilPixels({
+//     callback: baseSliders,
+//     offset: 2000,
+//     target: '.base',
+// })
 
 
 
@@ -161,108 +202,10 @@ const baseSlider2 = new Swiper('.base-slider-2', {
 
 
 
-const slider = document.querySelector('.before-after-slider');
-const before = document.querySelector('.before-section');
-const beforeImage = before.querySelector('.before-after-slide-inner');
-const resizer = document.querySelector('.before-after-slider__controller');
-// resizer.dispatchEvent(new Event('mouseover'));
-// resizer.dispatchEvent(new Event('mouseenter'));
-resizer.dispatchEvent(new Event('mousedown'));
-resizer.click()
-// resizer.dispatchEvent(new Event('mouseup'));
 
-let active = false;
 
-//Sort overflow out for Overlay Image
-document.addEventListener("DOMContentLoaded", function() {
-	let width = slider.offsetWidth;
-	// console.log(width);
-	beforeImage.style.width = width + 'px';
-});
 
-//Adjust width of image on resize 
-window.addEventListener('resize', function() {
-	let width = slider.offsetWidth;
-	// console.log(width);
-	beforeImage.style.width = width + 'px';
-})
 
-resizer.addEventListener('mousedown',function(){
-	active = true;
-	resizer.classList.add('resize');
-
-});
-
-document.body.addEventListener('mouseup',function(){
-	active = false;
-	resizer.classList.remove('resize');
-});
-
-document.body.addEventListener('mouseleave', function() {
-  active = false;
-  resizer.classList.remove('resize');
-});
-
-document.body.addEventListener('mousemove',function(e){
-  if (!active) return;
-  let x = e.pageX;
-  x -= slider.getBoundingClientRect().left;
-  slideIt(x);
-  pauseEvent(e);
-});
-
-resizer.addEventListener('touchstart',function(){
-  active = true;
-  resizer.classList.add('resize');
-});
-
-document.body.addEventListener('touchend',function(){
-  active = false;
-  resizer.classList.remove('resize');
-});
-
-document.body.addEventListener('touchcancel',function(){
-  active = false;
-  resizer.classList.remove('resize');
-});
-
-//calculation for dragging on touch devices
-document.body.addEventListener('touchmove',function(e){
-  if (!active) return;
-  let x;
-  
-  let i;
-  for (i=0; i < e.changedTouches.length; i++) {
-		x = e.changedTouches[i].pageX; 
-  }
-  
-  x -= slider.getBoundingClientRect().left;
-  slideIt(x);
-  pauseEvent(e);
-});
-
-function slideIt(x){
-	let transform = Math.max(0,(Math.min(x,slider.offsetWidth)));
-	before.style.width = transform+"px";
-	resizer.style.left = transform-0+"px";
-}
-
-//stop divs being selected.
-function pauseEvent(e){
-	if(e.stopPropagation) e.stopPropagation();
-	if(e.preventDefault) e.preventDefault();
-	e.cancelBubble=true;
-	e.returnValue=false;
-	return false;
-}
-
-if (window.innerWidth < 1200) {
-	
-before.style.width = '0'
-} else {
-
-before.style.width = '50px'
-}
 
 
 
@@ -382,7 +325,8 @@ popa({
 
 popa({
 	pop: '.pop-ilnaz',
-	clickTrigger: '.pop-trigger--ilnaz',
+	// clickTrigger: '.pop-trigger--ilnaz',
+	clickTrigger: '.has-popup--ilnaz',
 	// popCloser: '.closer-ilnaz',
 	popCloserType: 'inner',
 	// popCloserType: 'outer',
@@ -390,162 +334,117 @@ popa({
 
 
 
-
-popa({
-	pop: '.pop-nastya',
-	clickTrigger: '.pop-trigger--nastya',
-	popCloserType: 'inner',
-	// popCloserType: popButtonType,
-	// popCloserType: popButtonType,
-})
-
-popa({
-	clickTrigger: '.about-features__item--learn',
-	pop: '.pop-about-learn',
-	// popCloserType: popButtonType,
-	popCloserType: 'inner',
-})
-popa({
-	clickTrigger: '.about-features__item--projects',
-	pop: '.pop-about-projects',
-	popCloserType: 'inner',
-	// popCloserType: popButtonType,
-	// popCloserType: 'outer',
-})
-
-popa({
-	clickTrigger: '.about-features__item--database',
-	pop: '.pop-about-database',
-	// popCloserType: popButtonType,
-	popCloserType: 'inner',
-	// popCloserType: 'outer',
-})
-popa({
-	clickTrigger: '.about-features__item--giving',
-	pop: '.pop-about-giving',
-	// popCloserType: popButtonType,
-	popCloserType: 'inner',
-	// popCloserType: 'outer',
-})
-
-
-
-function startBuddyingSlider(){
-	var buddyingSlider = new Swiper('.pop-buddying-slider', {
-		navigation: {
-			nextEl: '.swiper-button-next.buddying-button-next',
-			prevEl: '.swiper-button-prev.buddying-button-prev',
-		},
+	popa({
+		pop: '.pop-nastya',
+		clickTrigger: '.has-popup--nastya',
+		popCloserType: 'inner',
+		// popCloserType: popButtonType,
+		// popCloserType: popButtonType,
 	})
-}
-popa({
-	clickTrigger: '.about-features__item--buddying',
-	pop: '.pop-about-buddying',
-	popCloserType: popButtonType,
-	onOpen: startBuddyingSlider,
-	// popCloserType: 'outer',
-	popCloserType: 'inner',
-})
 
-
-function startPsychoSlider() {
-	var psychoSlider = new Swiper('.pop-psycho-slider', {
-		direction: 'vertical',
-		spaceBetween: 3000,
-		navigation: {
-			nextEl: '.swiper-button-next.psycho-button-next',
-			prevEl: '.swiper-button-prev.psycho-button-prev',
-		},
+	popa({
+		clickTrigger: '.about-features__item--learn',
+		pop: '.pop-about-learn',
+		// popCloserType: popButtonType,
+		popCloserType: 'inner',
 	})
-}
-popa({
-	clickTrigger: '.about-features__item--psycho',
-	pop: '.pop-about-psycho',
-	onOpen: startPsychoSlider,
-	// popCloserType: popButtonType,
-	// popCloserType: 'outer',
-	popCloserType: 'inner',
-})
-
-popa({
-	clickTrigger: '.about-features__item--meetups',
-	pop: '.pop-about-meetups',
-	// popCloserType: popButtonType,
-	popCloserType: 'inner',
-})
-
-popa({
-	clickTrigger: '.about-features__item--classes',
-	pop: '.pop-about-classes',
-	// popCloserType: popButtonType,
-	// popCloserType: 'outer',
-	popCloserType: 'inner',
-})
-
-popa({
-	clickTrigger: '.about-features__item--chats',
-	pop: '.pop-about-chats',
-	// popCloserType: popButtonType,
-	// popCloserType: 'outer',
-	popCloserType: 'inner',
-})
-
-popa({
-	clickTrigger: '.about-features__item--combos',
-	pop: '.pop-about-combos',
-	// popCloserType: popButtonType,
-	popCloserType: 'inner',
-	// popCloserType: 'outer',
-})
-
-popa({
-	clickTrigger: '.pop-trigger--egor',
-	pop: '.pop-egor',
-	// popCloserType: 'inner',
-	// popCloserType: popButtonType,
-	popCloserType: 'inner',
-})
-
-
-function startElectiveSlider() {
-	var electiveSlider = new Swiper('.elective-slider', {
-		spaceBetween: 2000,
-		navigation: {
-			nextEl: '.swiper-button-next.elective-button-next',
-			prevEl: '.swiper-button-prev.elective-button-prev',
-		},
-
+	popa({
+		clickTrigger: '.about-features__item--projects',
+		pop: '.pop-about-projects',
+		popCloserType: 'inner',
+		// popCloserType: popButtonType,
+		// popCloserType: 'outer',
 	})
-}
-popa({
-	clickTrigger: '.button__elective',
-	pop: '.pop-elective',
-	popCloserType: 'inner',
-	onOpen: startElectiveSlider,
-})
 
-
-function startNuclearSlider() {
-	var nuclearSlider = new Swiper('.nuclear-slider', {
-		spaceBetween: 2000,
-		navigation: {
-			nextEl: '.swiper-button-next.nuclear-button-next',
-			prevEl: '.swiper-button-prev.nuclear-button-prev',
-		},
-
+	popa({
+		clickTrigger: '.about-features__item--database',
+		pop: '.pop-about-database',
+		// popCloserType: popButtonType,
+		popCloserType: 'inner',
+		// popCloserType: 'outer',
 	})
-}
+	popa({
+		clickTrigger: '.about-features__item--giving',
+		pop: '.pop-about-giving',
+		// popCloserType: popButtonType,
+		popCloserType: 'inner',
+		// popCloserType: 'outer',
+	})
 
 
 
-popa({
-	clickTrigger: '.button__nuclear',
-	pop: '.pop-nuclear',
-	// popCloserType: popButtonType,
-	// popCloserType: 'outer',
-	onOpen: startNuclearSlider,
-	popCloserType: 'inner',
-})
+	function startBuddyingSlider(){
+		var buddyingSlider = new Swiper('.pop-buddying-slider', {
+			navigation: {
+				nextEl: '.swiper-button-next.buddying-button-next',
+				prevEl: '.swiper-button-prev.buddying-button-prev',
+			},
+		})
+	}
+	popa({
+		clickTrigger: '.about-features__item--buddying',
+		pop: '.pop-about-buddying',
+		popCloserType: popButtonType,
+		onOpen: startBuddyingSlider,
+		// popCloserType: 'outer',
+		popCloserType: 'inner',
+	})
+
+
+	function startPsychoSlider() {
+		var psychoSlider = new Swiper('.pop-psycho-slider', {
+			direction: 'vertical',
+			spaceBetween: 3000,
+			navigation: {
+				nextEl: '.swiper-button-next.psycho-button-next',
+				prevEl: '.swiper-button-prev.psycho-button-prev',
+			},
+		})
+	}
+	popa({
+		clickTrigger: '.about-features__item--psycho',
+		pop: '.pop-about-psycho',
+		onOpen: startPsychoSlider,
+		// popCloserType: popButtonType,
+		// popCloserType: 'outer',
+		popCloserType: 'inner',
+	})
+
+	popa({
+		clickTrigger: '.about-features__item--meetups',
+		pop: '.pop-about-meetups',
+		// popCloserType: popButtonType,
+		popCloserType: 'inner',
+	})
+
+	popa({
+		clickTrigger: '.about-features__item--classes',
+		pop: '.pop-about-classes',
+		// popCloserType: popButtonType,
+		// popCloserType: 'outer',
+		popCloserType: 'inner',
+	})
+
+	popa({
+		clickTrigger: '.about-features__item--chats',
+		pop: '.pop-about-chats',
+		// popCloserType: popButtonType,
+		// popCloserType: 'outer',
+		popCloserType: 'inner',
+	})
+
+	popa({
+		clickTrigger: '.about-features__item--combos',
+		pop: '.pop-about-combos',
+		// popCloserType: popButtonType,
+		popCloserType: 'inner',
+		// popCloserType: 'outer',
+	})
+
+
+
+
+
 popa({
 	clickTrigger: '.programm__certificate-pic-1',
 	pop: '.pop-certificate-1',
@@ -568,28 +467,28 @@ popa({
 
 
 popa({
-	clickTrigger: '.pop-trigger--mikhail',
+	clickTrigger: '.has-popup--mikhail',
 	pop: '.pop-mikhail',
 	// popCloserType: 'iner',
 	// popCloserType: popButtonType,
 	popCloserType: 'inner',
 })
 popa({
-	clickTrigger: '.pop-trigger--dim',
+	clickTrigger: '.has-popup--dim',
 	pop: '.pop-dim',
 	// popCloserType: 'outer',
 	// popCloserType: popButtonType,
 	popCloserType: 'inner',
 })
 popa({
-	clickTrigger: '.pop-trigger--nikolai',
+	clickTrigger: '.has-popup--nikolai',
 	pop: '.pop-nikolai',
 	// popCloserType: 'outer',
 	// popCloserType: popButtonType,
 	popCloserType: 'inner',
 })
 popa({
-	clickTrigger: '.pop-trigger--bogdan',
+	clickTrigger: '.has-popup--bogdan',
 	pop: '.pop-bogdan',
 	// popCloserType: 'outer',
 	// popCloserType: popButtonType,
@@ -728,66 +627,6 @@ popa({
 
 
 
-// // ==== Smooth scrolling
-// var app = {
-//     scrolled: 0,
-//     newPosition: 0,
-//     interval: null,
-//     speed: 0,
-//
-//     scrollTo: function(el) {
-//         var link = el.getAttribute('href').replace('#', ''),
-//             anchor = document.getElementById(link);
-//
-//         var location = 0;
-//         if (anchor.offsetParent) {
-//             do {
-//                 location += anchor.offsetTop;
-//                 anchor = anchor.offsetParent;
-//             } while (anchor);
-//         }
-//         location = location >= 0 ? location : 0;
-//
-//         this.animateScroll(location);
-//         return false;
-//     },
-//
-//     animateScroll: function(pos) {
-//         document.documentElement.scrollTop = 1;
-//         var element = (document.documentElement && document.documentElement.scrollTop) ? document.documentElement : document.body,
-//             start = element.scrollTop,
-//             change = pos - start,
-//             currentTime = 0,
-//             increment = 20,
-//             duration = 300;
-//
-//         var animateScroll = function(){
-//             currentTime += increment;
-//             var val = Math.easeInOutQuad(currentTime, start, change, duration);
-//             element.scrollTop = val;
-//             if(currentTime < duration) {
-//                 setTimeout(animateScroll, increment);
-//             }
-//         };
-//         animateScroll();
-//     }
-// };
-//
-// Math.easeInOutQuad = function (t, b, c, d) {
-//     t /= d/2;
-//     if (t < 1) return c/2*t*t + b;
-//     t--;
-//     return -c/2 * (t*(t-2) - 1) + b;
-// };
-//
-// const anchors = [...document.querySelectorAll('a')]
-//
-// anchors.map(anchor => {
-//     anchor.addEventListener('click', function() {
-//         return app.scrollTo(this);
-//     })
-// })
-
 function startThanksSlider() {
 	var thanksSlider = new Swiper('.thanks-slider', {
 		spaceBetween: 300,
@@ -808,47 +647,47 @@ function makeTestimonialsPops() {
 	popa({
 		clickTrigger: '.testimonials-more-1',
 		pop: '.pop-testimonials-1',
-		popCloserType: 'inner',
+		// popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-2',
 		pop: '.pop-testimonials-2',
-		popCloserType: 'inner',
+		// popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-3',
 		pop: '.pop-testimonials-3',
-		popCloserType: 'inner',
+		// popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-4',
 		pop: '.pop-testimonials-4',
-		popCloserType: 'inner',
+		// popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-5',
 		pop: '.pop-testimonials-5',
-		popCloserType: 'inner',
+		// popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-6',
 		pop: '.pop-testimonials-6',
-		popCloserType: 'inner',
+		// popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-7',
 		pop: '.pop-testimonials-7',
-		popCloserType: 'inner',
+		// popCloserType: 'inner',
 	})
 	popa({
 		clickTrigger: '.testimonials-more-8',
 		pop: '.pop-testimonials-8',
-		popCloserType: 'inner',
+		// popCloserType: 'inner',
 	})
 }
 waitUntilPixels({
 	callback: makeTestimonialsPops,
-	offset: 1000,
+	offset: 2000,
 	target: '.testimonials',
 })
 
@@ -869,3 +708,38 @@ popa({
 	popCloserType: 'inner',
   // popCloserType: 'outer',
 })
+
+document.querySelector('.button-leaving').addEventListener('click', function() {
+	ym(75764569,'reachGoal','on-leaving');
+})
+document.querySelector('.hero-book-form').addEventListener('submit', function() {
+	ym(75764569,'reachGoal','hero-book');
+})
+document.querySelector('.callback').addEventListener('submit', function() {
+	ym(75764569,'reachGoal','callback');
+})
+document.querySelector('.consult-form').addEventListener('submit', function() {
+	ym(75764569,'reachGoal','consult');
+})
+
+document.querySelector('.header-phone').addEventListener('click', function(){
+	ym(75764569,'reachGoal','phone');
+})
+
+document.querySelector('.button-drag-1').addEventListener('click', function(){
+	ym(75764569,'reachGoal','demo');
+})
+
+document.querySelector('.testimonials-all-cases').addEventListener('click', function(){
+	ym(75764569,'reachGoal','all-cases');
+})
+
+document.querySelector('.pricing-button').addEventListener('click', function(){
+	ym(75764569,'reachGoal','pricing');
+})
+
+document.querySelector('.changes-offer__button').addEventListener('click', function(){
+	ym(75764569,'reachGoal','last-start');
+})
+
+
