@@ -543,6 +543,12 @@ span {
 	color: var(--c-primary);
 	max-height: 35px;
 }
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+	color: #fff;
+	background-color: var(--c-primary);
+	transition: all 0.3s;
+}
 .swiper-button-next {
 	right: 0;
 }
@@ -597,8 +603,10 @@ span {
 	font-family: 'Akrobat', sans-serif;
 }
 .nav-item:hover {
-	text-decoration: underline;
+	/* text-decoration: underline; */
+	border-bottom: 2px solid var(--c-primary);
 	transition: all 0.3s;
+	color: var(--c-primary);
 }
 
 .header-contact {
@@ -1710,8 +1718,7 @@ span {
 	margin-bottom: 40px;
 }
 .programm-drag-wrapper {
-	border-top: 1px dashed #2b2b2b;
-	border-bottom: 1px dashed #2b2b2b;
+	border: 1px dashed #2b2b2b;
 	max-width: 1200px;
 	margin-left: auto;
 	margin-right: auto;
@@ -2174,6 +2181,10 @@ span {
 	font-style: italic;
 	margin-top: auto;
 	font-size: 18px;
+}
+.testimonials__more:hover {
+	color: var(--c-primary);
+	border-bottom: 1px solid var(--c-primary);
 }
 
 .testimonials-all-cases {
@@ -2972,9 +2983,13 @@ span {
 }
 .pop-about-psycho {
 	position: relative;
-	max-width: 910px;
+	/* max-width: 910px; */
+	max-width: 850px;
 	width: 100%;
-	overflow-y: visible;
+	/* overflow-y: visible; */
+	overflow: hidden;
+	padding-top: 30px;
+	padding-bottom: 64px;
 }
 
 .pop-about-psycho .swiper-button-disabled {
@@ -2985,11 +3000,12 @@ span {
 	font-size: 18px;
 }
 .pop-about-psycho .pop-inner {
-	max-width: 370px;
-	/* max-width: 630px; */
+	/* max-width: 370px; */
+	max-width: 750px;
 }
 .pop-about-psycho .pop__title {
-	margin-bottom: 30px;
+	/* margin-bottom: 30px; */
+	margin-bottom: 10px;
 	font-size: 18px;
 }
 .psycho-pics {
@@ -3001,10 +3017,12 @@ span {
 	max-width: 200px;
 }
 .pop__img-psycho {
-	max-width: 300px;
-	position: absolute;
-	bottom: -15%;
-	right: -7%;
+	/* max-width: 300px; */
+	/* position: absolute; */
+	/* bottom: -15%; */
+	/* right: -7%; */
+	max-width: 240px;
+	margin-top: -60px;
 }
 .psycho-button-next {
 	top: unset;
@@ -3051,21 +3069,25 @@ span {
 }
 
 .pop-about-chats {
-	max-width: 870px;
+	max-width: 570px;
 	width: 100%;
 	box-sizing: border-box;
 	padding-bottom: 0;
 }
 .pop-about-chats .pop-inner {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 	max-width: 730px;
 	width: 100%;
-	justify-content: space-between;
-	align-items: flex-start;
-	flex-direction: row;
+	/* justify-content: space-between; */
+	/* align-items: flex-start; */
+	/* flex-direction: row; */
 }
 .pop-about-chats .pop__img {
 	max-width: 330px;
+	max-width: 220px;
 	margin-right: 0px;
 	margin-left: 0;
 	margin-top: -20px;
@@ -3080,23 +3102,35 @@ span {
 
 
 .pop-about-combos {
-	max-width: 770px;
+	/* max-width: 770px; */
+	max-width: 610px;
 	width: 100%;
 	padding-bottom: 0;
 }
+.pop-about-combos .pop__title {
+	padding-top: 40px;
+}
 .pop-about-combos .pop-inner {
-	flex-direction: row;
-	justify-content: space-between;
-	max-width: 700px;
+	/* flex-direction: row; */
+	/* justify-content: space-between; */
+	/* max-width: 700px; */
+	max-width: 460px;
 	width: 100%;
+	justify-content: center;
+	align-items: center;
+	margin-top: -40px;
 }
 .pop-about-combos .pop__text {
 	font-size: 18px;
 }
 .pop-about-combos .pop__img {
-	max-width: 400px;
-	margin-left: -100px;
-	margin-right: 0;
+	/* max-width: 400px; */
+	/* margin-left: -100px; */
+	/* margin-right: 0; */
+	max-width: 380px;
+	margin-top: -40px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 
@@ -3152,10 +3186,16 @@ span {
 	height: 90vh;
 	overflow: hidden
 }
+.pop-elective {
+	padding-top: 34px;
+}
 
-.pop-nuclear .pop__text, 
-.pop-programm .pop__text, 
 .pop-elective .pop__text {
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+.pop-nuclear .pop__text, 
+.pop-programm .pop__text {
 	font-size: 18px;
 }
 .pop-inner--nuclear {
@@ -3180,7 +3220,8 @@ span {
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 50px;
-	padding-bottom: 100px;
+	/* padding-bottom: 100px; */
+	padding-bottom: 0;
 	padding-right: 50px;
 }
 .programm-slider,
@@ -3192,43 +3233,58 @@ span {
 	top: 35%;
 	left: 5%;
 }
-.programm-slider .programm-button-prev,
-.elective-slider .elective-button-prev{
-	left: -15%;
-	top: 35%;
-}
 .nuclear-slider .nuclear-button-next {
 	top: 35%;
 	right: 5%;
 }
-.programm-slider .programm-button-next,
-.elective-slider .elective-button-next{
+
+.programm-slider .programm-button-prev {
+	left: -15%;
+	top: 35%;
+}
+.programm-slider .programm-button-next {
 	right: -15%;
 	top: 35%;
 }
+
+.elective-slider .elective-button-prev{
+	left: -15%;
+	top: 23%;
+}
+.elective-slider .elective-button-next {
+	right: -15%;
+	top: 23%;
+}
 .elective__pic {
-	position: absolute;
-	/* bottom: -230px; */
-	bottom: -180px;
-	/* right: -50%; */
-	right: -22%;
+	/* position: absolute; */
+	/* bottom: -180px; */
+	/* right: -22%; */
 	max-width: 310px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	position: static;
 }
 .elective__pic--target {
 	bottom: -140px;
 	right: -22%;
+	margin-top: -20px;
 }
 .elective__pic--branding {
 	bottom: -140px;
+	margin-top: -20px;
 }
 
 .nuclear__pic--yach-1,
 .nuclear__pic--yach-2 {
-	bottom: -10px;
-	position: absolute;
-	right: 0px;
-	max-width: 283px;
+	/* bottom: -10px; */
+	/* position: absolute; */
+	/* right: 0px; */
 	max-width: 253px;
+	position: static;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
 }
 .nuclear__pic--yach-2 {
 	bottom: -100px;
@@ -3245,11 +3301,15 @@ span {
 
 
 .pop-programm {
-	max-width: 670px;
+	max-width: 760px;
 	width: 100%;
 }
+.pop-programm-wrapper .pop-inner {
+	max-width: 750px;
+	display: block;
+}
 .programm-slider {
-	max-width: 400px;
+	max-width: 580px;
 }
 .pop-programm .programm-button-prev {
 	left: unset;
@@ -3387,12 +3447,17 @@ span {
 	margin-right: 30px;
 	padding-top: 70px;
 }
-.pop-drag-get-skillcard,
-.pop-drag-get-bonus {
+.pop-drag-get-skillcard{
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+}
+.pop-drag-get-bonus {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
 .pop-drag-get-skillcard__img,
 .pop-drag-get-bonus__img {
@@ -3400,6 +3465,16 @@ span {
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
+}
+.pop-coursework {
+	padding-top: 24px;
+}
+.pop-coursework .pop__text {
+	font-size: 16px;
+}
+.pop-coursework .pop__img {
+	margin-top: -40px;
+	max-width: 270px;
 }
 
 .pop-additional {
@@ -3487,6 +3562,11 @@ figcaption {
 .pop-testimonials em {
 	margin-bottom: 15px;
 	display: block;
+}
+.pop-closer:hover {
+	color: var(--c-primary);
+	font-weight: 700px;
+
 }
 
 @import './max-width.css';

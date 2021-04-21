@@ -918,6 +918,7 @@
 		top: 20px;
 		right: 20px;
 		z-index: 10;
+		box-shadow: none;
 	}
 	.burger__line {
 		height: 3px;
@@ -1956,6 +1957,7 @@
 	}
 	.pop-about-psycho .pop__text {
 		font-size: 14px;
+		line-height: 1.1em;
 	}
 	.pop-about-psycho .pop__title {
 		margin-bottom: 10px;
@@ -1964,6 +1966,10 @@
 		max-width: 170px;
 		bottom: -5%;
 		right: -7%;
+		margin-top: -10px;
+	}
+	.pop-about-psycho {
+		overflow-y: hidden;
 	}
 	.pop-closer--inner {
 		top: 5px;
@@ -1980,9 +1986,6 @@
 	}
 	.pop-about-combos .pop__img {
 		margin-left: 0;
-	}
-	.pop-about-chats .pop-inner {
-		flex-direction: column-reverse;
 	}
 	.pop-about-chats .pop__img {
 		max-width: 160px;
@@ -2037,7 +2040,7 @@
 	}
 	.pop-programm .programm-button-next,
 	.pop-programm .programm-button-prev {
-		right: 2%;
+		right: -2%;
 	}
 	.pop__img--programm-2 {
 		display: none;

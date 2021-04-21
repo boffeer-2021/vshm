@@ -1,5 +1,6 @@
 // TODO:
 // logErrors: parametr
+// Протяни пропсы как в реакте, чтобы на любом уровне вложенности ты имел одинаковые исходные данные
 
 
 
@@ -148,17 +149,32 @@ function popa($){
 		//         window.onbeforeunload = null;
 		//     }
 		// }
+		//
+		//
+		//
+		// TODO: 
+		// Сделай параметр для счета количества открытия попапов вместо тру фолс
+		//
 		let popShown = false;
-		document.addEventListener('mouseleave', function() {
+		document.querySelector('.pop-leaving-area').addEventListener('mouseenter', function() {
 			if (popShown === false) {
 				showPop(popWrap, pop);
 				popShown = true;
-				setTimeout(function(){
-					popShown = false
-				}, 90000)
-
+				// setTimeout(function(){
+				//     popShown = false
+				// }, 90000)
 			}
 		})
+		// document.addEventListener('mouseleave', function() {
+		//     if (popShown === false) {
+		//         showPop(popWrap, pop);
+		//         popShown = true;
+		//         // setTimeout(function(){
+		//         //     popShown = false
+		//         // }, 90000)
+		//     }
+		// })
+
 	} else {
 		// let opener = document.querySelector($.clickTrigger);
 		const opener = [...document.querySelectorAll($.clickTrigger)];
